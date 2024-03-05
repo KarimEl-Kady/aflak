@@ -76,11 +76,11 @@
 								<!--end::Title-->
 								<!--begin::Form group-->
 								<div class="form-group">
-									<label class="font-size-h6 font-weight-bolder text-dark">{{__('messages.email')}}</label>
+									<label class="font-size-h6 font-weight-bolder text-dark">{{__('messages.phone')}}</label>
 
-									<input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="email" placeholder="email"
+									<input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="phone" placeholder="phone"
 
-									name="email" autocomplete="off" />
+									name="phone" autocomplete="off" />
 								</div>
 								<!--end::Form group-->
 								<!--begin::Form group-->
@@ -226,10 +226,10 @@
 		FormValidation.formValidation(
 			document.getElementById('kt_login_signin_form'), {
 				fields: {
-					email: {
+					phone: {
 						validators: {
 							notEmpty: {
-								message: 'email is required'
+								message: 'phone is required'
 							},
 						}
 					},

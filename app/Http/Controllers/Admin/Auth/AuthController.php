@@ -12,7 +12,7 @@ class AuthController extends Controller
     }
     public function admin_login(LoginRequest $request){
 
-        if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password]
+        if (auth()->guard('admin')->attempt(['phone' => $request->phone, 'password' => $request->password]
         ,$request->remember)){
             return redirect()->route('admins.index')
             ->with(['success'=> __("messages.login successfully")]);

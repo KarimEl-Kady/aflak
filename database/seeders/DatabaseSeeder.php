@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\HomeSlider\HomeSliderTranslation;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +19,10 @@ class DatabaseSeeder extends Seeder
             // UserSeeder::class,
 
             AdminSeeder::class,
+            HomeSliderSeeder::class,
+            AdvantageSeeder::class,
+            ServiceSeeder::class,
+            HomeSliderSeeder::class,
             // SettingSeeder::class,
         ]);
     }

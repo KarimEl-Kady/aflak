@@ -72,7 +72,7 @@
                         </div>
                     </li>
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('details.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -98,7 +98,7 @@
                                     </span>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="{{ route('requests.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.all') }}</span>
                                     </a>
                                 </li>
@@ -125,7 +125,7 @@
                                     </span>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="{{ route('offers.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.all') }}</span>
                                     </a>
                                 </li>
@@ -153,7 +153,7 @@
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('home_banners.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.all') }}</span>
                                     </a>
                                 </li>
@@ -180,31 +180,31 @@
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('settings.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.settings') }}</span>
                                     </a>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('privacies.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.privacy') }}</span>
                                     </a>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('terms.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.terms') }}</span>
                                     </a>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('world_terms.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.wallet_terms') }}</span>
                                     </a>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                     data-menu-toggle="hover">
-                                    <a href="{{ route('questions.index') }}" class="menu-link">
+                                    <a href="#" class="menu-link">
                                         <span class="menu-text">{{ __('messages.questions') }}</span>
                                     </a>
                                 </li>
@@ -218,7 +218,7 @@
 
                     {{-- posts link Start --}}
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('posts.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -266,7 +266,7 @@
 
                     {{-- notifications link Start --}}
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('notifications.create') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -280,7 +280,7 @@
                     {{-- Contracts link Start  --}}
 
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('contracts.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -325,7 +325,7 @@
                         </div> --}}
                     </li>
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('upgrates.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -336,7 +336,7 @@
                     </li>
 
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('payment_orders.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
@@ -347,7 +347,7 @@
                     </li>
 
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{ Route('payment_ways.index') }}" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
