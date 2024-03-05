@@ -15,16 +15,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
 
             // UserSeeder::class,
-            RequestSeeder::class,
-            OfferSeeder::class,
+
             AdminSeeder::class,
-            HomeBannerSeeder::class,
-            PrivacySeeder::class,
-            TermSeeder::class,
-            SettingSeeder::class,
-            QuestionSeeder::class,
-            WorldTermSeeder::class,
-            PaymentOrderSeeder::class,
+            // SettingSeeder::class,
         ]);
     }
 }
