@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Auth\AuthController;
-
+use App\Http\Controllers\Admin\HomeSliderController;
+use App\Http\Controllers\Admin\HomeSliderImageController;
+use App\Models\HomeSlider\HomeSlider;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Route;
 
@@ -26,8 +28,13 @@ Route::group(
 
                 //admins
                 Route::resource('admins', AdminController::class);
+                //home_sliders
+                Route::get('home_sliders', [HomeSliderController::class, 'index'])->name('home_sliders.index');
+                Route::post('home_sliders/update', [HomeSliderController::class, 'update'])->name('home_sliders.update');
 
-                });
+                //home_slider_images
+                Route::resource('home_slider_images', HomeSliderImageController::class);
             });
         });
-
+    }
+);

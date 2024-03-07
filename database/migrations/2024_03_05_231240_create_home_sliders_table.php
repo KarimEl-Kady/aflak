@@ -25,6 +25,12 @@ return new class extends Migration
            $table->foreign('home_slider_id')->references('id')->on('home_sliders')->onDelete('cascade')->onUpdate('cascade');
            $table->timestamps();
         });
+
+        Schema::create('home_slider_images', function (Blueprint $table) {
+           $table->increments('id');
+           $table->string('image')->nullable();
+           $table->timestamps();
+        });
     }
 
     /**
@@ -34,5 +40,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('home_sliders');
         Schema::dropIfExists('home_slider_translations');
+        Schema::dropIfExists('home_slider_images');
     }
 };
