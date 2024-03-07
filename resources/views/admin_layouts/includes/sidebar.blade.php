@@ -71,22 +71,13 @@
 
                         </div>
                     </li>
-                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="#" class="menu-link menu-toggle">
-                            <span class="svg-icon menu-icon">
-                                <i class="fas fa-user-lock"></i>
-                            </span>
-                            <span class="menu-text">{{ __('messages.user_details') }}</span>
-                            {{-- <i class="menu-arrow"></i> --}}
-                        </a>
 
-                    </li>
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                         <a href="javascript:;" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>
                             </span>
-                            <span class="menu-text">{{ __('messages.requests') }}</span>
+                            <span class="menu-text">{{ __('messages.home_slider_images') }}</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="menu-submenu">
@@ -94,12 +85,17 @@
                             <ul class="menu-subnav">
                                 <li class="menu-item menu-item-parent" aria-haspopup="true">
                                     <span class="menu-link">
-                                        <span class="menu-text">{{ __('messages.requests') }}</span>
+                                        <span class="menu-text">{{ __('messages.Home') }}</span>
                                     </span>
                                 </li>
                                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                    <a href="#" class="menu-link">
-                                        <span class="menu-text">{{ __('messages.all') }}</span>
+                                    <a href="{{route('home_sliders.index')  }}" class="menu-link">
+                                        <span class="menu-text">{{ __('messages.home_slider') }}</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                    <a href="{{route('home_slider_images.index')  }}" class="menu-link">
+                                        <span class="menu-text">{{ __('messages.home_slider_image') }}</span>
                                     </a>
                                 </li>
 

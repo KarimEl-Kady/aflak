@@ -22,8 +22,12 @@ class DatabaseSeeder extends Seeder
             HomeSliderSeeder::class,
             AdvantageSeeder::class,
             ServiceSeeder::class,
-            HomeSliderSeeder::class,
-            // SettingSeeder::class,
+            // HomeSliderSeeder::class,
+            HomeSliderImageSeeder::class,
+            AboutUsSeeder::class,
+            AboutUsImageSeeder::class,
+            AboutUsFeatureSeeder::class,
+            
         ]);
     }
 }
