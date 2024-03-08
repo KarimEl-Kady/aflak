@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image')->nullable();
+            $table->string('icon')->nullable();
+
             $table->timestamps();
         });
         Schema::create('service_translations', function (Blueprint $table) {
