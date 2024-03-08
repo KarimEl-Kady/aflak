@@ -17,4 +17,13 @@ class AboutUsFeature extends Model
     public $translatedAttributes = ['title','text'];
 
     protected $guarded = [];
+    public function getImageLinkAttribute()
+    {
+        return $this->image ? asset($this->image) : '';
+    }
+
+    public function about_us()
+    {
+        return $this->belongsTo(AboutUs::class);
+    }
 }

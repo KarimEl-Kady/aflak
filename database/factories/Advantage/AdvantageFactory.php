@@ -18,7 +18,7 @@ class AdvantageFactory extends Factory
     public function definition(): array
     {
         $data = [];
-        $data['image'] = fake()->imageUrl(640, 480, 'animals', true);
+        $data['image'] ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLUMEziTPxBzsrAVjF75ZaWH8CzkuosMMbXg&usqp=CAU";
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
             $data[$localeCode] = [
                 'title' => fake()->text(20),

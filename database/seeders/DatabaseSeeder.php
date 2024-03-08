@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             AboutUsSeeder::class,
             AboutUsImageSeeder::class,
             AboutUsFeatureSeeder::class,
-            
+
         ]);
     }
 }
