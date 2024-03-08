@@ -13,4 +13,15 @@ class Service extends Model
     public $translatedAttributes = ['title','text'];
     protected $translationForeignKey = 'service_id';
     protected $guarded = [];
+
+    protected $appends = ["image_link", "icon_link"];
+    public function getImageLinkAttribute()
+    {
+        return $this->image ? asset($this->image) : '';
+    }
+
+    public function getIconLinkAttribute()
+    {
+        return $this->icon ? asset($this->icon) : '';
+    }
 }

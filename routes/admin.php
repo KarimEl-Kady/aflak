@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\StepController;
 use App\Models\HomeSlider\HomeSlider;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +49,12 @@ Route::group(
 
                 //why_us_features
                 Route::resource('about_us_features', AboutUsFeatureController::class);
+
+                //services
+                Route::resource('services', ServiceController::class);
+
+                //steps
+                Route::resource('steps', StepController::class);
 
             });
         });
