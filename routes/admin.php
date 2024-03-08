@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\AboutUsFeatureController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
@@ -34,6 +37,17 @@ Route::group(
 
                 //home_slider_images
                 Route::resource('home_slider_images', HomeSliderImageController::class);
+
+                //advantages
+                Route::resource('advantages', AdvantageController::class);
+
+                //about_us
+                Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us.index');
+                Route::post('about_us/update', [AboutUsController::class, 'update'])->name('about_us.update');
+
+                //why_us_features
+                Route::resource('about_us_features', AboutUsFeatureController::class);
+
             });
         });
     }

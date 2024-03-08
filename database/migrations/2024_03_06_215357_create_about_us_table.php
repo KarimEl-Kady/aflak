@@ -27,12 +27,14 @@ return new class extends Migration
 
         Schema::create('about_us_images'  , function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('about_us_id')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });
 
         Schema::create('about_us_features'  , function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('about_us_id')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

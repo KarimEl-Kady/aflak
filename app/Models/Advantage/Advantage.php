@@ -15,4 +15,11 @@ class Advantage extends Model
     protected $translationForeignKey = 'advantage_id';
 
     protected $guarded = [];
+
+    protected $appends  = ["image_link"];
+
+    public function getImageLinkAttribute()
+    {
+        return $this->image ? asset($this->image) : '';
+    }
 }

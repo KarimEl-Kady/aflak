@@ -15,5 +15,14 @@ class AboutUs extends Model
     public $translatedAttributes = ['title', 'text'];
 
     protected $guarded = [];
-    
+
+    public function features()
+    {
+        return $this->hasMany(AboutUsFeature::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(AboutUsImage::class);
+    }
 }
