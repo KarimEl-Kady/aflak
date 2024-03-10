@@ -1,0 +1,231 @@
+
+header {
+  background-color: #56a0dd;
+  .socia-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    a {
+      text-decoration: none;
+      color: white;
+      svg {
+        margin-left: 0.3rem;
+      }
+    }
+    .phones {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    p {
+      margin: 0 1rem;
+      font-size: 13px;
+      font-family: "Plain";
+    }
+    .logo {
+      svg {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+.navbar {
+  background-color: white;
+  border-bottom: 0.1px solid #969595;
+  .navbar-collapse {
+    justify-content: space-between;
+    .img {
+      margin-right: 1rem;
+      img {
+        width: 75px;
+      }
+    }
+
+    ul {
+      .nav-link {
+        &.active {
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            color: black;
+            text-align: center;
+            margin: 0 auto;
+          }
+        }
+      }
+      li {
+        font-size: 18px;
+        font-family: "semibold";
+        margin: 0.5rem;
+      }
+    }
+    .navbar-nav {
+      margin: 0 auto;
+    }
+  }
+  .btn-secondary {
+    background-color: white;
+    color: #3d4c5e;
+    border: 1px solid #3d4c5e;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "semibold";
+    transition: 0.5s all;
+    padding: 0.5rem 1rem;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "semibold";
+    }
+    &:hover {
+      background-color: #3d4c5e;
+      color: white;
+      transition: 0.5s all;
+    }
+  }
+  .chose-languge{
+    display: flex;
+    align-items: center;
+    .dropdown{
+      margin-right: 1.5rem;
+      img{
+        width: 25px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-family: "plain";
+      }
+      .dropdown-toggle{
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+// footer
+footer {
+  background-image: url(../img/foot.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 10rem 0 0;
+  .logo-footer {
+    p {
+      color: white;
+      font-size: 15px;
+      font-family: "light";
+    }
+    .icon {
+      display: flex;
+      .logo {
+        width: 30px;
+        height: 30px;
+        background-color: #56a0dd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        &:hover {
+          background-color: white;
+          color: #56a0dd;
+          
+          svg {
+            color: #56a0dd;
+          }
+        }
+        svg {
+          color: white;
+        }
+      }
+    }
+  }
+  .About-company {
+    margin-left: 2rem;
+    p {
+      color: white;
+      font-size: 22px;
+      font-family: "SemiBold";
+    }
+    h4 {
+      color: white;
+      font-size: 22px;
+      font-family: "SemiBold";
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      a {
+        text-decoration: none;
+      }
+      li {
+        color: #d9d9d9;
+        font-size: 16px;
+        font-family: "Bold";
+      }
+    }
+  }
+  .Communication-links {
+    margin-left: 2rem;
+    p {
+      font-size: 22px;
+      font-family: "semibold";
+      color: white;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      a {
+        text-decoration: none;
+      }
+      .icon {
+        color: white;
+        margin-right: 1rem;
+      }
+      p {
+        color: #daddde;
+        font-size: 16px;
+        font-family: "semilight";
+        margin: 0;
+      }
+      h6 {
+        color: white;
+        font-size: 16px;
+        font-family: "plain";
+      }
+    }
+  }
+  .Made-by {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    h6 {
+      color: white;
+      font-size: 14px;
+      font-family: "semilight";
+      span {
+        color: #be6b03;
+        font-size: 19px;
+        font-family: "bold";
+      }
+    }
+  }
+}
