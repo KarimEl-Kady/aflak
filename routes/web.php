@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Website\IndexController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,3 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () {
+
+
+        Route::get('/', [IndexController::class, 'index'])->name('home');
+    });

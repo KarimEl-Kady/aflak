@@ -1,0 +1,5 @@
+@include("Website.website_layouts.includes.header")
+@include("Website.website_layouts.includes.top_nav")
+@include("Website.website_layouts.includes.navbar")
+@yield("content")
+@include("Website.website_layouts.includes.footer")

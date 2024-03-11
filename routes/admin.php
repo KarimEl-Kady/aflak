@@ -5,8 +5,13 @@ use App\Http\Controllers\Admin\AboutUsFeatureController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\EmailNewsController;
+use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
+use App\Http\Controllers\Admin\SectionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\StepController;
 use App\Models\HomeSlider\HomeSlider;
@@ -55,6 +60,21 @@ Route::group(
 
                 //steps
                 Route::resource('steps', StepController::class);
+
+                //hashtags
+                Route::resource('hashtags', HashtagController::class);
+
+                //sections
+                Route::resource('sections', SectionController::class);
+
+                //blogs
+                Route::resource('blogs', BlogController::class);
+
+                //clients
+                Route::resource('clients', ClientController::class);
+
+                //email_news
+                Route::resource('email_news', EmailNewsController::class);
 
             });
         });

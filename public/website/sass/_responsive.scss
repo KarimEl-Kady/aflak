@@ -1,0 +1,316 @@
+@import "./responsive/_smLaptop.scss";
+@import "./responsive/_tablet.scss";
+@import "./responsive/_mobile.scss";
+
+@media (max-width: 900px) {
+  .navbar .navbar-collapse .navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+  }
+  .navbar .navbar-collapse .img {
+    text-align: center;
+  }
+  .home .mySwiper1 .contant-on-swiper h3 {
+    font-size: 35px;
+  }
+  .home .mySwiper1 .contant-on-swiper h6 {
+    font-size: 21px;
+  }
+  .home .mySwiper1 .contant-on-swiper p {
+    font-size: 15px;
+  }
+  .home .mySwiper1 .contant-on-swiper .btn-light {
+    font-size: 15px;
+  }
+  .home .mySwiper1 .swiper-button-next {
+    width: 50px;
+    height: 50px;
+  }
+  .home .mySwiper1 .contant-on-swiper {
+    width: 75%;
+    margin: 0 13%;
+  }
+  .home .mySwiper1 .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+  .home .advantges-home .About-Us .About-Us-Experiences .Experiences {
+    margin-bottom: 1rem;
+  }
+  .home .advantges-home .About-Us .mySwiper2 .swiper-slide img {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .swiper-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+    text-align: center;
+  }
+  .home .Services .card-Services .card-one {
+    margin: 0.5rem 0;
+  }
+  .home .contact-us .title h4 {
+    font-size: 25px;
+  }
+  .home .contact-us .title h6 {
+    color: #daddde;
+    font-size: 15px;
+    font-family: "plain";
+    width: 100%;
+  }
+  .Subscribe {
+    padding: 1rem;
+  }
+  .logo-footer {
+    margin: 1rem 0 2rem;
+  }
+  footer .About-company ul li {
+    margin: 1rem 0;
+  }
+  .pagge-serves .Important-Services .items-Services .text h4 {
+    font-size: 20px;
+  }
+  .pagge-serves .Important-Services .items-Services .text p {
+    font-size: 15px;
+  }
+  .pagge-serves .title h5 {
+    font-size: 25px;
+  }
+  .pagge-serves .Important-Services .contant .text h4 {
+    font-size: 19px;
+  }
+  .pagge-serves .Important-Services .contant .text p {
+    font-size: 15px;
+  }
+  .pagge-serves .Important-Services .items-Services .img {
+    margin: 0 1rem;
+  }
+  .read-blog .head h4 {
+    font-size: 25px;
+  }
+  .read-blog .contant p {
+    font-size: 17px;
+    margin-bottom: 2rem;
+  }
+  .page-about-us .Our-Story .shipping-services .title h5 {
+    font-size: 25px;
+    width: 100%;
+  }
+  .page-about-us .Our-Story .img img {
+    width: 50%;
+  }
+  .page-about-us .Our-Story .img-two img {
+    width: 50%;
+  }
+  .page-about-us .Our-Story .shipping-services .xperiencee {
+    margin-top: 2rem;
+  }
+  .page-about-us .About-Logistics .tab-content .contant .text p {
+    color: #656b78;
+    font-size: 15px;
+    width: 90%;
+  }
+  .our-blog-page .card-plog h4 {
+    font-size: 20px;
+  }
+  .our-blog-page .card-plog p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 800px) {
+  header .socia-media {
+    flex-direction: column-reverse;
+  }
+  header .socia-media .phones {
+    justify-content: space-between;
+    width: 100%;
+    align-items: end;
+  }
+  header .socia-media .logo {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  header .socia-media p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .mySwiper1 .contant-on-swiper h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  .home .mySwiper1 .contant-on-swiper h6 {
+    font-size: 13px;
+  }
+  .home .advantges-home .head .title h1 {
+    font-size: 65px;
+  }
+  .home .mySwiper1 .contant-on-swiper p {
+    font-size: 13px;
+    width: 100%;
+  }
+  .home .mySwiper1 .contant-on-swiper {
+    width: 80%;
+    margin: 0 10%;
+    top: 25px;
+  }
+  .home .mySwiper1 img {
+    width: 100%;
+    height: 65vh;
+  }
+  .home .advantges-home .About-Us .About-Us-Experiences .title h1 {
+    font-size: 65px;
+  }
+  .home .advantges-home .About-Us .About-Us-Experiences .title h4 {
+    font-size: 25px;
+    width: 100%;
+  }
+  .home .advantges-home .About-Us .About-Us-Experiences .title h6 {
+    font-size: 14px;
+    width: 100%;
+  }
+  .home
+    .advantges-home
+    .About-Us
+    .About-Us-Experiences
+    .Experiences
+    .describe
+    h5 {
+    font-size: 18px;
+  }
+  .home
+    .advantges-home
+    .About-Us
+    .About-Us-Experiences
+    .Experiences
+    .describe
+    p {
+    font-size: 14px;
+  }
+  .home .advantges-home .About-Us .mySwiper2 .swiper-slide img {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  .home .Services .title h1 {
+    font-size: 65px;
+  }
+  .home .Services .title h5 {
+    font-size: 25px;
+  }
+  .home .Services .card-Services .card-one h4 {
+    font-size: 17px;
+  }
+  .home .Services .card-Services .card-one p {
+    font-size: 14px;
+  }
+  .home .how-it-work .title h1 {
+    font-size: 65px;
+  }
+  .home .how-it-work .title h5 {
+    font-size: 26px;
+  }
+  .home .how-it-work .vidio .shado {
+    padding: 2rem 0 0;
+  }
+  .home .BLOGs .title .contant h1 {
+    font-size: 65px;
+  }
+  .home .BLOGs .title .contant h5 {
+    font-size: 23px;
+    margin-bottom: 1rem;
+  }
+  .home .BLOGs .title {
+    flex-direction: column;
+    align-items: end;
+  }
+  .home .BLOGs .news h4 {
+    font-size: 20px;
+  }
+  .home .BLOGs .news h6 {
+    font-size: 15px;
+  }
+  footer .Made-by {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pagge-serves .our-services h4 {
+    font-size: 30px;
+  }
+  .pagge-serves .title h1 {
+    font-size: 65px;
+  }
+  .pagge-serves .title p::after {
+    right: 100px;
+    top: 12px;
+  }
+  .pagge-serves .title h5 {
+    font-size: 20px;
+  }
+  .pagge-serves .Important-Services .items-Services {
+    flex-direction: column;
+  }
+  .pagge-serves .Important-Services .items-Services .img {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .pagge-serves .Important-Services .items-Services .text h4 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .pagge-serves .Important-Services .items-Services .text {
+    width: 95%;
+  }
+  .read-blog .head {
+    width: 100%;
+  }
+  .read-blog .contant .galary img {
+    width: 45%;
+    margin: 0 auto;
+  }
+  .read-blog .contant p {
+    font-size: 14px;
+  }
+  .page-about-us .about-us h4 {
+    font-size: 29px;
+  }
+  .page-about-us .Our-Story .shipping-services .title h1 {
+    font-size: 65px;
+  }
+  .page-about-us .Our-Story .shipping-services .xperiencee {
+    flex-direction: column;
+  }
+  .page-about-us .Our-Story .shipping-services .xperiencee .years-experience {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 80%);
+    margin: 0 auto;
+  }
+  .page-about-us .advantges-home .head .title h1 {
+    font-size: 65px;
+  }
+  .page-about-us .About-Logistics .tab-content .contant .text p {
+    color: #656b78;
+    font-size: 13px;
+    width: 90%;
+  }
+  .our-blog-page .head-blog h4 {
+    font-size: 30px;
+  }
+  .our-blog-page .card-plog h4 {
+    font-size: 17px;
+  }
+  .our-blog-page .card-plog p {
+    font-size: 13px;
+  }
+  .page-contact-us .Related-posts {
+    margin-top: 1rem;
+  }
+  .page-erro .page-not-found h4 {
+    font-size: 30px;
+    font-family: "plain";
+  }
+  .page-erro .page-not-found p {
+    font-size: 0.9rem;
+  }
+}
