@@ -205,13 +205,13 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="img/swip1.png" alt="" />
+              <img src="/website/img/swip1.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="img/swip2.png" alt="" />
+              <img src="/website/img/swip2.png" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="img/swip3.png" alt="" />
+              <img src="/website/img/swip3.png" alt="" />
             </div>
           </div>
         </div>
@@ -243,7 +243,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
       <div class="col-lg-3 col-md-6 col-12">
         <div class="card-one">
           <div class="img">
-            <img src="img/card4.png" alt="" />
+            <img src="/website/img/card4.png" alt="" />
             <div class="icon"></div>
           </div>
 
@@ -263,7 +263,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
       <div class="col-lg-3 col-md-6 col-12">
         <div class="card-one">
           <div class="img">
-            <img src="img/card3.png" alt="" />
+            <img src="/website/img/card3.png" alt="" />
             <div class="icon-two"></div>
           </div>
           <h4>OCEAN FREIGHT</h4>
@@ -282,7 +282,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
       <div class="col-lg-3 col-md-6 col-12">
         <div class="card-one">
           <div class="img">
-            <img src="img/card2.png" alt="" />
+            <img src="/website/img/card2.png" alt="" />
             <div class="icon-three"></div>
           </div>
           <h4>OCEAN FREIGHT</h4>
@@ -336,7 +336,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
     <p>How It’s Work</p>
     <h5>How to send your <span>package</span> ?</h5>
   </div>
-  <div class="img"><img src="img/po.png" alt="" /></div>
+  <div class="img"><img src="/website/img/po.png" alt="" /></div>
 </div>
 <!-- Learn How We Work gif -->
 <div class="vidio">
@@ -346,7 +346,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
       data-bs-toggle="modal"
       data-bs-target="#staticBackdrop"
     >
-      <img src="img/vidio3.png" alt="" />
+      <img src="/website/img/vidio3.png" alt="" />
     </div>
     <!-- Modal -->
     <div
@@ -388,28 +388,28 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
 <div class="swiper mySwiper3">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <img src="img/swiper1.png" alt="" />
+      <img src="/website/img/swiper1.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper2.png" alt="" />
+      <img src="/website/img/swiper2.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper3.png" alt="" />
+      <img src="/website/img/swiper3.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper4.png" alt="" />
+      <img src="/website/img/swiper4.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper5.png" alt="" />
+      <img src="/website/img/swiper5.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper6.png" alt="" />
+      <img src="/website/img/swiper6.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper7.png" alt="" />
+      <img src="/website/img/swiper7.png" alt="" />
     </div>
     <div class="swiper-slide">
-      <img src="img/swiper8.png" alt="" />
+      <img src="/website/img/swiper8.png" alt="" />
     </div>
   </div>
 </div>
@@ -516,7 +516,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
         <div class="Updates-news">
           <div class="img">
             <a href="read-blog.html">
-              <img src="img/air1.png" alt="" />
+              <img src="/website/img/air1.png" alt="" />
             </a>
           </div>
           <h4>
@@ -545,7 +545,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
         <div class="Updates-news">
           <div class="img">
             <a href="read-blog.html">
-              <img src="img/air2.png" alt="" />
+              <img src="/website/img/air2.png" alt="" />
             </a>
           </div>
           <h4>
@@ -559,7 +559,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
         <div class="Updates-news">
           <div class="img">
             <a href="read-blog.html">
-              <img src="img/air3.png" alt="" />
+              <img src="/website/img/air3.png" alt="" />
             </a>
           </div>
           <h4>
@@ -596,7 +596,7 @@ data-aos-easing="ease-out-cubic" data-aos-duration="1300">
 
         <div class="telgram">
           <button type="button" class="btn btn-primary">
-            <img src="img/tel.png" alt="" />
+            <img src="/website/img/tel.png" alt="" />
           </button>
         </div>
       </div>
