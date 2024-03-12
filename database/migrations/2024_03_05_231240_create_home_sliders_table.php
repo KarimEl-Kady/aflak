@@ -20,6 +20,7 @@ return new class extends Migration
            $table->increments('id');
            $table->unsignedInteger('home_slider_id')->nullable();
            $table->string('title')->nullable();
+           $table->string('subtitle')->nullable();
            $table->string('text')->nullable();
            $table->string('locale')->nullable();
            $table->foreign('home_slider_id')->references('id')->on('home_sliders')->onDelete('cascade')->onUpdate('cascade');

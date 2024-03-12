@@ -22,6 +22,7 @@ class HomeSliderFactory extends Factory
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
             $data[$localeCode] = [
                 'title' => fake()->text(20),
+                'subtitle' => fake()->text(20),
                 'text' => fake()->text(50),
             ];
         }

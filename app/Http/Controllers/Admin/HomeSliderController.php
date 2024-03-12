@@ -22,15 +22,16 @@ class HomeSliderController extends Controller
 
     public function update(UpdateRequest $request)
     {
-
+        // dd($request->all());
         $home_slider = HomeSlider::firstOrCreate();
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-            $data[$localeCode] = ['title' => $request['title-' . $localeCode],
-                                 'text' => $request['text-' . $localeCode],
-          ];
+            $data[$localeCode] = [
+                'title' => $request['title-' . $localeCode],
+                'subtitle' => $request['subtitle-' . $localeCode],
+                'text' => $request['text-' . $localeCode],
+            ];
         }
-
-
+        // dd($data);
         $home_slider->update($data);
 
 

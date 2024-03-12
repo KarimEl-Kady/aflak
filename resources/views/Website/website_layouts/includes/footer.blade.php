@@ -38,10 +38,10 @@
           <div class="About-company">
             <p>About company</p>
             <ul>
-              <a href="#"><li>.. Home</li></a>
+              <a href="home"><li>.. Home</li></a>
               <a href="#"><li>About us</li></a>
-              <a href="#"><li>services</li></a>
-              <a href="#"> <li>blogs</li></a>
+              <a href="services"><li>services</li></a>
+              <a href="blogs"> <li>blogs</li></a>
             </ul>
           </div>
         </div>

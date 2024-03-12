@@ -27,6 +27,8 @@ class UpdateRequest extends FormRequest
         foreach (LaravelLocalization::getSupportedLocales() as
         $localeCode => $properties) {
              $validators['title-' . $localeCode] = ['required'];
+             $validators['subtitle-' . $localeCode] = ['required'];
+
              $validators['text-' . $localeCode] = ['required'];
          }
 
