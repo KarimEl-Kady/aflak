@@ -14,6 +14,6 @@ class HomeSliderSeeder extends Seeder
     public function run(): void
     {
         //
-        HomeSlider::factory(5)->create();
+        HomeSlider::factory(1)->create();
     }
 }

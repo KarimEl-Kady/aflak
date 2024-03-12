@@ -18,7 +18,7 @@
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="home"
                   >Home</a
                 >
                 <div class="point"></div>
@@ -28,11 +28,11 @@
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Services.html">Services</a>
+                <a class="nav-link" href="services">Services</a>
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Blogs.html">Blogs</a>
+                <a class="nav-link" href="blogs">Blogs</a>
                 <div class="point"></div>
               </li>
             </ul>
@@ -58,7 +58,7 @@
                   <li><a class="dropdown-item" href="#">Another languge</a></li>
                 </ul>
               </div>
-              <a href="contact-us.html"
+              <a href="contact_us"
                 ><button type="button" class="btn btn-secondary">
                   Contact Us
                 </button></a

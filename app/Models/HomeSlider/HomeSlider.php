@@ -11,8 +11,8 @@ class HomeSlider extends Model
     use HasFactory , Translatable;
     protected $table = 'home_sliders';
 
-    public $translatedAttributes = ['title','text'];
+    public $translatedAttributes = ['title' , 'subtitle' ,'text'];
     protected $translationForeignKey = 'home_slider_id';
-    
+
     protected $guarded = [];
 }

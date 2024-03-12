@@ -64,6 +64,27 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
+                                        {{ __('messages.subtitle_' . $localeCode) }}
+                                        <span class="text-danger"> ( {{ $localeCode }} )</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input type="text" class="form-control" name="subtitle-{{ $localeCode }}"
+                                            value={{ $home_slider->translate($localeCode)->subtitle }}>
+                                    </div>
+
+                                </div>
+                            </div>
+                        @endforeach
+
+
+                    </div>
+
+                    <div class="row">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <!-- For loop this div -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label>
                                         {{ __('messages.text_' . $localeCode) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
