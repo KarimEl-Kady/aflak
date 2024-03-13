@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\EmailNewsController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
+use App\Http\Controllers\Admin\JoinSectionController;
 use App\Http\Controllers\Admin\SectionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\StepController;
@@ -75,6 +76,9 @@ Route::group(
 
                 //email_news
                 Route::resource('email_news', EmailNewsController::class);
+
+                //join_sections
+                Route::resource('join_sections', JoinSectionController::class);
 
             });
         });

@@ -34,7 +34,7 @@ class StepController extends Controller
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
             $data[$localeCode] = [
                 'title' => $request['title-' . $localeCode],
-                'text' => $request['text-' . $localeCode],
+                // 'text' => $request['text-' . $localeCode],
             ];
         }
 
@@ -60,7 +60,7 @@ class StepController extends Controller
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
             $data[$localeCode] = [
                 'title' => $request['title-' . $localeCode],
-                'text' => $request['text-' . $localeCode],
+                // 'text' => $request['text-' . $localeCode],
             ];
         }
 

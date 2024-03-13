@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Step;
+namespace App\Http\Requests\Admin\JoinSection;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -26,6 +26,7 @@ class UpdateRequest extends FormRequest
 
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
             $rules["title-$localeCode"] = "required";
+            $rules["text-$localeCode"] = "required";
         }
 
         $rules['image'] = 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048';

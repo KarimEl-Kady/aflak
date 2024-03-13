@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Website\BlogController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\IndexController;
 use App\Http\Controllers\Website\ServiceController;
@@ -30,4 +31,7 @@ Route::group(
 
         Route::get('services', [ServiceController::class, 'index'])->name('services');
 
+
+        Route::get('blog', [BlogController::class, 'index'])->name('blog');
+        Route::get('blog/{id}', [BlogController::class, 'show'])->name('blog.show');
     });

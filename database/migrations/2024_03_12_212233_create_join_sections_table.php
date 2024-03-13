@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('steps', function (Blueprint $table) {
+        Schema::create('join_sections', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('step_translations', function (Blueprint $table) {
+        Schema::create('join_section_translations', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('step_id')->nullable();
+            $table->unsignedInteger('join_section_id')->nullable();
             $table->string('locale')->index();
             $table->string('title')->nullable();
-            $table->foreign('step_id')->references('id')->on('steps')->onDelete('cascade')->onUpdate('cascade');
+            $table->longText('text')->nullable();
+            $table->foreign('join_section_id')->references('id')->on('join_sections')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
-
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('steps');
+        Schema::dropIfExists('join_sections');
     }
 };
