@@ -28,13 +28,13 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.edit_steps') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.edit_join_sections') }}</h3>
                 </div>
             </div>
 
 
             <div class="card-body">
-                <form method="post" action="{{ route('steps.update', $step->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('join_sections.update', $join_section->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -49,7 +49,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $step->translate($localeCode)->title }}>
+                                            value={{ $join_section->translate($localeCode)->title }}>
                                     </div>
 
                                 </div>
@@ -59,7 +59,26 @@
 
                     </div>
 
-               
+                    <div class="row">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <!-- For loop this div -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label>
+                                        {{ __('messages.text_' . $localeCode) }}
+                                        <span class="text-danger"> ( {{ $localeCode }} )</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input type="text" class="form-control" name="text-{{ $localeCode }}"
+                                            value={{ $join_section->translate($localeCode)->text }}>
+                                    </div>
+
+                                </div>
+                            </div>
+                        @endforeach
+
+
+                    </div>
 
                     <div class="row">
                         <div class="col-8 mx-auto">

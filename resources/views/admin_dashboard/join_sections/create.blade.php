@@ -28,15 +28,14 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.edit_steps') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.add_join_section') }}</h3>
                 </div>
             </div>
 
 
             <div class="card-body">
-                <form method="post" action="{{ route('steps.update', $step->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('join_sections.store') }}" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
 
                     <div class="row">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -49,7 +48,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $step->translate($localeCode)->title }}>
+                                        >
                                     </div>
 
                                 </div>
@@ -59,7 +58,26 @@
 
                     </div>
 
-               
+                    <div class="row">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <!-- For loop this div -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label>
+                                        {{ __('messages.text_' . $localeCode) }}
+                                        <span class="text-danger"> ( {{ $localeCode }} )</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input type="text" class="form-control" name="text-{{ $localeCode }}"
+                                        >
+                                    </div>
+
+                                </div>
+                            </div>
+                        @endforeach
+
+
+                    </div>
 
                     <div class="row">
                         <div class="col-8 mx-auto">

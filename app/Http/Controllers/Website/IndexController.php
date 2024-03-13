@@ -7,8 +7,11 @@ use App\Models\AboutUs\AboutUs;
 use App\Models\AboutUs\AboutUsFeature;
 use App\Models\AboutUs\AboutUsImage;
 use App\Models\Advantage\Advantage;
+use App\Models\Blog\Blog;
+use App\Models\Client\Client;
 use App\Models\HomeSlider\HomeSlider;
 use App\Models\HomeSlider\HomeSliderimage;
+use App\Models\JoinSection\JoinSection;
 use App\Models\Service\Service;
 use App\Models\Step\Step;
 use Illuminate\Http\Request;
@@ -28,6 +31,27 @@ class IndexController extends Controller
         $aboutus_features = AboutUsFeature::get();
         $aboutus_images = AboutUsImage::get();
         $steps = Step::get();
-        return view($this->view . 'index', compact('home_slider' , 'home_slider_images' , 'advantages'  , 'services' , 'aboutus' , 'aboutus_features' , 'aboutus_images' , 'steps'));
+        $join_section = JoinSection::first();
+        $clients = Client::get();
+        $last_blog = Blog::latest()->first(); // Get the last blog added
+
+        $blogs = Blog::where('id', '!=', $last_blog->id) // Exclude the last blog added
+            ->orderBy('id', 'desc') // Order the blogs by ID in descending order
+            ->get(); // Retrieve the results
+
+    return view($this->view . 'index', compact(
+            'home_slider',
+            'home_slider_images',
+            'advantages',
+            'services',
+            'aboutus',
+            'aboutus_features',
+            'aboutus_images',
+            'steps',
+            'join_section',
+            'clients',
+            'blogs',
+            'last_blog'
+        ));
     }
 }

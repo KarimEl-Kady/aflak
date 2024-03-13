@@ -58,27 +58,7 @@
 
                     </div>
 
-                    <div class="row">
-                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <!-- For loop this div -->
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <label>
-                                        {{ __('messages.text_' . $localeCode) }}
-                                        <span class="text-danger"> ( {{ $localeCode }} )</span>
-                                    </label>
-                                    <div class="text-input">
-                                        <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                        >
-                                    </div>
-
-                                </div>
-                            </div>
-                        @endforeach
-
-
-                    </div>
-
+                  
                     <div class="row">
                         <div class="col-8 mx-auto">
                             <div class="uploadOuter">

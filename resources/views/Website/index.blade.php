@@ -152,16 +152,24 @@
     <!-- Services -->
 
     <!-- how-it-work -->
-    <div class="how-it-work">
-        <div class="container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+    {{-- <div class="how-it-work">
+        <div
+        class="container"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <div class="title">
                 <h1>How</h1>
                 <p>How It’s Work</p>
                 <h5>How to send your <span>package</span> ?</h5>
             </div>
             @foreach ($steps as $step  )
-
-            <div class="img"><img src="{{ $step->image_link ?? ''}}" alt="" /></div>
+            <div class="item-one">
+                <div class="icon">
+                    <img src="{{ $step->image_link }}" alt="">
+                </div>
+                <p>{{ $step->title }}</p>
+              </div>
             @endforeach
         </div>
         <!-- Learn How We Work gif -->
@@ -222,177 +230,276 @@
             </div>
         </div>
         <!-- swiper3 logo -->
-    </div>
-    <!-- how-it-work -->
+    </div> --}}
+    <div class="how-it-work">
+        <div
+          class="container"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          <div class="title">
+            <h1>How</h1>
+            <p>How It’s Work</p>
+            <h5>How to send your <span>package</span> ?</h5>
+          </div>
+          <div class="items-package">
+            <div class="item-one">
+              <div class="icon">
+                  <img src="img/list.svg" alt="">
+              </div>
+              <p>Make An Order</p>
+            </div>
+            <div class="item-one">
+              <div class="icon">
+                  <img src="img/XMLID_246_.svg" alt="">
+              </div>
+              <p>Track Your Order</p>
+            </div>
+            <div class="item-one">
+              <div class="icon">
+                  <img src="img/Layer_2_16_.svg" alt="">
+              </div>
+              <p>Wait For Pickup</p>
+            </div>
+            <div class="item-one">
+              <div class="icon">
+                  <img src="img/outline.svg" alt="">
+              </div>
+              <p>Finish And Rate Us</p>
+            </div>
+          </div>
+        <!-- Learn How We Work gif -->
+        <div class="vidio">
+            <div class="shado">
+              <div
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <img src="img/vidio3.png" alt="" />
+              </div>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="100%" controls style="border-radius: 10px">
+                        <source
+                          src="img/pexels-taryn-elliott-5309381 (1080p).mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6>Learn How We Work</h6>
+            </div>
+          </div>
+          <!-- Learn How We Work gif -->
 
-    <!-- contact us -->
 
-    <div class="container">
+        <!-- swiper3 logo -->
+        <div class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            @foreach ($clients as $client)
+
+            <div class="swiper-slide">
+                <img src="{{ $client->image_link }}" alt="" />
+            </div>
+            @endforeach
+
+          </div>
+        </div>
+        <!-- swiper3 logo -->
+      </div>
+      <!-- how-it-work -->
+
+      <!-- contact us -->
+
+      <div class="container">
         <div class="contact-us">
-            <div class="row">
-                <div class="col-lg-7 col-md-5 col-12">
-                    <div class="title">
-                        <p>contact us</p>
-                        <h4>We are here for you</h4>
-                        <h6>
-                            Our headquarter is located in Cairo, Egypt. Our services
-                            expanded throughout Egypt ports (Alexandria old port, SOKHNA
-                            port, DEKHEILA port , CAI airport)
-                        </h6>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-7 col-12">
-                    <form>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput">Your Name:</label>
-                            <input type="text" class="form-control" placeholder="your name" />
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-6">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Your Email:</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="your email" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-6">
-                                <div class="form-group">
-                                    <label for="phone">Phone No:</label>
-                                    <input type="number" class="form-control" placeholder="your Phone" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-6">
-                                <div class="form-group">
-                                    <label for="phone">Freight type:</label>
-                                    <select class="form-control">
-                                        <option>select</option>
-                                        <option>Default select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-6">
-                                <div class="form-group">
-                                    <label for="phone">Load:</label>
-                                    <select class="form-control">
-                                        <option>select</option>
-                                        <option>Default select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary">
-                            SUBMIT REQUEST
-                        </button>
-                    </form>
-                </div>
+          <div class="row">
+            <div class="col-lg-7 col-md-5 col-12">
+              <div class="title">
+                <p>contact us</p>
+                <h4>We are here for you</h4>
+                <h6>
+                  Our headquarter is located in Cairo, Egypt. Our services
+                  expanded throughout Egypt ports (Alexandria old port, SOKHNA
+                  port, DEKHEILA port , CAI airport)
+                </h6>
+              </div>
             </div>
-        </div>
-    </div>
-    <!-- contact us -->
-
-    <!-- BLOGS -->
-    <div class="BLOGs" data-aos="zoom-in-up" data-aos-duration="2000">
-        <div class="container">
-            <div class="title">
-                <div class="contant">
-                    <h1>BLOGS</h1>
-                    <p>Blog & News</p>
-                    <h5>We Provide All The Necessary <span>Updates</span></h5>
+            <div class="col-lg-5 col-md-7 col-12">
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Your Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="your name"
+                  />
                 </div>
-                <a href="read-blog.html"><button type="button" class="btn btn-light">Show more</button></a>
-            </div>
-            <div class="news">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <div class="Updates-news">
-                            <div class="img">
-                                <a href="read-blog.html">
-                                    <img src="img/air1.png" alt="" />
-                                </a>
-                            </div>
-                            <h4>
-                                How To Implement Sustainability In Inventory Management
-                            </h4>
-                            <p>February 3, 2024</p>
-                            <h6>
-                                As the world’s leading logistics company, we have a
-                                responsibility to set an example in our industry and be a
-                                sustainability leader. That means reducing our carbon
-                                footprint and setting the highest social and governance
-                                standards. Over the years, we have repeatedly redefined
-                                logistics, from pioneering the first green logistics product
-                                to becoming the first logistics company to commit to a
-                                zero-emissions target. Today we offer the most comprehensive
-                                portfolio of green logistics solutions in the industry.But
-                                we can make an even greater impact when we join forces with
-                                you. Together with many customers
-                            </h6>
-                            <a href="read-blog.html">
-                                <h5>Read More <i class="fa-solid fa-arrow-right"></i></h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <div class="Updates-news">
-                            <div class="img">
-                                <a href="read-blog.html">
-                                    <img src="img/air2.png" alt="" />
-                                </a>
-                            </div>
-                            <h4>
-                                How To Implement Sustainability In Inventory Management
-                            </h4>
-                            <p>February 3, 2024</p>
-                            <a href="read-blog.html">
-                                <h5>Read More <i class="fa-solid fa-arrow-right"></i></h5>
-                            </a>
-                        </div>
-                        <div class="Updates-news">
-                            <div class="img">
-                                <a href="read-blog.html">
-                                    <img src="img/air3.png" alt="" />
-                                </a>
-                            </div>
-                            <h4>
-                                How To Implement Sustainability In Inventory Management
-                            </h4>
-                            <p>February 3, 2024</p>
-                            <a href="read-blog.html">
-                                <h5>Read More <i class="fa-solid fa-arrow-right"></i></h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- BLOGS -->
-
-    <!-- subscibe -->
-    <div class="container">
-        <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
-            <p>Get the latest news and events</p>
-            <h4>Subscribe now to see the latest offers</h4>
-            <form>
-                <div class="col-lg-5 col-md-8 col-12">
+                  <div class="col-lg-6 col-md-6 col-6">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="enter your email adress" />
-                        <div class="email"><img src="img/sms.svg" alt="" /></div>
+                      <label for="exampleInputEmail1">Your Email:</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="your email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-6">
+                    <div class="form-group">
+                      <label for="phone">Phone No:</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="your Phone"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-6">
+                    <div class="form-group">
+                      <label for="phone">Freight type:</label>
+                      <select class="form-control">
+                        <option>select</option>
+                        <option>Default select</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-6">
+                    <div class="form-group">
+                      <label for="phone">Load:</label>
+                      <select class="form-control">
+                        <option>select</option>
+                        <option>Default select</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  SUBMIT REQUEST
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact us -->
 
-                        <div class="telgram">
-                            <button type="button" class="btn btn-primary">
-                                <img src="img/tel.png" alt="" />
-                            </button>
-                        </div>
+      <!-- BLOGS -->
+      <div class="BLOGs" data-aos="zoom-in-up" data-aos-duration="2000">
+        <div class="container">
+          <div class="title">
+            <div class="contant">
+              <h1>BLOGS</h1>
+              <p>Blog & News</p>
+              <h5>We Provide All The Necessary <span>Updates</span></h5>
+            </div>
+            <a href="read-blog.html"
+              ><button type="button" class="btn btn-light">Show more</button></a
+            >
+          </div>
+          <div class="news">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="Updates-news">
+                        <div class="img">
+                            <a href="{{ route('blog.show', $last_blog->id) }}">
+                                <img src="{{ $last_blog->image_link }}" alt="" />
+                            </a>
+                  </div>
+                  <h4>
+{{$last_blog->title}}                  </h4>
+                  <p>{{ $last_blog->created_at->format( 'd-%B-y') }}</p>
+                  <h6>
+                   {{$last_blog->text}}
+                </h6>
+                <a href="{{ route('blog.show', $last_blog->id) }}">
+                    <h5>Read More <i class="fa-solid fa-arrow-right"></i></h5
+                        ></a>
                     </div>
                 </div>
-            </form>
+
+              <div class="col-lg-6 col-md-12 col-12">
+                @foreach ($blogs as $blog)
+                <div class="Updates-news">
+                  <div class="img">
+                    <a href="read-blog.html">
+                      <img src="{{ $blog->image_link }}" alt="" />
+                    </a>
+                  </div>
+                  <h4>
+{{$blog->title}}                  </h4>
+                  <p>{{ $blog->created_at->format( 'd-%B-y') }}</p>
+                  <a href="{{ route('blog.show', $blog->id) }}"
+                    ><h5>Read More <i class="fa-solid fa-arrow-right"></i></h5
+                  ></a>
+                </div>
+                @endforeach
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- subscibe -->
+      </div>
+      <!-- BLOGS -->
+
+      <!-- subscibe -->
+      <div class="container">
+        <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
+          <p>Get the latest news and events</p>
+          <h4>Subscribe now to see the latest offers</h4>
+          <form>
+            <div class="col-lg-5 col-md-8 col-12">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="enter your email adress"
+                />
+                <div class="email"><img src="img/sms.svg" alt="" /></div>
+
+                <div class="telgram">
+                  <button type="button" class="btn btn-primary">
+                    <img src="img/tel.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- subscibe -->
+
+
 @endsection
 
 <!-- mySwiper1 -->
