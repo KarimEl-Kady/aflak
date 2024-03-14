@@ -49,7 +49,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $advantage->translate($localeCode)->title }}>
+                                            value="{{ $advantage->translate($localeCode)->title }}"/>
                                     </div>
 
                                 </div>
@@ -70,7 +70,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $advantage->translate($localeCode)->text }}>
+                                            value="{{ $advantage->translate($localeCode)->text }}"/>
                                     </div>
 
                                 </div>

@@ -1,4 +1,40 @@
+     <!-- subscibe -->
+     <div class="container">
+        <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
+          <p>Get the latest news and events</p>
+          <h4>Subscribe now to see the latest offers</h4>
+          <form action="{{ route('send_email') }}" method="POST">
+            @csrf
+            <div class="col-lg-5 col-md-8 col-12">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        name="email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter your email address"
+                        required
+                    />
+                    <div class="email"><img src="img/sms.svg" alt="" /></div>
+
+                    <div class="telgram">
+                        <button type="submit" class="btn btn-primary">
+                            <img src="/website/img/tel.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        </div>
+      </div>
+      <!-- subscibe -->
+
 <footer>
+
+
+    <!-- footer -->
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-12">

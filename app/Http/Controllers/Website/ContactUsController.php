@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Website\EmailNews\StoreRequest;
+use App\Models\NewsEmail\NewsEmail;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -15,4 +17,5 @@ class ContactUsController extends Controller
         return view($this->view . 'index');
     }
 
+    
 }

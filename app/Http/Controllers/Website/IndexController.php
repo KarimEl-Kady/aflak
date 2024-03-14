@@ -37,6 +37,7 @@ class IndexController extends Controller
 
         $blogs = Blog::where('id', '!=', $last_blog->id) // Exclude the last blog added
             ->orderBy('id', 'desc') // Order the blogs by ID in descending order
+            ->take(2)
             ->get(); // Retrieve the results
 
     return view($this->view . 'index', compact(
