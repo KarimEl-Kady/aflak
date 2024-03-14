@@ -41,8 +41,8 @@
                                 <div class="card-one">
                                     <h6>{{ $advantage->title }}</h6>
                                     <div class="contant">
-                                        <img src="{{ $advantage->image_link ?? '' }}" alt="{{ $advantage->title }}"
-                                            class="icon" />
+                                        <img src="{{ $advantage->image_link ?? '' }}" alt="{{ $advantage->title }} "
+                                           style="width: 38; height: 38" />
                                         <div class="description">
                                             <p>
                                                 {{ $advantage->text ?? '' }}</p>
@@ -71,7 +71,7 @@
                                 <div class="Experiences">
 
                                     <div class="img">
-                                        <img src="{{ $feature->image_link ?? '' }}" alt="" />
+                                        <img src="{{ $feature->image_link ?? '' }}" alt="" style="width: 50px; height: 50px"/>
                                     </div>
                                     <div class="describe">
                                         <h5>{{ $feature->title ?? '' }}</h5>
@@ -91,11 +91,11 @@
                             <div class="swiper-wrapper">
                                 @foreach ($aboutus_images as $image)
                                     <div class="swiper-slide">
-                                        <img src="{{ $image->image_link ?? '' }}" alt="" />
+                                        <img src="{{ $image->image_link ?? '' }}" alt="" style="width: 526px; height: 625px; border-radius: 10px"/>
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="swiper-pagination"></div> <!-- Add pagination container -->
+                            <div class="swiper-pagination" hidden></div> <!-- Add pagination container -->
                         </div>
                     </div>
 
@@ -151,86 +151,6 @@
     </div>
     <!-- Services -->
 
-    <!-- how-it-work -->
-    {{-- <div class="how-it-work">
-        <div
-        class="container"
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
-            <div class="title">
-                <h1>How</h1>
-                <p>How It’s Work</p>
-                <h5>How to send your <span>package</span> ?</h5>
-            </div>
-            @foreach ($steps as $step  )
-            <div class="item-one">
-                <div class="icon">
-                    <img src="{{ $step->image_link }}" alt="">
-                </div>
-                <p>{{ $step->title }}</p>
-              </div>
-            @endforeach
-        </div>
-        <!-- Learn How We Work gif -->
-        <div class="vidio">
-            <div class="shado">
-                <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <img src="img/vidio3.png" alt="" />
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <video width="100%" controls style="border-radius: 10px">
-                                    <source src="img/pexels-taryn-elliott-5309381 (1080p).mp4" type="video/mp4" />
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h6>Learn How We Work</h6>
-            </div>
-        </div>
-        <!-- Learn How We Work gif -->
-
-        <!-- swiper3 logo -->
-        <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/swiper1.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper2.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper3.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper4.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper5.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper6.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper7.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/swiper8.png" alt="" />
-                </div>
-            </div>
-        </div>
-        <!-- swiper3 logo -->
-    </div> --}}
     <div class="how-it-work">
         <div
           class="container"
@@ -432,12 +352,12 @@
                     <div class="Updates-news">
                         <div class="img">
                             <a href="{{ route('blog.show', $last_blog->id) }}">
-                                <img src="{{ $last_blog->image_link }}" alt="" />
+                                <img src="{{ $last_blog->image_link }}" alt="" style="width: 636px; height: 303px; border-radius: 10px;" />
                             </a>
                   </div>
                   <h4>
 {{$last_blog->title}}                  </h4>
-                  <p>{{ $last_blog->created_at->format( 'd-%B-y') }}</p>
+                  <p>{{ $last_blog->created_at->format('d F Y') ?? '' }}</p>
                   <h6>
                    {{$last_blog->text}}
                 </h6>
@@ -452,12 +372,12 @@
                 <div class="Updates-news">
                   <div class="img">
                     <a href="read-blog.html">
-                      <img src="{{ $blog->image_link }}" alt="" />
+                      <img src="{{ $blog->image_link }}" alt="" style="width: 632px; height: 222px; border-radius: 10px;"/>
                     </a>
                   </div>
                   <h4>
 {{$blog->title}}                  </h4>
-                  <p>{{ $blog->created_at->format( 'd-%B-y') }}</p>
+                  <p>{{ $blog->created_at->format('d F Y') ?? '' }}</p>
                   <a href="{{ route('blog.show', $blog->id) }}"
                     ><h5>Read More <i class="fa-solid fa-arrow-right"></i></h5
                   ></a>
@@ -471,32 +391,36 @@
       <!-- BLOGS -->
 
       <!-- subscibe -->
-      <div class="container">
+      {{-- <div class="container">
         <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
           <p>Get the latest news and events</p>
           <h4>Subscribe now to see the latest offers</h4>
-          <form>
+          <form action="{{ route('send_email') }}" method="POST">
+            @csrf
             <div class="col-lg-5 col-md-8 col-12">
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="enter your email adress"
-                />
-                <div class="email"><img src="img/sms.svg" alt="" /></div>
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        name="email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter your email address"
+                        required
+                    />
+                    <div class="email"><img src="img/sms.svg" alt="" /></div>
 
-                <div class="telgram">
-                  <button type="button" class="btn btn-primary">
-                    <img src="img/tel.png" alt="" />
-                  </button>
+                    <div class="telgram">
+                        <button type="submit" class="btn btn-primary">
+                            <img src="/website/img/tel.png" alt="" />
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </form>
+        </form>
+
         </div>
-      </div>
+      </div> --}}
       <!-- subscibe -->
 
 

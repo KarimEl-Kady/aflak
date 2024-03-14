@@ -132,7 +132,7 @@
   </div>
 
   <!-- subscibe -->
-  <div class="container">
+  {{-- <div class="container">
     <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
       <p>Get the latest news and events</p>
       <h4>Subscribe now to see the latest offers</h4>
@@ -157,7 +157,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> --}}
   <!-- subscibe -->
 
 

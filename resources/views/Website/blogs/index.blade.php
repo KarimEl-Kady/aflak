@@ -1,6 +1,10 @@
 @extends('Website.website_layouts.index')
 
 <style>
+.card-plog {
+min-width: 280;
+overflow: auto;
+}
 
 </style>
 
@@ -34,12 +38,12 @@
                 @foreach ($posts as $post )
 
                 <div class="section">
-                    <div class="img"><img src="{{ $post->image_link }}" alt="" /></div>
+                    <div class="img"><img src="{{ $post->image_link }}" alt="" width="107px" height="76px" style="border-radius: 10px;"/></div>
                   <div class="contant">
                     <h6>
                       {{$post->title}}
                     </h6>
-                    <p>{{ substr($post->text, 0, 15) }} ...</p>
+                    <p>{{ substr($post->description, 0, 15) }} ...</p>
                 </div>
                 </div>
 
@@ -57,92 +61,25 @@
               </div>
             </div>
             <div class="col-lg-8 col-md-8 col-12">
-              <div class="row">
-                {{-- <div class="col-lg-6 col-md-12 col-12" >
-                  <div class="card-plog" data-aos="zoom-in-left">
-                    <a href="read-blog.html">
-                      <div class="img">
-                        <img src="img/pagblog2.png" alt="" />
-                        <div class="date">
-                          <h5>23</h5>
-                          <p>Jan</p>
-                        </div>
-                      </div>
-                      <h4>
-                        How To Implement Sustainability In Inventory Management
-                      </h4>
-                      <p>
-                        As the world’s leading logistics company, we have a
-                        responsibility to set an example in our industry and be a
-                        sustainability leader. That means reducing our carbon
-                        footprint and setting the highest social and governance
-                        standards.
-                      </p>
-                      <h6>show more</h6>
-                    </a>
-                  </div>
-                  <div class="card-plog" data-aos="zoom-in-left">
-                    <a href="read-blog.html">
-                      <div class="img">
-                        <img src="img/pagblog3.png" alt="" />
-                        <div class="date">
-                          <h5>23</h5>
-                          <p>Jan</p>
-                        </div>
-                      </div>
-                      <h4>
-                        How To Implement Sustainability In Inventory Management
-                      </h4>
-                      <p>
-                        As the world’s leading logistics company, we have a
-                        responsibility to set an example in our industry and be a
-                        sustainability leader. That means reducing our carbon
-                        footprint and setting the highest social and governance
-                        standards.
-                      </p>
-                      <h6>show more</h6>
-                    </a>
-                  </div>
-                  <div class="card-plog" data-aos="zoom-in-left">
-                    <a href="read-blog.html">
-                      <div class="img">
-                        <img src="img/pagblog6.png" alt="" />
-                        <div class="date">
-                          <h5>23</h5>
-                          <p>Jan</p>
-                        </div>
-                      </div>
-                      <h4>
-                        How To Implement Sustainability In Inventory Management
-                      </h4>
-                      <p>
-                        As the world’s leading logistics company, we have a
-                        responsibility to set an example in our industry and be a
-                        sustainability leader. That means reducing our carbon
-                        footprint and setting the highest social and governance
-                        standards.
-                      </p>
-                      <h6>show more</h6>
-                    </a>
-                  </div>
-                </div> --}}
+              <div class="row" >
+
                 <div class="col-lg-8 col-md-7 col-12">
-                    <div class="row">
+                    <div class="row" >
                         @foreach ($blogs as $blog)
-                            <div class="col-lg-6 col-md-6 col-6">
+                            <div class="col-lg-6 col-md-6 col-6" >
 
 
-                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000">
+                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000" >
                                     <a href="{{ route('blog.show', $blog->id) }}">
                                         <div class="img">
-                                            <img src="{{ $blog->image_link ?? ''}}" alt="" />
+                                            <img src="{{ $blog->image_link ?? ''}}" alt="" style="border-radius: 10px;"/>
                                             <div class="date">
                                                 <h5>{{ $blog->created_at->format('d')  ?? ''}}</h5>
                                                 <p>{{ $blog->created_at->formatLocalized('%B')  ?? ''}}</p>
                                             </div>
                                         </div>
                                         <h4>{{ $blog->title  ?? ''}}</h4>
-                                        <p>{{ $blog->description  ?? ''}}</p>
+                                        <p>{{ (substr($blog->description,0,30). '..' ) ?? ''}}</p>
                                         <h6>{{ __('messages.read_more') }}</h6>
                                     </a>
                                 </div>
@@ -154,20 +91,7 @@
                     </div>
                 </div>
 
-                {{-- <nav aria-label="Page navigation example">
-                  <ul class="pagination justify-content-center">
-                    <div class="page-contant"> <li class="page-item"><a class="page-link" href="#">1</a></li></div>
-                    <div class="page-contant"><li class="page-item"><a class="page-link" href="#">2</a></li></div>
-                    <div class="page-contant"><li class="page-item"><a class="page-link" href="#">3</a></li></div>
-                    <div class="page-contant">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </div>
-                  </ul>
-                </nav> --}}
+
 
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
@@ -216,7 +140,7 @@
       <!-- our blog page -->
 
       <!-- subscibe -->
-      <div class="container">
+      {{-- <div class="container">
         <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
           <p>Get the latest news and events</p>
           <h4>Subscribe now to see the latest offers</h4>
@@ -241,7 +165,7 @@
             </div>
           </form>
         </div>
-      </div>
+      </div> --}}
       <!-- subscibe -->
 
 

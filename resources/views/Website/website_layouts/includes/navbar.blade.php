@@ -18,13 +18,13 @@
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="home"
+                <a class="nav-link" aria-current="page" href="/"
                   >Home</a
                 >
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="About-Us.html">About Us</a>
+                <a class="nav-link" href="about_us">About Us</a>
                 <div class="point"></div>
               </li>
               <li class="nav-item">
@@ -32,7 +32,7 @@
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blogs">Blogs</a>
+                <a class="nav-link" href="blog">Blogs</a>
                 <div class="point"></div>
               </li>
             </ul>
@@ -84,16 +84,16 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="About-Us.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Services.html">Services</a>
+                <a class="nav-link" href="{{ route('services') }}">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Blogs.html">Blogs</a>
+                <a class="nav-link" href="{{ route('blog') }}">Blogs</a>
               </li>
             </ul>
             <div class="chose-languge">
