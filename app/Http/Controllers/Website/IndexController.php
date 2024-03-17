@@ -34,12 +34,14 @@ class IndexController extends Controller
         $join_section = JoinSection::first();
         $clients = Client::get();
         $last_blog = Blog::latest()->first(); // Get the last blog added
-
+        if($last_blog){
         $blogs = Blog::where('id', '!=', $last_blog->id) // Exclude the last blog added
             ->orderBy('id', 'desc') // Order the blogs by ID in descending order
             ->take(2)
             ->get(); // Retrieve the results
-
+    }else{
+        $blogs = [];
+    }
     return view($this->view . 'index', compact(
             'home_slider',
             'home_slider_images',

@@ -335,59 +335,62 @@
       <!-- BLOGS -->
       <div class="BLOGs" data-aos="zoom-in-up" data-aos-duration="2000">
         <div class="container">
-          <div class="title">
-            <div class="contant">
-              <h1>BLOGS</h1>
-              <p>Blog & News</p>
-              <h5>We Provide All The Necessary <span>Updates</span></h5>
+            <div class="title">
+                <div class="contant">
+                    <h1>BLOGS</h1>
+                    <p>Blog & News</p>
+                    <h5>We Provide All The Necessary <span>Updates</span></h5>
+                </div>
+                <a href="blog">
+                    <button type="button" class="btn btn-light">Show more</button>
+                </a>
             </div>
-            <a href="read-blog.html"
-              ><button type="button" class="btn btn-light">Show more</button></a
-            >
-          </div>
-          <div class="news">
-            <div class="row">
+            @if ($last_blog)
 
-                <div class="col-lg-6 col-md-12 col-12">
-                    <div class="Updates-news">
-                        <div class="img">
+            <div class="news">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="Updates-news">
+                            <div class="img">
+                                <a href="{{ $last_blog ? route('blog.show', $last_blog->id) : '#' }}">
+                                    <img src="{{ $last_blog ? $last_blog->image_link : asset('placeholder_image.jpg') }}" alt="" style="width: 636px; height: 303px; border-radius: 10px;" />
+                                </a>
+                            </div>
+                            <h4>{{ $last_blog ? $last_blog->title : __('messages.no_blogs_found') }}</h4>
+                            <p>{{ $last_blog ? $last_blog->created_at->format('d F Y') : __('messages.no_blogs_found') }}</p>
+                            <h6>{{ $last_blog ? $last_blog->text : '' }}</h6>
+                            @if ($last_blog)
                             <a href="{{ route('blog.show', $last_blog->id) }}">
-                                <img src="{{ $last_blog->image_link }}" alt="" style="width: 636px; height: 303px; border-radius: 10px;" />
+                                <h5>{{ __('Read More') }} <i class="fa-solid fa-arrow-right"></i></h5>
                             </a>
-                  </div>
-                  <h4>
-{{$last_blog->title}}                  </h4>
-                  <p>{{ $last_blog->created_at->format('d F Y') ?? '' }}</p>
-                  <h6>
-                   {{$last_blog->text}}
-                </h6>
-                <a href="{{ route('blog.show', $last_blog->id) }}">
-                    <h5>Read More <i class="fa-solid fa-arrow-right"></i></h5
-                        ></a>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-12">
+                        @foreach ($blogs as $blog)
+                        <div class="Updates-news">
+                            <div class="img">
+                                <a href="{{ route('blog.show', $blog->id) }}">
+                                    <img src="{{ $blog->image_link }}" alt="" style="width: 632px; height: 222px; border-radius: 10px;"/>
+                                </a>
+                            </div>
+                            <h4>{{ $blog->title }}</h4>
+                            <p>{{ $blog->created_at->format('d F Y') ?? '' }}</p>
+                            <a href="{{ route('blog.show', $blog->id) }}">
+                                <h5>{{ __('Read More') }} <i class="fa-solid fa-arrow-right"></i></h5>
+                            </a>
+                        </div>
+                        @endforeach
                     </div>
                 </div>
-
-              <div class="col-lg-6 col-md-12 col-12">
-                @foreach ($blogs as $blog)
-                <div class="Updates-news">
-                  <div class="img">
-                    <a href="read-blog.html">
-                      <img src="{{ $blog->image_link }}" alt="" style="width: 632px; height: 222px; border-radius: 10px;"/>
-                    </a>
-                  </div>
-                  <h4>
-{{$blog->title}}                  </h4>
-                  <p>{{ $blog->created_at->format('d F Y') ?? '' }}</p>
-                  <a href="{{ route('blog.show', $blog->id) }}"
-                    ><h5>Read More <i class="fa-solid fa-arrow-right"></i></h5
-                  ></a>
-                </div>
-                @endforeach
-              </div>
             </div>
-          </div>
+            @endif
+
         </div>
-      </div>
+    </div>
+
+
       <!-- BLOGS -->
 
       <!-- subscibe -->

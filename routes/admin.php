@@ -12,8 +12,13 @@ use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
 use App\Http\Controllers\Admin\JoinSectionController;
+use App\Http\Controllers\Admin\LogisiticSectionController;
+use App\Http\Controllers\Admin\NewsEmailSettingController;
+use App\Http\Controllers\Admin\OurStoryController;
+use App\Http\Controllers\Admin\OurStoryFeatureController;
 use App\Http\Controllers\Admin\SectionController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ServiceFeatureController;
 use App\Http\Controllers\Admin\StepController;
 use App\Models\HomeSlider\HomeSlider;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -59,6 +64,9 @@ Route::group(
                 //services
                 Route::resource('services', ServiceController::class);
 
+                //service_features
+                Route::resource('service_features', ServiceFeatureController::class);
+
                 //steps
                 Route::resource('steps', StepController::class);
 
@@ -77,8 +85,28 @@ Route::group(
                 //email_news
                 Route::resource('email_news', EmailNewsController::class);
 
+                //email_news_seeting
+                Route::resource('news_email_settings', NewsEmailSettingController::class);
+                Route::post('news_email_settings/update', [NewsEmailSettingController::class, 'update'])->name('news_email_settings.update');
+
+
                 //join_sections
                 Route::resource('join_sections', JoinSectionController::class);
+
+                //our_stories
+                Route::resource('our_stories', OurStoryController::class);
+                Route::post('our_stories/update', [OurStoryController::class, 'update'])->name('our_stories.update');
+                Route::delete('our_stories/destroy_features/{id}', [OurStoryController::class, 'destroy_features'])->name('our_stories.destroy_features');
+                Route::delete('our_stories/destroy_stroy_image/{id}', [OurStoryController::class, 'destroy_stroy_image'])->name('our_stories.destroy_stroy_image');
+
+                //our_story_features
+                // Route::resource('our_story_features', OurStoryFeatureController::class);
+                // Route::post('our_story_features/update', [OurStoryFeatureController::class, 'update'])->name('our_story_features.update');
+
+                //logisitic_setcions
+                Route::resource('logisitic_setcions', LogisiticSectionController::class);
+                Route::post('logisitic_setcions/update', [LogisiticSectionController::class, 'update'])->name('logisitic_setcions.update');
+
 
             });
         });

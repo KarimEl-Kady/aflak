@@ -27,6 +27,23 @@ return new class extends Migration
            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
            $table->timestamps();
         });
+
+        Schema::create('service_features', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger('service_id')->nullable();
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
+         });
+
+         Schema::create('service_feature_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger('service_feature_id')->nullable();
+            $table->string('title')->nullable();
+            $table->string('text')->nullable();
+            $table->string('locale')->nullable();
+            $table->foreign('service_feature_id')->references('id')->on('service_features')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
+         });
     }
 
     /**
@@ -36,5 +53,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('services');
         Schema::dropIfExists('service_translations');
+        Schema::dropIfExists('service_features');
+        Schema::dropIfExists('service_feature_translations');
     }
 };

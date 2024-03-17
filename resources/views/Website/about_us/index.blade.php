@@ -15,8 +15,8 @@ overflow: auto;
         <div class="about-us">
           <div class="container">
             <div class="row">
-              <p>HOME . <span>ABOUT US</span></p>
-              <h4>ABOUT US</h4>
+              <p>{{ __('messages.home') }} <span>{{ __('messages.about_us') }}</span></p>
+              <h4>{{ __('messages.about_us') }}</h4>
             </div>
           </div>
         </div>
@@ -29,56 +29,47 @@ overflow: auto;
               <div class="col-lg-6 col-md-12 col-12" data-aos="fade-right" data-aos-duration="1000">
                 <div class="shipping-services">
                   <div class="title">
-                    <h1>Our Story</h1>
-                    <p>Our Story</p>
+                    <h1>{{ __('messages.our_story') }}</h1>
+                    <p>{{ __('messages.our_story') }}</p>
                     <h5>
-                      Your <span>shipping services</span> have become easier with
-                      us
+                      {{$our_story->title ?? ''}}
                     </h5>
                     <h6>
-                      devoted to offering customized and professional support as
-                      an international logistics and freight forwarding service
-                      that provides quality that continues to se cure a loyal
-                      customer base.
+                     {{$our_story->text ?? ''}}
                     </h6>
                   </div>
                   <div class="xperiencee">
                     <div class="achive">
+                        @if ($our_story_features)
+                        @foreach ($our_story_features as $feature)
+
                       <div class="check">
-                        <img src="img/check.png" alt="" />
-                        <h6>Demand planning</h6>
+                        <img src="/website/img/check.png" alt="" />
+                        <h6>{{ $feature->title }}</h6>
                       </div>
-                      <div class="check">
-                        <img src="img/check.png" alt="" />
-                        <h6>Materials handling</h6>
-                      </div>
-                      <div class="check">
-                        <img src="img/check.png" alt="" />
-                        <h6>Damage Insurance</h6>
-                      </div>
-                      <div class="check">
-                        <img src="img/check.png" alt="" />
-                        <h6>Fast delivery system</h6>
-                      </div>
+                      @endforeach
+
+                      @endif
+
                     </div>
                     <div class="years-experience">
                       <div class="head">
-                        <h3>25+</h3>
-                        <h4>years</h4>
+                        <h3>{{ $our_story->label_title ?? '' }}</h3>
+                        {{-- <h4>years</h4> --}}
                       </div>
-                      <p>We have more than years of experience</p>
+                      <p>{{ $our_story->label_text ?? '' }}</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 col-6" data-aos="flip-left" data-aos-duration="1000">
                 <div class="img">
-                  <img src="img/abo.png" alt="" />
+                  <img src="{{ $our_story_images[0]->image_link ?? '' }}" alt="" />
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 col-6" data-aos="flip-right" data-aos-duration="1000">
                 <div class="img-two">
-                  <img src="img/abo2.png" alt="" />
+                  <img src="{{ $our_story_images[1]->image_link ?? '' }}" alt="" />
                 </div>
               </div>
             </div>
@@ -90,23 +81,18 @@ overflow: auto;
         <div class="About-Logistics">
           <div class="container">
             <div class="row">
+                @if ($logistic_sectoion)
+
               <div class="logistics" data-aos="fade-down"  data-aos-duration="2000">
-                <h6>About Our Logistics</h6>
+                <h6>{{ __('messages.about_logistics') }}</h6>
                 <p>
-                  Welcome to Logistics service, your trusted partner in logistics.
-                  We are a team of experienced professionals who are passionate
-                  about helping businesses streamline their supply chain
-                  operations and optimize their logistics processes.
-                </p>
-                <img src="img/qw.png" alt="" />
+                  {{$logistic_sectoion->first_text ?? ''}}</p>
+                <img src="{{ $logistic_sectoion->image_link ?? '' }}" alt="" />
                 <p>
-                  Our transportation services include ground, air, and ocean
-                  freight, as well as intermodal and expedited shipping options.
-                  We leverage our carrier network and technology to provide you
-                  with the most cost-effective and efficient transportation
-                  solutions.
-                </p>
+                  {{$logistic_sectoion->second_text ?? ''}}</p>
               </div>
+              @endif
+
               <!-- tab -->
               <nav data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
@@ -238,36 +224,19 @@ overflow: auto;
         </div>
         <!-- About Our Logistics -->
 
-        <!-- swiper3 logo -->
-        <div class="swiper mySwiper3">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/swiper1.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper2.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper3.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper4.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper5.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper6.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper7.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-              <img src="img/swiper8.png" alt="" />
-            </div>
+       <!-- swiper3 logo -->
+       <div class="swiper mySwiper3">
+        <div class="swiper-wrapper">
+          @foreach ($clients as $client)
+
+          <div class="swiper-slide">
+              <img src="{{ $client->image_link }}" alt="" />
           </div>
+          @endforeach
+
         </div>
-        <!-- swiper3 logo -->
+      </div>
+      <!-- swiper3 logo -->
 
         <!-- advantges -->
         <div class="advantges-home" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1300">

@@ -10,20 +10,24 @@
     <div class="pagge-serves">
         <div class="our-services">
           <div class="container">
-            <p>HOME <span>. services</span></p>
-            <h4>our services</h4>
+            <p>{{ __('messages.home') }} <span>. {{ __('messages.services') }}</span></p>
+            <h4>{{ __('messages.our_services') }}</h4>
           </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="title">
-              <h1>Services</h1>
-              <p>Our Services</p>
+              <h1>{{ __('messages.services') }}</h1>
+              <p>{{ __('messages.our_services') }}</p>
               <h5>
-                Learn About <span>Our</span> Most Important
-                <span>Services</span>
+                {{ __('messages.learn_about') }} <span>{{ __('messages.our') }}</span> {{ __('messages.most_important') }}
+                <span>{{ __('messages.services') }}</span>
               </h5>
             </div>
+            @if ($services)
+@foreach ($services as $index => $service )
+            @if ($index % 2 == 0)
+
             <div class="Important-Services"
               data-aos="fade-left"
               data-aos-anchor="#example-anchor"
@@ -31,178 +35,66 @@
             >
               <div class="items-Services">
                 <div class="img">
-                  <img src="img/ser2.png" alt="" />
+                  <img src="{{ $service->image_link ?? '' }}" alt="" />
                 </div>
                 <div class="text">
-                  <h4>OCEAN FREIGHT</h4>
+                  <h4>{{ $service->title ?? '' }}</h4>
                   <p>
-                    Ocean freight is a shipping service that transports goods or
-                    cargo by sea using large cargo ships. This mode of
-                    transportation is a popular and cost-effective method for
-                    international trade and commerce. Ocean freight services can
-                    be offered by various companies such as shipping lines,
-                    freight forwarders, and NVOCCs (Non-Vessel Operating Common
-                    Carrier). Here are some key details about ocean freight
-                    services: Shipping Routes: Ocean freight services operate on
-                    specific routes between various ports around the world. The
-                    routes are determined by the shipping lines or NVOCCs and can
-                    be based on factors such as demand, availability, and cost.
-                  </p>
+                   {{$service->text ?? ''}}</p>
                 </div>
               </div>
+              @if ( $service->service_features)
+              @foreach ( $service->service_features as $feature )
+
               <div class="contant">
                 <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
+                  <img src="/website/img/ser6.svg" alt="" />
                 </div>
                 <div class="text">
-                  <h4>Shipping Routes</h4>
+                  <h4>{{ $feature->title }}</h4>
                   <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
+                   {{$feature->text}}</p>
                 </div>
               </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Types of Cargo</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Containerization</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Documentation</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Insurance</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
+              @endforeach
+
+              @endif
+
             </div>
+            @endif
+            @if ($index % 2 != 0)
+
             <div  class="Important-Services"
               data-aos="fade-right"
               data-aos-offset="100"
               data-aos-easing="ease-in-sine" >
               <div class="items-Services">
-                <div class="text">
-                  <h4>OCEAN FREIGHT</h4>
-                  <p>
-                    Ocean freight is a shipping service that transports goods or
-                    cargo by sea using large cargo ships. This mode of
-                    transportation is a popular and cost-effective method for
-                    international trade and commerce. Ocean freight services can
-                    be offered by various companies such as shipping lines,
-                    freight forwarders, and NVOCCs (Non-Vessel Operating Common
-                    Carrier). Here are some key details about ocean freight
-                    services: Shipping Routes: Ocean freight services operate on
-                    specific routes between various ports around the world. The
-                    routes are determined by the shipping lines or NVOCCs and can
-                    be based on factors such as demand, availability, and cost.
-                  </p>
-                </div>
                 <div class="img">
-                  <img src="img/ser3.png" alt="" />
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
+                  <img src="{{ $service->image_link ?? '' }}" alt="" />
                 </div>
                 <div class="text">
-                  <h4>Shipping Routes</h4>
+                  <h4>{{ $service->title ?? '' }}</h4>
                   <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
+                   {{$service->text ?? ''}}</p>
                 </div>
               </div>
+              @if ( $service->service_features)
+              @foreach ( $service->service_features as $feature )
+
               <div class="contant">
                 <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
+                  <img src="/website/img/ser6.svg" alt="" />
                 </div>
                 <div class="text">
-                  <h4>Types of Cargo</h4>
+                  <h4>{{ $feature->title }}</h4>
                   <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
+                   {{$feature->text}}</p>
                 </div>
               </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Containerization</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Documentation</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
+              @endforeach
+
+              @endif
+
                 <div class="icon">
                   <img src="img/ser6.svg" alt="" />
                 </div>
@@ -217,199 +109,13 @@
                 </div>
               </div>
             </div>
-            <div class="Important-Services"
-            data-aos="fade-left"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine"
-            >
-              <div class="items-Services">
-                <div class="img">
-                  <img src="img/ser4.png" alt="" />
-                </div>
-                <div class="text">
-                  <h4>OCEAN FREIGHT</h4>
-                  <p>
-                    Ocean freight is a shipping service that transports goods or
-                    cargo by sea using large cargo ships. This mode of
-                    transportation is a popular and cost-effective method for
-                    international trade and commerce. Ocean freight services can
-                    be offered by various companies such as shipping lines,
-                    freight forwarders, and NVOCCs (Non-Vessel Operating Common
-                    Carrier). Here are some key details about ocean freight
-                    services: Shipping Routes: Ocean freight services operate on
-                    specific routes between various ports around the world. The
-                    routes are determined by the shipping lines or NVOCCs and can
-                    be based on factors such as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Shipping Routes</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Types of Cargo</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Containerization</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Documentation</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Insurance</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="Important-Services"
-              data-aos="fade-right"
-              data-aos-offset="100"
-              data-aos-easing="ease-in-sine"
-            >
-              <div class="items-Services">
-                <div class="text">
-                  <h4>OCEAN FREIGHT</h4>
-                  <p>
-                    Ocean freight is a shipping service that transports goods or
-                    cargo by sea using large cargo ships. This mode of
-                    transportation is a popular and cost-effective method for
-                    international trade and commerce. Ocean freight services can
-                    be offered by various companies such as shipping lines,
-                    freight forwarders, and NVOCCs (Non-Vessel Operating Common
-                    Carrier). Here are some key details about ocean freight
-                    services: Shipping Routes: Ocean freight services operate on
-                    specific routes between various ports around the world. The
-                    routes are determined by the shipping lines or NVOCCs and can
-                    be based on factors such as demand, availability, and cost.
-                  </p>
-                </div>
-                <div class="img">
-                  <img src="img/ser5.png" alt="" />
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Shipping Routes</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Types of Cargo</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Containerization</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Documentation</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
-              <div class="contant">
-                <div class="icon">
-                  <img src="img/ser6.svg" alt="" />
-                </div>
-                <div class="text">
-                  <h4>Insurance</h4>
-                  <p>
-                    Ocean freight services operate on specific routes between
-                    various ports around the world. The routes are determined by
-                    the shipping lines or NVOCCs and can be based on factors such
-                    as demand, availability, and cost.
-                  </p>
-                </div>
-              </div>
+            @endif
+
+@endforeach
+
+            @endif
+
+
             </div>
           </div>
         </div>

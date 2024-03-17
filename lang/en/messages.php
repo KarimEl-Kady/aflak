@@ -402,7 +402,7 @@ return [
 
     "show_requests"=> "Show Requests",
     "show_offers"=> "Show Offers",
-
+    "enter_your_email_address"  => "Enter Your Email Address",
 
 
 ];
