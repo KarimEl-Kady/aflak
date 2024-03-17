@@ -1717,18 +1717,24 @@ body {
 }
 
 // subscribe
+
 .Subscribe {
-  background-image: url(../img/foot1.png);
+//   background-image: url(../img/foot1.png);
   background-repeat: no-repeat;
   background-position: center;
-  // background-attachment: fixed;
+  //background-attachment: fixed;
   background-size: cover;
   padding: 3rem;
   border-radius: 10px;
-  // height: 30vh;
+  //height: 30vh;
   margin: 5rem 0 -8rem;
   position: relative;
-  p {
+    p :;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+{
     color: #ffffff;
     font-size: 18px;
     font-family: "light";

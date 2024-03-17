@@ -27,7 +27,10 @@ class DatabaseSeeder extends Seeder
             AboutUsSeeder::class,
             AboutUsImageSeeder::class,
             AboutUsFeatureSeeder::class,
-
+            NewsEmailSettingSeeder::class,
+            OurStorySeeder::class,
+            OurStoryFeatureSeeder::class,
+            LogisiticSectionSeeder::class,
         ]);
     }
 }

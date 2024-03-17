@@ -447,5 +447,5 @@ return [
 
     "show_requests"=> "اظهار الطلبات",
     "show_offers"=> "اظهار العروض",
-
+    "enter_your_email_address"  => "ادخل بريدك الالكترونى",
 ];

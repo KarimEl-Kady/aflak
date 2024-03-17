@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Service\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,6 +14,7 @@ class ServiceController extends Controller
 
     public function index()
     {
-        return view($this->view . 'index');
+        $services = Service::get();
+        return view($this->view . 'index' , compact('services'));
     }
 }

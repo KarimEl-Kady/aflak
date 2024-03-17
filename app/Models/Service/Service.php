@@ -24,4 +24,9 @@ class Service extends Model
     {
         return $this->icon ? asset($this->icon) : '';
     }
+
+    public function service_features()
+    {
+        return $this->hasMany(ServiceFeature::class);
+    }
 }

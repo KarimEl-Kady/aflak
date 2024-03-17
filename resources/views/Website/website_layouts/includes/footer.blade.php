@@ -1,9 +1,19 @@
-     <!-- subscibe -->
+<style>
+    .Subscribe {
+        @if($news_email_setting->image_link)
+            background-image: url({{ $news_email_setting->image_link }});
+        @else
+            background-image: url(../img/foot1.png);
+        @endif
+    }
+</style>
+
+<!-- subscibe -->
      <div class="container">
         <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
-          <p>Get the latest news and events</p>
-          <h4>Subscribe now to see the latest offers</h4>
-          <form action="{{ route('send_email') }}" method="POST">
+            <p>{{ $news_email_setting->title ?? __('messages.get_the_latest_news_andevents') }}</p>
+            <h4>{{ $news_email_setting->subtitle ?? __('messages.see_the_latest_offers') }}</h4>
+            <form action="{{ route('send_email') }}" method="POST">
             @csrf
             <div class="col-lg-5 col-md-8 col-12">
                 <div class="form-group">
@@ -13,10 +23,10 @@
                         id="exampleInputEmail1"
                         name="email"
                         aria-describedby="emailHelp"
-                        placeholder="Enter your email address"
+                        placeholder="{{ __('messages.enter_your_email_address') }}"
                         required
                     />
-                    <div class="email"><img src="img/sms.svg" alt="" /></div>
+                    <div class="email"><img src="{{ asset('img/sms.svg') }}" alt="" /></div>
 
                     <div class="telgram">
                         <button type="submit" class="btn btn-primary">
