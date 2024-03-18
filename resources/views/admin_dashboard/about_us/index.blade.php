@@ -61,7 +61,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $about_us->translate($localeCode)->title }}>
+                                            value="{{ $about_us->translate($localeCode)->title }}">
                                     </div>
 
                                 </div>
@@ -82,7 +82,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $about_us->translate($localeCode)->text }}>
+                                            value="{{ $about_us->translate($localeCode)->text }}">
                                     </div>
 
                                 </div>

@@ -12,6 +12,8 @@ use App\Models\Client\Client;
 use App\Models\HomeSlider\HomeSlider;
 use App\Models\HomeSlider\HomeSliderimage;
 use App\Models\JoinSection\JoinSection;
+use App\Models\RequestSection\RequestSection;
+use App\Models\RequestSection\RequestSectionSetting;
 use App\Models\Service\Service;
 use App\Models\Step\Step;
 use Illuminate\Http\Request;
@@ -42,6 +44,14 @@ class IndexController extends Controller
     }else{
         $blogs = [];
     }
+    $request_section = RequestSection::first();
+    $request_load_ids  = RequestSectionSetting::where('type', 1)
+    ->pluck('id')
+    ->toArray();
+$request_type_ids  = RequestSectionSetting::where('type', 2)
+    ->pluck( 'id')
+    ->toArray();
+
     return view($this->view . 'index', compact(
             'home_slider',
             'home_slider_images',
@@ -54,7 +64,10 @@ class IndexController extends Controller
             'join_section',
             'clients',
             'blogs',
-            'last_blog'
+            'last_blog',
+            'request_section',
+            'request_load_ids',
+            'request_type_ids'
         ));
     }
 }

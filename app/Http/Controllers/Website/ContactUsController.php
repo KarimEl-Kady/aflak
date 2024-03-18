@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Website\EmailNews\StoreRequest;
 use App\Models\NewsEmail\NewsEmail;
+use App\Models\Setting\Setting;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -14,8 +15,9 @@ class ContactUsController extends Controller
 
     public function index()
     {
-        return view($this->view . 'index');
+        $setting = Setting::first();
+        return view($this->view . 'index' ,compact('setting'));
     }
 
-    
+
 }

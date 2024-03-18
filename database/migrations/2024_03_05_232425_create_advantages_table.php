@@ -20,7 +20,7 @@ return new class extends Migration
            $table->increments('id');
            $table->unsignedInteger('advantage_id')->nullable();
            $table->string('title')->nullable();
-           $table->string('text')->nullable();
+           $table->longText('text')->nullable();
            $table->string('locale')->nullable();
            $table->foreign('advantage_id')->references('id')->on('advantages')->onDelete('cascade')->onUpdate('cascade');
            $table->timestamps();

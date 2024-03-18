@@ -9,8 +9,8 @@
 <div class="page-contact-us">
     <div class="head-contact-us">
       <div class="container">
-        <p>HOME <span>. contact us</span></p>
-        <h4>contact us</h4>
+        <p>{{ __('messages.home') }} <span>. {{ __('messages.contact_us') }}</span></p>
+        <h4>{{ __('messages.contact_us') }}</h4>
       </div>
     </div>
     <div class="img">
@@ -21,28 +21,28 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-12">
             <div class="Related-posts">
-              <h5>CONTACT</h5>
+              <h5>{{ __('messages.contact_us') }}</h5>
               <div class="section">
                 <div class="img">
-                  <img src="img/phone1.svg" alt="" />
+                  <img src="/website/img/phone1.svg" alt="" />
                 </div>
                 <div class="contant">
-                  <h6>Call Us</h6>
-                  <p>(+84) 8 3555 3203</p>
-                </div>
-              </div>
-              <div class="section">
-                <div class="img"><img src="img/location.svg" alt="" /></div>
-                <div class="contant">
-                  <h6>our Location</h6>
-                  <p>101 Your Name Road, Your City, United State.</p>
+                  <h6>{{ __('messages.contact_us') }}</h6>
+                  <p>{{ $setting->phone ?? '' }}</p>
                 </div>
               </div>
               <div class="section">
-                <div class="img"><img src="img/mail.svg" alt="" /></div>
+                <div class="img"><img src="/website/img/location.svg" alt="" /></div>
                 <div class="contant">
-                  <h6>Email Adress</h6>
-                  <p>aroha.info@gmail.com</p>
+                  <h6>{{ __('messages.address') }}</h6>
+                  <p>{{ $setting->address ?? '' }}</p>
+                </div>
+              </div>
+              <div class="section">
+                <div class="img"><img src="/website/img/mail.svg" alt="" /></div>
+                <div class="contant">
+                  <h6>{{ __('messages.email') }}</h6>
+                  <p>{{ $setting->email ?? '' }}</p>
                 </div>
               </div>
               <div class="section">
@@ -54,22 +54,22 @@
                 </div>
               </div>
               <div class="icon">
-                <a href="#">
+                <a href="{{ route($setting->twitter) }}">
                   <div class="logo">
                     <i class="fa-brands fa-twitter"></i>
                   </div>
                 </a>
-                <a href="#">
+                <a href="{{ route($setting->linkedin)  }} ">
                   <div class="logo">
                     <i class="fa-brands fa-linkedin"></i>
                   </div>
                 </a>
-                <a href="#">
+                <a href="{{ route($setting->instagram)  }}">
                   <div class="logo">
                     <i class="fa-brands fa-instagram"></i>
                   </div>
                 </a>
-                <a href="#">
+                <a href="{{ route($setting->facbook)  }}">
                   <div class="logo">
                     <i class="fa-brands fa-facebook-f"></i>
                   </div>

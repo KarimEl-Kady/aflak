@@ -16,9 +16,13 @@ use App\Http\Controllers\Admin\LogisiticSectionController;
 use App\Http\Controllers\Admin\NewsEmailSettingController;
 use App\Http\Controllers\Admin\OurStoryController;
 use App\Http\Controllers\Admin\OurStoryFeatureController;
+use App\Http\Controllers\Admin\RequestController;
+use App\Http\Controllers\Admin\RequestSectionController;
+use App\Http\Controllers\Admin\RequestSectionSettingController;
 use App\Http\Controllers\Admin\SectionController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ServiceFeatureController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\StepController;
 use App\Models\HomeSlider\HomeSlider;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -107,6 +111,20 @@ Route::group(
                 Route::resource('logisitic_setcions', LogisiticSectionController::class);
                 Route::post('logisitic_setcions/update', [LogisiticSectionController::class, 'update'])->name('logisitic_setcions.update');
 
+                //request_sections
+                Route::resource('request_sections', RequestSectionController::class);
+                Route::post('request_sections/update', [RequestSectionController::class, 'update'])->name('request_sections.update');
+
+                //request_section_settings
+                Route::resource('request_section_settings', RequestSectionSettingController::class);
+                Route::post('request_section_settings/{request_section_setting}', [RequestSectionSettingController::class, 'update'])->name('request_section_settings.update');
+
+                //requests
+                Route::resource('requests', RequestController::class);
+
+                //settings
+                Route::resource('settings', SettingController::class);
+                Route::post('settings/update', [SettingController::class, 'update'])->name('settings.update');
 
             });
         });

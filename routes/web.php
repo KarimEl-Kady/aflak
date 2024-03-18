@@ -5,6 +5,7 @@ use App\Http\Controllers\Website\BlogController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\EmailNewsController;
 use App\Http\Controllers\Website\IndexController;
+use App\Http\Controllers\Website\RequestController;
 use App\Http\Controllers\Website\ServiceController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -40,4 +41,8 @@ Route::group(
 
         Route::get('blog', [BlogController::class, 'index'])->name('blog');
         Route::get('blog/{id}', [BlogController::class, 'show'])->name('blog.show');
-    });
+
+
+        Route::post('send_request', [RequestController::class, 'send_request'])->name('send_request');
+    }
+);
