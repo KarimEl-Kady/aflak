@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 col-12">
           <div class="logo-footer">
-            <img src="img/title.png" alt="" />
+            <img src="/website/img/title.png" alt="" />
             <p>
               Vestibulum id ligula porta felis euismod sem per. Aenean eu
               leo quam. Pellen tesque orn are sem lacinia quam venenatis.

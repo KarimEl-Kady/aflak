@@ -1,5 +1,17 @@
 @extends('Website.website_layouts.index')
 
+<style>
+    .contact-us {
+        @if($request_section && $request_section->image_link)
+    background-image: url({{ $request_section->image_link }});
+    @else
+    background-image: url(../img/trans.png);
+
+     @endif
+}
+
+</style>
+
 @section('content')
     <!-- mySwiper1 -->
     <div class="swiper mySwiper1">
@@ -166,7 +178,7 @@
           <div class="items-package">
             <div class="item-one">
               <div class="icon">
-                  <img src="img/list.svg" alt="">
+                  <img src="/website/img/list.svg" alt="">
               </div>
               <p>Make An Order</p>
             </div>
@@ -197,7 +209,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
-                <img src="img/vidio3.png" alt="" />
+                <img src="/website/img/vidio3.png" alt="" />
               </div>
               <!-- Modal -->
               <div
@@ -255,80 +267,174 @@
       <!-- contact us -->
 
       <div class="container">
+        {{-- <div class="contact-us">
+            <div class="row">
+                <div class="col-lg-7 col-md-5 col-12">
+                    <div class="title">
+                        <p>{{ __('messages.contact_us') }}</p>
+                        <h4>{{ $request_section->title ?? '' }}</h4>
+                        <h6>{{ $request_section->text ?? '' }}</h6>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-7 col-12">
+                    <form method="POST" action="{{ route('send_request') }}">
+                        @csrf
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">{{ __('messages.your_name') }}</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="your name"
+                                name="name"
+                            />
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{{ __('messages.email') }}</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
+                                        placeholder="your email"
+                                        name="email"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="phone">{{ __('messages.phone') }}</label>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        placeholder="your Phone"
+                                        name="phone"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="freight_type">{{ __('messages.freight_type') }}</label>
+                                    <select class="form-control" id="freight_type" name="freight_type">
+                                        <option value="">{{ __('messages.select') }}</option>
+                                        @foreach($request_types as $id => $title)
+                                            <option value="{{ $id }}">{{ $title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="load">{{ __('messages.load') }}</label>
+                                    <select class="form-control" id="load" name="load">
+                                        <option value="">{{ __('messages.select') }}</option>
+                                        @foreach($request_loads as $id => $title)
+                                            <option value="{{ $id }}">{{ $title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('messages.send') }}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div> --}}
+
         <div class="contact-us">
-          <div class="row">
-            <div class="col-lg-7 col-md-5 col-12">
-              <div class="title">
-                <p>contact us</p>
-                <h4>We are here for you</h4>
-                <h6>
-                  Our headquarter is located in Cairo, Egypt. Our services
-                  expanded throughout Egypt ports (Alexandria old port, SOKHNA
-                  port, DEKHEILA port , CAI airport)
-                </h6>
-              </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-5 col-12">
+                    <div class="title">
+                        <p>{{ __('messages.contact_us') }}</p>
+                        <h4>{{ $request_section->title ?? '' }}</h4>
+                        <h6>{{ $request_section->text ?? '' }}</h6>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-7 col-12">
+                    <form method="POST" action="{{ route('send_request') }}">
+                        @csrf
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">{{ __('messages.your_name') }}</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="your name"
+                                name="name"
+                            />
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{{ __('messages.email') }}</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
+                                        placeholder="your email"
+                                        name="email"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="phone">{{ __('messages.phone') }}</label>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        placeholder="your Phone"
+                                        name="phone"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="freight_type">{{ __('messages.freight_type') }}</label>
+                                    <select class="form-control" id="freight_type" name="type">
+                                        <option value="">{{ __('messages.select') }}</option>
+                                        @foreach($request_type_ids as $id)
+                                            @php
+                                                $request_type = \App\Models\RequestSection\RequestSectionSettingTranslation::where('request_section_setting_id', $id)->first();
+                                            @endphp
+                                            @if($request_type)
+                                                <option value="{{ $id }}">{{ $request_type->title }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-6">
+                                <div class="form-group">
+                                    <label for="load">{{ __('messages.load') }}</label>
+                                    <select class="form-control" id="load" name="load">
+                                        <option value="">{{ __('messages.select') }}</option>
+                                        @foreach($request_load_ids as $id)
+                                            @php
+                                                $request_load = \App\Models\RequestSection\RequestSectionSettingTranslation::where('request_section_setting_id', $id)->first();
+                                            @endphp
+                                            @if($request_load)
+                                                <option value="{{ $id }}">{{ $request_load->title }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">{{ __('messages.send') }}</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-lg-5 col-md-7 col-12">
-              <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Your Name:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="your name"
-                  />
-                </div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-6">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Your Email:</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        placeholder="your email"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-6">
-                    <div class="form-group">
-                      <label for="phone">Phone No:</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="your Phone"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-6">
-                    <div class="form-group">
-                      <label for="phone">Freight type:</label>
-                      <select class="form-control">
-                        <option>select</option>
-                        <option>Default select</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-6">
-                    <div class="form-group">
-                      <label for="phone">Load:</label>
-                      <select class="form-control">
-                        <option>select</option>
-                        <option>Default select</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-primary">
-                  SUBMIT REQUEST
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
+
       </div>
       <!-- contact us -->
 

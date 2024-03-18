@@ -28,15 +28,14 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.edit_service') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.add_request_section') }}</h3>
                 </div>
             </div>
 
 
             <div class="card-body">
-                <form method="post" action="{{ route('services.update', $service->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('request_sections.update', $request_section->id) }}" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
 
                     <div class="row">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -49,7 +48,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value="{{ $service->translate($localeCode)->title }}">
+                                            value="{{ $request_section->translate($localeCode)->title ?? '' }}">
                                     </div>
 
                                 </div>
@@ -70,7 +69,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $service->translate($localeCode)->text }}>
+                                            value="{{ $request_section->translate($localeCode)->text ?? '' }}  " >
                                     </div>
 
                                 </div>
@@ -84,43 +83,35 @@
                         <div class="col-8 mx-auto">
                             <div class="uploadOuter">
                                 <span class="dragBox">
-
-                                    Darg and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
+                                    Drag and Drop image here
+                                    <input type="file" name="image" onChange="dragNdrop(event)" onChange="previewImage(event)" id="uploadFile" ondragover="drag()" ondrop="drop()" id="uploadFile" />
                                 </span>
                             </div>
 
-                            <div id="preview">
-                                @error('image')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
+                            @if ($request_section->image)
+                                <div id="preview">
+                                    <img src="{{ asset($request_section->image) }}" alt="Preview Image" style="max-width: 100%; height: auto;">
+                                </div>
+                            @endif
 
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-
-                                    Darg and Drop icon here
-                                    <input type="file" name="icon" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
+                            @error('image')
+                                <span class="invalid-feedback">
+                                    {{ $message }}
                                 </span>
-                            </div>
-
-                            <div id="preview">
-                                @error('icon')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
-                            </div>
+                            @enderror
                         </div>
-
                     </div>
+<script>
+    function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+        var output = document.getElementById('preview');
+        output.innerHTML = '<img src="' + reader.result + '" alt="Preview Image" style="max-width: 100%; height: auto;">';
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+</script>
 
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}

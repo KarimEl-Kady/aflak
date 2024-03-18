@@ -19,7 +19,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('about_us_id')->nullable();
             $table->string('title')->nullable();
-            $table->string('text')->nullable();
+            $table->longText('text')->nullable();
             $table->string('locale')->nullable();
             $table->foreign('about_us_id')->references('id')->on('about_us')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
@@ -43,7 +43,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('about_us_feature_id')->nullable();
             $table->string('title')->nullable();
-            $table->string('text')->nullable();
+            $table->longText('text')->nullable();
             $table->string('locale')->nullable();
             $table->foreign('about_us_feature_id')->references('id')->on('about_us_features')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

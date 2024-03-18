@@ -39,7 +39,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('service_feature_id')->nullable();
             $table->string('title')->nullable();
-            $table->string('text')->nullable();
+            $table->longText('text')->nullable();
             $table->string('locale')->nullable();
             $table->foreign('service_feature_id')->references('id')->on('service_features')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

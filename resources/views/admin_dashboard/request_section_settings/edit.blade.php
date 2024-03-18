@@ -28,15 +28,15 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.edit_service') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.edit_request_section_setting') }}</h3>
                 </div>
             </div>
 
 
             <div class="card-body">
-                <form method="post" action="{{ route('services.update', $service->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('request_section_settings.update', $request_section_setting->id) }}" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
+
 
                     <div class="row">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -49,7 +49,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value="{{ $service->translate($localeCode)->title }}">
+                                            value="{{ $request_section_setting->translate($localeCode)->title }}">
                                     </div>
 
                                 </div>
@@ -60,67 +60,21 @@
                     </div>
 
                     <div class="row">
-                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <!-- For loop this div -->
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <label>
-                                        {{ __('messages.text_' . $localeCode) }}
-                                        <span class="text-danger"> ( {{ $localeCode }} )</span>
-                                    </label>
-                                    <div class="text-input">
-                                        <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $service->translate($localeCode)->text }}>
-                                    </div>
-
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group"> <!-- Apply form-group class -->
+                                <label for="type">{{ __('messages.type') }}</label>
+                                <div class="text-input"> <!-- Apply text-input class -->
+                                    <select name="type" id="type" class="form-control"> <!-- Apply form-control class -->
+                                        <option value="1" {{ $request_section_setting->type == 1 ? 'selected' : '' }}>{{ __('messages.load') }}</option>
+                                        <option value="2" {{ $request_section_setting->type == 2 ? 'selected' : '' }}>{{ __('messages.type') }}</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
                                 </div>
                             </div>
-                        @endforeach
-
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-
-                                    Darg and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
-                                </span>
-                            </div>
-
-                            <div id="preview">
-                                @error('image')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
-                            </div>
                         </div>
-
                     </div>
 
-                    <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
 
-                                    Darg and Drop icon here
-                                    <input type="file" name="icon" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
-                                </span>
-                            </div>
-
-                            <div id="preview">
-                                @error('icon')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                    </div>
 
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}

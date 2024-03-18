@@ -19,45 +19,45 @@
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/"
-                  >Home</a
+                  >{{ __('messages.home') }}</a
                 >
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about_us">About Us</a>
+                <a class="nav-link" href="about_us">{{ __('messages.about_us') }}</a>
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services">Services</a>
+                <a class="nav-link" href="services">{{ __('messages.services') }}</a>
                 <div class="point"></div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog">Blogs</a>
+                <a class="nav-link" href="blog">{{ __('messages.blogs') }}</a>
                 <div class="point"></div>
               </li>
             </ul>
             <div class="chose-languge">
-              <div class="dropdown">
-                <a
-                  class="dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  English
-                  <img src="img/en.png" alt="" />
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li>
-                    <a class="dropdown-item" href="#"
-                      >AR <img src="img/download.jfif" alt=""
-                    /></a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Another languge</a></li>
-                </ul>
-              </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      @if (app()->getLocale() == 'en')
+                        EN
+                      @else
+                        AR
+                      @endif
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        <li>
+                          <a rel="alternate" class="dropdown-item" hreflang="{{ $localeCode }}"
+                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                          </a>
+                        </li>
+                      @endforeach
+
+                    </ul>
+                  </div>
               <a href="contact_us"
                 ><button type="button" class="btn btn-secondary">
                   Contact Us
@@ -84,16 +84,16 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                <a class="nav-link" aria-current="page" href="{{ route('home') }}">{{ __('messages.home') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="About-Us.html">About Us</a>
+                <a class="nav-link" href="About-Us.html">{{ __('messages.about_us') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('services') }}">Services</a>
+                <a class="nav-link" href="{{ route('services') }}">{{ __('messages.services') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('blog') }}">Blogs</a>
+                <a class="nav-link" href="{{ route('blog') }}">{{ __('messages.blogs') }}</a>
               </li>
             </ul>
             <div class="chose-languge">
@@ -115,12 +115,12 @@
                       >AR <img src="img/download.jfif" alt=""
                     /></a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Another languge</a></li>
+                  <li><a class="dropdown-item" href="#">{{ __('messages.another_language') }}</a></li>
                 </ul>
               </div>
               <a href="contact-us.html"
                 ><button type="button" class="btn btn-secondary">
-                  Contact Us
+                  {{ __('messages.contact_us') }}
                 </button></a
               >
             </div>
