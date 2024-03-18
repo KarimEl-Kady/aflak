@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        Schema::defaultStringLength(191);
-        $news_email_setting = NewsEmaillSetting::firstOrNew();
-        View::share('news_email_setting', $news_email_setting);
+        // Schema::defaultStringLength(191);
+        // $news_email_setting = NewsEmaillSetting::firstOrNew();
+        // View::share('news_email_setting', $news_email_setting);
     }
 }
