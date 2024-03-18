@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             AdvantageSeeder::class,
             ServiceSeeder::class,
             // HomeSliderSeeder::class,
-            HomeSliderImageSeeder::class,
+            // HomeSliderImageSeeder::class,
             AboutUsSeeder::class,
             AboutUsImageSeeder::class,
             AboutUsFeatureSeeder::class,
