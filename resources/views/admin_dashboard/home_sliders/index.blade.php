@@ -48,7 +48,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $home_slider->translate($localeCode)->title }}>
+                                            value="{{ $home_slider->translate($localeCode)->title }}" ?? ''>
                                     </div>
 
                                 </div>
