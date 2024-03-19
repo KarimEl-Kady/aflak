@@ -176,30 +176,19 @@
             <h5>How to send your <span>package</span> ?</h5>
           </div>
           <div class="items-package">
+            @if ($steps)
+            @foreach ($steps as $step )
+
             <div class="item-one">
               <div class="icon">
-                  <img src="/website/img/list.svg" alt="">
+                  <img src="{{ $step->image_link ?? '/website/img/list.svg' }}" alt="">
               </div>
-              <p>Make An Order</p>
+              <p>{{ $step->title ?? '' }}</p>
             </div>
-            <div class="item-one">
-              <div class="icon">
-                  <img src="img/XMLID_246_.svg" alt="">
-              </div>
-              <p>Track Your Order</p>
-            </div>
-            <div class="item-one">
-              <div class="icon">
-                  <img src="img/Layer_2_16_.svg" alt="">
-              </div>
-              <p>Wait For Pickup</p>
-            </div>
-            <div class="item-one">
-              <div class="icon">
-                  <img src="img/outline.svg" alt="">
-              </div>
-              <p>Finish And Rate Us</p>
-            </div>
+            @endforeach
+
+            @endif
+
           </div>
         <!-- Learn How We Work gif -->
         <div class="vidio">
@@ -242,14 +231,14 @@
                   </div>
                 </div>
               </div>
-              <h6>Learn How We Work</h6>
+              <h6>{{ __('messages.learn_how_we_work') }}</h6>
             </div>
           </div>
           <!-- Learn How We Work gif -->
 
 
         <!-- swiper3 logo -->
-        <div class="swiper mySwiper3">
+        <div class="swiper mySwiper3"  style="height: 145px;">
           <div class="swiper-wrapper">
             @foreach ($clients as $client)
 

@@ -15,15 +15,15 @@ overflow: auto;
     <div class="our-blog-page">
         <div class="head-blog">
           <div class="container">
-            <p>HOME <span>. Blogs</span></p>
-            <h4>our Blogs</h4>
+            <p>{{ __('messages.home') }} <span>. {{ __('messages.blog') }}</span></p>
+            <h4>{{ __('messages.blog') }}</h4>
           </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-4 col-12" data-aos="fade-right">
               <div class="sections">
-                <h6>sections</h6>
+                <h6>{{ __('messages.sections')}}</h6>
                 <ul>
                     @foreach ($sections as $section )
 
@@ -33,7 +33,7 @@ overflow: auto;
                 </ul>
               </div>
               <div class="Related-posts">
-                <h6>Related posts</h6>
+                <h6>{{ __('messages.related_posts') }}</h6>
 
                 @foreach ($posts as $post )
 
@@ -50,7 +50,7 @@ overflow: auto;
                 @endforeach
               </div>
               <div class="Tags">
-                <h6>Tags</h6>
+                <h6>{{ __('messages.hashtags') }}</h6>
                 <div class="head">
                     @foreach ($hashtags as $hashtag )
 
@@ -69,7 +69,7 @@ overflow: auto;
                             <div class="col-lg-6 col-md-6 col-6" >
 
 
-                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000" >
+                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000" style="min-height: 358px">
                                     <a href="{{ route('blog.show', $blog->id) }}">
                                         <div class="img">
                                             <img src="{{ $blog->image_link ?? ''}}" alt="" style="border-radius: 10px;"/>
@@ -98,11 +98,11 @@ overflow: auto;
                         <div class="page-contant">
                             @if ($blogs->onFirstPage())
                                 <li class="page-item disabled">
-                                    <span  aria-hidden="true">&laquo; </span>
+                                    <span aria-hidden="true">&laquo;</span>
                                 </li>
                             @else
                                 <li class="page-item">
-                                    <a  href="{{ $blogs->previousPageUrl() }}" aria-label="Previous">
+                                    <a href="{{ $blogs->previousPageUrl() }}" aria-label="Previous" class="circle-btn">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
@@ -111,8 +111,8 @@ overflow: auto;
 
                         @foreach ($blogs->getUrlRange(1, $blogs->lastPage()) as $page => $url)
                             <div class="page-contant">
-                                <li class="page-item {{ $page == $blogs->currentPage()}}">
-                                    <a  href="{{ $url }}">{{ $page }}</a>
+                                <li class="page-item {{ $page == $blogs->currentPage() }}">
+                                    <a href="{{ $url }}" class="circle-btn">{{ $page }}</a>
                                 </li>
                             </div>
                         @endforeach
@@ -120,17 +120,18 @@ overflow: auto;
                         <div class="page-contant">
                             @if ($blogs->hasMorePages())
                                 <li class="page-item">
-                                    <a  href="{{ $blogs->nextPageUrl() }}" aria-label="Next">
+                                    <a href="{{ $blogs->nextPageUrl() }}" aria-label="Next" class="circle-btn">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
                             @else
                                 <li class="page-item disabled">
-                                    <span  aria-hidden="true">&raquo;</span>
+                                    <span aria-hidden="true">&raquo;</span>
                                 </li>
                             @endif
                         </div>
                     </ul>
+
                 </nav>
               </div>
             </div>

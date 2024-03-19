@@ -41,26 +41,25 @@
         <div class="container">
           <div class="socia-media">
             <div class="logo">
-              <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"> <i class="fa-brands fa-twitter"></i></a>
-              <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
-              <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+              <a href="{{ $setting->facebook ?? '' }}"> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href="{{ $setting->twitter ?? '' }}"> <i class="fa-brands fa-twitter"></i></a>
+              <a href="{{ $setting->linkedin ?? '' }}"> <i class="fa-brands fa-linkedin"></i></a>
+              <a href="{{ $setting->youtube ?? '' }}"> <i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="phones">
-              <a href="#">
+              <a >
                 <p>
-                  Cargo Hub, LD 32614, UK<i
+                    {{ $setting->translate(LaravelLocalization::getCurrentLocale())->address ?? '' }}<i
                     class="fa-solid fa-location-dot"
                   ></i></p
               ></a>
-              <a href="#">
+              <a >
                 <p>
-                  timothy.gilbert@mail.com
-                  <i class="fa-regular fa-envelope"></i></p
+{{$setting->email ?? ''}}                  <i class="fa-regular fa-envelope"></i></p
               ></a>
 
               <a href="#">
-                <p>(995)658-5930 <i class="fa-solid fa-phone-flip"></i></p
+                <p>{{ $setting->phone ?? '' }} <i class="fa-solid fa-phone-flip"></i></p
               ></a>
             </div>
           </div>

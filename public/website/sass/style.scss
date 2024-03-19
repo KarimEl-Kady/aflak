@@ -784,6 +784,7 @@ body {
         padding: 0.5rem 1.5rem;
       }
     }
+
     .news {
       .Updates-news {
         margin: 1rem 0;
@@ -822,6 +823,30 @@ body {
         font-size: 16px;
         font-family: "plain";
       }
+    }
+    .our-blog-page .pagination .page-contant {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #e5890a;
+        border: 1px solid #e5890a;
+        padding: 1.5rem;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .our-blog-page .pagination .page-contant:hover {
+        background-color: black;
+    }
+    .our-blog-page .pagination .page-contant a {
+        color: white;
+    }
+    .our-blog-page .pagination a {
+        border: none;
+        background-color: transparent;
+        color: black;
+        box-shadow: none;
     }
   }
 }
@@ -889,6 +914,64 @@ body {
           span {
             color: #56a0dd;
           }
+        }
+      }
+      .items-package{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-image: url(../img/arrowhow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .item-one{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+          .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #56A0DD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid black;
+            img{
+              width: 55%;
+            }
+          }
+          p{
+            font-size: 1rem;
+            font-family: "bold";
+            margin-top: .5rem;
+          }
+        }
+      }
+      .item-one{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        .icon{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #56A0DD;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 3px solid black;
+          img{
+            width: 55%;
+          }
+        }
+        p{
+          font-size: 1rem;
+          font-family: "bold";
+          margin-top: .5rem;
         }
       }
       .achive {
