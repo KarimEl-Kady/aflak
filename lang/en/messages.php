@@ -679,5 +679,18 @@ return [
 'entered_password_is_wrong'   => 'Entered Password Is Wrong',
 
 
+'monday'            => 'Monday',
+'friday'            => 'Friday',
+'enter_name'        => 'Enter Name',
+'enter_email'       => 'Enter Email',
+'enter_subject'     => 'Enter Subject',
+'enter_message'     => 'Enter Message',
+'about_us'          => 'About Us',
+'services'          => 'Services',
+'our_story'         => 'Our Story',
+'learn_how_we_work' => 'Learn How We Work',
+'finish_and_rate_us'    => 'Finish And Rate Us',
+'wait_for_us'       => 'Wait For Us',
+
 
 ];

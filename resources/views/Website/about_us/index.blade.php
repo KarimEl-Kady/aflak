@@ -225,7 +225,7 @@ overflow: auto;
         <!-- About Our Logistics -->
 
        <!-- swiper3 logo -->
-       <div class="swiper mySwiper3">
+       <div class="swiper mySwiper3" style="height: 145px;">
         <div class="swiper-wrapper">
           @foreach ($clients as $client)
 

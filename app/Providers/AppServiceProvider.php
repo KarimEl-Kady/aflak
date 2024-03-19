@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting\Setting;
 use App\Models\NewsEmail\NewsEmaillSetting;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -25,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
         $news_email_setting = NewsEmaillSetting::firstOrNew();
+        $setting = Setting::firstOrNew();
         View::share('news_email_setting', $news_email_setting);
+        View::share('setting', $setting);
+
     }
 }
