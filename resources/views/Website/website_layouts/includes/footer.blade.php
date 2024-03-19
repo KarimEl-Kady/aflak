@@ -84,7 +84,7 @@
           <div class="About-company">
             <p>About company</p>
             <ul>
-              <a href="/"><li> {{ __('messages.about_us') }}</li></a>
+              <a href="/"><li> {{ __('messages.home') }}</li></a>
               <a href="about_us"><li>{{ __('messages.about_us') }}</li></a>
               <a href="services"><li>{{ __('messages.services') }}</li></a>
               <a href="blog"> <li>{{ __('messages.blogs') }}</li></a>

@@ -41,7 +41,7 @@ class ServiceController extends Controller
         }
 
         if($request->hasFile('icon')){
-            $data["icon"] = upload_image($request->image,"services");
+            $data["icon"] = upload_image($request->icon,"services");
         }
 
 
@@ -74,6 +74,10 @@ class ServiceController extends Controller
             $data["image"] = upload_image($request->image,"services");
         }
 
+        if($request->hasFile('icon')){
+            delete_image($service->icon);
+            $data["icon"] = upload_image($request->icon,"services");
+        }
 
         $service->update($data);
         return redirect()->route($this->route."index")

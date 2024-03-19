@@ -26,10 +26,10 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="contant-on-swiper">
-            <h3>{{ $home_slider->title ?? '' }}</h3>
-            <h6>{{ $home_slider->subtitle ?? '' }}</h6>
+            <h3>{{ "$home_slider->title" ?? '' }}</h3>
+            <h6>{{ "$home_slider->subtitle" ?? '' }}</h6>
             <p>
-                {{ $home_slider->text ?? '' }}
+                {{ "$home_slider->text" ?? '' }}
             </p>
             <a href="contact_us">
                 <button type="button" class="btn btn-light">Contact Us</button></a>
@@ -470,8 +470,9 @@
                                     <img src="{{ $blog->image_link }}" alt="" style="width: 632px; height: 222px; border-radius: 10px;"/>
                                 </a>
                             </div>
-                            <h4>{{ $blog->title }}</h4>
+                            <h4>{{ $blog->title ?? '' }}</h4>
                             <p>{{ $blog->created_at->format('d F Y') ?? '' }}</p>
+                            <h6>{{ $blog->description ?? '' }}</h6>
                             <a href="{{ route('blog.show', $blog->id) }}">
                                 <h5>{{ __('Read More') }} <i class="fa-solid fa-arrow-right"></i></h5>
                             </a>
