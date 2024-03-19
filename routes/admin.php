@@ -61,7 +61,8 @@ Route::group(
                 //about_us
                 Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us.index');
                 Route::post('about_us/update', [AboutUsController::class, 'update'])->name('about_us.update');
-
+                Route::delete('about_us/destroy_image/{id}', [AboutUsController::class, 'destroy_image'])
+                ->name('about_us.destroy_image');
                 //why_us_features
                 Route::resource('about_us_features', AboutUsFeatureController::class);
 
