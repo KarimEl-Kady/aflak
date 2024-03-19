@@ -60,7 +60,7 @@
                   </div>
               <a href="contact_us"
                 ><button type="button" class="btn btn-secondary">
-                  Contact Us
+                 {{__('messages.contact_us')}}
                 </button></a
               >
             </div>

@@ -84,10 +84,10 @@
           <div class="About-company">
             <p>About company</p>
             <ul>
-              <a href="home"><li>.. Home</li></a>
-              <a href="#"><li>About us</li></a>
-              <a href="services"><li>services</li></a>
-              <a href="blogs"> <li>blogs</li></a>
+              <a href="/"><li> {{ __('messages.about_us') }}</li></a>
+              <a href="about_us"><li>{{ __('messages.about_us') }}</li></a>
+              <a href="services"><li>{{ __('messages.services') }}</li></a>
+              <a href="blog"> <li>{{ __('messages.blogs') }}</li></a>
             </ul>
           </div>
         </div>
@@ -110,8 +110,8 @@
                 <img src="img/Icon4.svg" alt="" />
               </div>
               <div class="contant">
-                <a href="#"> <p>phone number</p></a>
-                <a href="#"><h6>+966543042000</h6></a>
+                <a href="#"> <p>{{__('messages.phone')}}</p></a>
+                <a href="#"><h6>{{ $setting->phone ?? '' }}</h6></a>
               </div>
             </div>
             <div class="links">
@@ -119,8 +119,8 @@
                 <img src="img/Icon5.svg" alt="" />
               </div>
               <div class="contant">
-                <a href="#"> <p>E-mail</p></a>
-                <a href="#"><h6>info@aflakshipping.com</h6></a>
+                <a href="#"> <p>{{__('messages.email')}}</p></a>
+                <a href="#"><h6>{{$setting->email ?? ''}}</h6></a>
               </div>
             </div>
             <div class="links">
@@ -128,8 +128,8 @@
                 <img src="img/Icon66.svg" alt="" />
               </div>
               <div class="contant">
-                <a href="#"> <p>Our Location</p></a>
-                <a href="#"><h6>706 Campfire Ave. Meriden, CT 06450</h6></a>
+                <a href="#"> <p>{{__('messages.address')}}</p></a>
+                <a href="#"><h6>{{$setting->address ?? ''}}</h6></a>
               </div>
             </div>
           </div>

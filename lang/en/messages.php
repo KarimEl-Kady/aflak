@@ -691,6 +691,10 @@ return [
 'learn_how_we_work' => 'Learn How We Work',
 'finish_and_rate_us'    => 'Finish And Rate Us',
 'wait_for_us'       => 'Wait For Us',
+'learn_about'       => 'Learn About',
+'our'               => 'Our',
+'most_important'   => 'Most Important',
+'blog'              => 'Blog',
 
 
 ];

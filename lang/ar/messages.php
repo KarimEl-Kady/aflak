@@ -400,7 +400,7 @@ return [
 
     // Wallets messages end
 
-   /** notifications */
+    /** notifications */
     "notifications fetched successfully" => "تم إرجاع الإشعارات بنجاح",
     "notifications" => "الإشعارات",
     "notification" => "الإشعار",
@@ -445,8 +445,8 @@ return [
     "egypt" => "مصر",
     "cairo" => "القاهرة",
 
-    "show_requests"=> "اظهار الطلبات",
-    "show_offers"=> "اظهار العروض",
+    "show_requests" => "اظهار الطلبات",
+    "show_offers" => "اظهار العروض",
     "enter_your_email_address"  => "ادخل بريدك الالكترونى",
 
     "webShortAbouts" => "نبذة قصيرة عنا",
@@ -787,7 +787,7 @@ return [
     'my_reciets'            => 'فواتيرى',
     'favorites'          => 'المفضلات',
     'chats'              => 'المحادثات',
-    'dont_upload_image_more_3.5_mbs'     =>'قم بأرفاق صورة لا تتجاوز عن 3.5 ميغا بايت' ,
+    'dont_upload_image_more_3.5_mbs'     => 'قم بأرفاق صورة لا تتجاوز عن 3.5 ميغا بايت',
     'full_name' => 'الاسم الكامل',
     'current_password'    => 'كلمة المرور الحالية',
     'new_password'        => 'كلمة المرور الجديدة',
@@ -813,7 +813,7 @@ return [
     'need_help'         => 'تحتاج الى مساعدة؟',
     'connect_us_now'    => 'لا تتردد في الاتصال بنا. نحن فريق من الخبراء ويسعدنا التحدث معك',
     'finsih_course_and_get_your_certificate'    => 'شهادات معتمدة من خلالنا',
-    'this_certificate_is_for_the_course_student_not_a_certificate_from_any_official_organization'   =>'تمنح شهادة اتمام البرنامج معتمدة من مركز معيار النجاح
+    'this_certificate_is_for_the_course_student_not_a_certificate_from_any_official_organization'   => 'تمنح شهادة اتمام البرنامج معتمدة من مركز معيار النجاح
     للتدريب و هي شهادة مؤهلة لدخول اختبار الرخصة المهنيةو
     ليست شهادة معتمدة من هيئة التقويم و التدريب',
     'payment_methods'    => 'طرق الدفع',
@@ -821,11 +821,27 @@ return [
     'add_your_review_to_enhance_our_services'   => 'قم بأضافة تقييمك للحقيبة التعليمية من اجل تحسين خدمتنا لك',
     'weekly_holidays'       => 'العطلات الاسبوعية',
     'add_admin'            => 'اضافة مسئول',
-    'success_standard'  =>'مركز معيار النجاح للتدريب',
+    'success_standard'  => 'مركز معيار النجاح للتدريب',
     'entered_email_is_wrong_or_not_registered'   => 'البريد الالكتروني المدخل غير صحيح او غير مسجل',
     'entered_password_is_wrong'      => 'كلمة المرور المدخلة غير صحيحة',
     'Educational_section' => 'القسم التعليمي',
-    'back'=>'رجوع',
-    'monday'    => 'الاثنين',
-    'friday'    => 'الجمعة',
+    'back' => 'رجوع',
+
+    'monday'            => 'الاثنين',
+    'friday'            => 'الجمعة',
+    'enter_name'        => 'ادخل الاسم',
+    'enter_email'       => 'ادخل البريد الإلكتروني',
+    'enter_subject'     => 'ادخل الموضوع',
+    'enter_message'     => 'ادخل الرسالة',
+    'about_us'          => 'من نحن',
+    'services'          => 'الخدمات',
+    'our_story'         => 'قصتنا',
+    'learn_how_we_work' => 'تعرف على كيفية عملنا',
+    'finish_and_rate_us'    => 'انتهي وقيمنا',
+    'wait_for_us'       => 'انتظرنا',
+    'learn_about'       => 'تعرف على',
+    'our'               => 'عنا',
+    'most_important'    => 'الأكثر أهمية',
+    'blog'              => 'المدونة',
+
 ];
