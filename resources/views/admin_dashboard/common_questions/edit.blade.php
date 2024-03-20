@@ -28,13 +28,13 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.edit_advantage') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.edit_common_question') }}</h3>
                 </div>
             </div>
 
 
             <div class="card-body">
-                <form method="post" action="{{ route('advantages.update', $advantage->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('common_questions.update', $common_question->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -44,12 +44,12 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.title_' . $localeCode) }}
+                                        {{ __('messages.question_' . $localeCode) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
-                                        <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value="{{ $advantage->translate($localeCode)->title }}"/>
+                                        <input type="text" class="form-control" name="question-{{ $localeCode }}"
+                                            value="{{ $common_question->translate($localeCode)->question  }}"/>
                                     </div>
 
                                 </div>
@@ -65,12 +65,12 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.text_' . $localeCode) }}
+                                        {{ __('messages.answer_' . $localeCode) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
-                                        <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value="{{ $advantage->translate($localeCode)->text }}"/>
+                                        <input type="text" class="form-control" name="answer-{{ $localeCode }}"
+                                            value="{{ $common_question->translate($localeCode)->answer }}"/>
                                     </div>
 
                                 </div>
@@ -80,25 +80,7 @@
 
                     </div>
 
-                    <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-                                    Drag and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
-                                </span>
-                            </div>
-                            <div id="preview">
-                                @if($advantage->image_link)
-                                    <img src="{{ $advantage->image_link }}" alt="Advantage Image" style="max-width: 100%; height: auto;">
-                                @endif
-                                @error('image')
-                                    <span class="invalid-feedback">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
+
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}
                         <span class="svg-icon svg-icon m-0 svg-icon-md">

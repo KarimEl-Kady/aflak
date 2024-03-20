@@ -81,46 +81,34 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-
-                                    Darg and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
-                                </span>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="image">{{ __('messages.preview_image') }}</label>
+                                <input type="file" class="form-control" name="image" id="image" accept="image/*">
                             </div>
-
-                            <div id="preview">
-                                @error('image')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
+                            <div id="imagePreview" class="preview">
+                                @if($service->image_link)
+                                    <img src="{{ $service->image_link }}" alt="Preview">
+                                @endif
                             </div>
                         </div>
-
                     </div>
-
-                    <div class="row">
-                        <div class="col-8 mx-auto">
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-
-                                    Darg and Drop icon here
-                                    <input type="file" name="icon" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
-                                </span>
+                    <div class ="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="icon">{{ __('messages.preview_icon') }}</label>
+                                <input type="file" class="form-control" name="icon" id="icon" accept="image/*">
                             </div>
-
-                            <div id="preview">
-                                @error('icon')
-                                    <span class="invalid-feedback">
-                                        {{ $message }}</span>
-                                @enderror
+                            <div id="iconPreview" class="preview">
+                                @if($service->icon_link)
+                                    <img src="{{ $service->icon_link }}" alt="Preview">
+                                @endif
                             </div>
                         </div>
-
                     </div>
+                    <!-- Your existing form fields -->
+
+
 
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}

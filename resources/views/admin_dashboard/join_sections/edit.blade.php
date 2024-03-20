@@ -84,21 +84,21 @@
                         <div class="col-8 mx-auto">
                             <div class="uploadOuter">
                                 <span class="dragBox">
-
-                                    Darg and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
-                                        ondrop="drop()" id="uploadFile" />
+                                    Drag and Drop image here
+                                    <input type="file" name="image" onChange="previewImage(event)"
+                                        id="uploadFile" />
                                 </span>
                             </div>
-
                             <div id="preview">
+                                <img src="{{ $join_section->image_link }}" alt="Preview"
+                                    id="currentImagePreview" />
                                 @error('image')
                                     <span class="invalid-feedback">
-                                        {{ $message }}</span>
+                                        {{ $message }}
+                                    </span>
                                 @enderror
                             </div>
                         </div>
-
                     </div>
 
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
@@ -128,6 +128,15 @@
 
                     </button>
                 </form>
-
+                <script>
+                    function previewImage(event) {
+                        var reader = new FileReader();
+                        reader.onload = function() {
+                            var output = document.getElementById('currentImagePreview');
+                            output.src = reader.result;
+                        };
+                        reader.readAsDataURL(event.target.files[0]);
+                    }
+                </script>
                 <!--end::Form-->
             @endsection

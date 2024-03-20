@@ -59,9 +59,25 @@
                     </div>
 
                     <!-- Upload image section -->
-                    <div class="form-group">
-                        <label for="">{{ __('messages.add_image_to_blog') }}</label>
-                        <input type="file" name="image" class="form-control" accept="image/*">
+                    <div class="row">
+                        <div class="col-8 mx-auto">
+                            <div class="uploadOuter">
+                                <span class="dragBox">
+
+                                    Darg and Drop image here
+                                    <input type="file" name="image" onChange="dragNdrop(event)" ondragover="drag()"
+                                        ondrop="drop()" id="uploadFile" />
+                                </span>
+                            </div>
+
+                            <div id="preview">
+                                @error('image')
+                                    <span class="invalid-feedback">
+                                        {{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Description fields -->
