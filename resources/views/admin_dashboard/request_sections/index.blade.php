@@ -84,34 +84,22 @@
                             <div class="uploadOuter">
                                 <span class="dragBox">
                                     Drag and Drop image here
-                                    <input type="file" name="image" onChange="dragNdrop(event)" onChange="previewImage(event)" id="uploadFile" ondragover="drag()" ondrop="drop()" id="uploadFile" />
+                                    <input type="file" name="image" onChange="previewImage(event)"
+                                        id="uploadFile" />
                                 </span>
                             </div>
-
-                            @if ($request_section->image)
-                                <div id="preview">
-                                    <img src="{{ asset($request_section->image) }}" alt="Preview Image" style="max-width: 100%; height: auto;">
-                                </div>
-                            @endif
-
-                            @error('image')
-                                <span class="invalid-feedback">
-                                    {{ $message }}
-                                </span>
-                            @enderror
+                            <div id="preview">
+                                <img src="{{ $request_section->image_link }}" alt="Preview"
+                                    id="currentImagePreview" />
+                                @error('image')
+                                    <span class="invalid-feedback">
+                                        {{ $message }}
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
                     </div>
-<script>
-    function previewImage(event) {
-    var reader = new FileReader();
-    reader.onload = function () {
-        var output = document.getElementById('preview');
-        output.innerHTML = '<img src="' + reader.result + '" alt="Preview Image" style="max-width: 100%; height: auto;">';
-    };
-    reader.readAsDataURL(event.target.files[0]);
-}
 
-</script>
 
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}
@@ -140,6 +128,15 @@
 
                     </button>
                 </form>
-
+                <script>
+                    function previewImage(event) {
+                        var reader = new FileReader();
+                        reader.onload = function() {
+                            var output = document.getElementById('currentImagePreview');
+                            output.src = reader.result;
+                        };
+                        reader.readAsDataURL(event.target.files[0]);
+                    }
+                </script>
                 <!--end::Form-->
             @endsection

@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Website\AboutUsController;
 use App\Http\Controllers\Website\BlogController;
+use App\Http\Controllers\Website\CommonQuestionController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\EmailNewsController;
 use App\Http\Controllers\Website\IndexController;
+use App\Http\Controllers\Website\PrivacyController;
 use App\Http\Controllers\Website\RequestController;
 use App\Http\Controllers\Website\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -44,5 +46,10 @@ Route::group(
 
 
         Route::post('send_request', [RequestController::class, 'send_request'])->name('send_request');
+
+        Route::get('privacies', [PrivacyController::class, 'index'])->name('privacies'); // Privacy Page Route
+
+        Route::get('common_questions', [CommonQuestionController::class, 'index'])->name('common_questions'); // Common Questions Page Route
+
     }
 );

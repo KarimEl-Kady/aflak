@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\CommonQuestionController;
 use App\Http\Controllers\Admin\EmailNewsController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\HomeSliderController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Admin\LogisiticSectionController;
 use App\Http\Controllers\Admin\NewsEmailSettingController;
 use App\Http\Controllers\Admin\OurStoryController;
 use App\Http\Controllers\Admin\OurStoryFeatureController;
+use App\Http\Controllers\Admin\PrivacyController;
 use App\Http\Controllers\Admin\RequestController;
 use App\Http\Controllers\Admin\RequestSectionController;
 use App\Http\Controllers\Admin\RequestSectionSettingController;
@@ -127,6 +129,13 @@ Route::group(
                 Route::resource('settings', SettingController::class);
                 Route::post('settings/update', [SettingController::class, 'update'])->name('settings.update');
 
+                //privacies
+                Route::get('privacies', [PrivacyController::class, 'index'])->name('privacies.index');
+                Route::post('privacies/update', [PrivacyController::class, 'update'])->name('privacies.update');
+
+                //common_question
+                Route::resource('common_questions', CommonQuestionController::class);
+                //
             });
         });
     }

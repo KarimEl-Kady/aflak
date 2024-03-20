@@ -95,10 +95,10 @@
           <div class="About-company">
             <h4>other pages</h4>
             <ul>
-              <a href="#"><li>privacy policy</li></a>
-              <a href="#"><li>Instructions for use</li></a>
-              <a href="#"><li>common questions</li></a>
-              <a href="#"> <li>contact us</li></a>
+              <a href={{route('privacies')}}><li>{{__('messages.privacy_policy')}}</li></a>
+              <a href="#"><li>{{__('messages.terms_and_conditions')}}</li></a>
+              <a href="{{ route('common_questions') }}"><li>{{__('messages.common_questions')}}</li></a>
+              <a href="contact_us"> <li>{{__('messages.contact_us')}}</li></a>
             </ul>
           </div>
         </div>
