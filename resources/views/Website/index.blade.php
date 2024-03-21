@@ -15,6 +15,9 @@
 .home .mySwiper1 img {
     height: unset !important;
 }
+.home .contact-us {
+    margin-top: 48px !important;
+}
 
 </style>
 
