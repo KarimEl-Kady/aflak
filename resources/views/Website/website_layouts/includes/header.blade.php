@@ -5,7 +5,7 @@
     <!--  -->
     <link rel="icon" href="img/title.png" type="image" />
     <!-- animation -->
-    <link rel="stylesheet" href="/website/css/aos-anmite.css" />
+    {{-- <link rel="stylesheet" href="/website/css/aos-anmite.css" /> --}}
     <!-- animation -->
     <link rel="stylesheet" href="/website/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/website/sass/_navbar.scss" />
