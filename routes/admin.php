@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\HomeSliderImageController;
 use App\Http\Controllers\Admin\JoinSectionController;
 use App\Http\Controllers\Admin\LogisiticSectionController;
 use App\Http\Controllers\Admin\NewsEmailSettingController;
+use App\Http\Controllers\Admin\OurGoalController;
 use App\Http\Controllers\Admin\OurStoryController;
 use App\Http\Controllers\Admin\OurStoryFeatureController;
 use App\Http\Controllers\Admin\PrivacyController;
@@ -105,6 +106,12 @@ Route::group(
                 Route::post('our_stories/update', [OurStoryController::class, 'update'])->name('our_stories.update');
                 Route::delete('our_stories/destroy_features/{id}', [OurStoryController::class, 'destroy_features'])->name('our_stories.destroy_features');
                 Route::delete('our_stories/destroy_stroy_image/{id}', [OurStoryController::class, 'destroy_stroy_image'])->name('our_stories.destroy_stroy_image');
+
+                //our_goals
+                Route::resource('our_goals', OurGoalController::class);
+                Route::post('our_goals/update', [OurGoalController::class, 'update'])->name('our_goals.update');
+
+                Route::delete('our_goals/destroy_features/{id}', [OurGoalController::class, 'destroy_features'])->name('our_goals.destroy_features');
 
                 //our_story_features
                 // Route::resource('our_story_features', OurStoryFeatureController::class);

@@ -14,7 +14,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="img">
-              <img src="img/title.png" alt="" />
+              <img src="/website/img/title.png" alt="" />
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
@@ -41,9 +41,10 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       @if (app()->getLocale() == 'en')
-                        EN
+                        EN <img src="/website/img/en.png" alt="" />
                       @else
-                        AR
+                        AR <img src="/website/img/download.jfif" alt=""
+                        />
                       @endif
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -51,7 +52,8 @@
                         <li>
                           <a rel="alternate" class="dropdown-item" hreflang="{{ $localeCode }}"
                             href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }}
+                            {{ $properties['native'] }} <img {{ $localeCode == 'en' ? 'src="/website/img/en.png"' : 'src="img/download.jfif"' }} alt="" />
+
                           </a>
                         </li>
                       @endforeach
@@ -67,65 +69,7 @@
           </div>
         </div>
       </nav>
-        <div class="container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="img"><img src="img/title.png" alt="" /></div>
 
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('home') }}">{{ __('messages.home') }}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="About-Us.html">{{ __('messages.about_us') }}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('services') }}">{{ __('messages.services') }}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('blog') }}">{{ __('messages.blogs') }}</a>
-              </li>
-            </ul>
-            <div class="chose-languge">
-              <div class="dropdown">
-                <a
-                  class="dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  English
-                  <img src="img/en.png" alt="" />
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li>
-                    <a class="dropdown-item" href="#"
-                      >AR <img src="img/download.jfif" alt=""
-                    /></a>
-                  </li>
-                  <li><a class="dropdown-item" href="#">{{ __('messages.another_language') }}</a></li>
-                </ul>
-              </div>
-              <a href="contact-us.html"
-                ><button type="button" class="btn btn-secondary">
-                  {{ __('messages.contact_us') }}
-                </button></a
-              >
-            </div>
-          </div>
-        </div>
       </nav>
 </section>
 

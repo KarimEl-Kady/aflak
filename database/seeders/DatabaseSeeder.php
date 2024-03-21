@@ -31,6 +31,8 @@ class DatabaseSeeder extends Seeder
             OurStorySeeder::class,
             OurStoryFeatureSeeder::class,
             LogisiticSectionSeeder::class,
+            OurGoalSeeder::class,
+            OurGoalFeatureSeeder::class,
         ]);
     }
 }

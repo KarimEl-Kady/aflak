@@ -27,8 +27,8 @@ class IndexController extends Controller
     {
         $home_slider = HomeSlider::first();
         $home_slider_images = HomeSliderimage::get();
-        $advantages = Advantage::get();
-        $services = Service::get();
+        $advantages = Advantage::take(6)->get();
+        $services = Service::take(4)->get();
         $aboutus = AboutUs::first();
         $aboutus_features = AboutUsFeature::get();
         $aboutus_images = AboutUsImage::get();

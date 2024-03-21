@@ -696,5 +696,31 @@ return [
 'most_important'   => 'Most Important',
 'blog'              => 'Blog',
 
+'our_services'      => 'Our Services',
+'about_company'     => 'About Company',
+'other_pages'       => 'Other Pages',
+'communication_links'   => 'Communication Links',
+'what_we'           => 'What We',
+'offer'             => 'Offer',
+'for you '          => 'For You ',
+'advantages'        => 'Advantages',
+'for_you'           => 'For You',
+'our_advantages'    => 'Our Advantages',
+'how'               => 'How',
+'how_its_work'      => 'How Its Work',
+'how_to_send_your'  => 'How To Send Your',
+'package'           => 'Package',
+'your_name'         => 'Your Name',
+'freight_type'      => 'Freight Type',
+'load'              => 'Load',
+'select'            => 'Select',
+
+'about_logistics'   => 'About Logistics',
+'our_story'         => 'Our Story',
+'our_goal'          => 'Our Goal',
+'related_posts'     => 'Related Posts',
+'time'              => 'Time',
+
+
 
 ];
