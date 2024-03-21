@@ -15,6 +15,9 @@
 .home .mySwiper1 img {
     height: unset !important;
 }
+.home .contact-us {
+    margin-top: 48px !important;
+}
 
 </style>
 
@@ -245,17 +248,17 @@
 
         <!-- swiper3 logo -->
         <!-- swiper3 logo -->
-    </div>
-    <div class="swiper mySwiper3"  style="height: 145px;">
-      <div class="swiper-wrapper">
-        @foreach ($clients as $client)
+        <div class="swiper mySwiper3"  style="height: 145px;">
+          <div class="swiper-wrapper">
+            @foreach ($clients as $client)
 
-        <div class="swiper-slide">
-            <img src="{{ $client->image_link }}" alt="" />
+            <div class="swiper-slide">
+                <img src="{{ $client->image_link }}" alt="" />
+            </div>
+            @endforeach
+
+          </div>
         </div>
-        @endforeach
-
-      </div>
     </div>
       <!-- how-it-work -->
 
