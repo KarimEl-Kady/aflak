@@ -48,7 +48,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="name"
-                                            value={{ $client->name }}>
+                                            value="{{ $client->name }}">
                                     </div>
 
                                 </div>

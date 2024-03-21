@@ -1,10 +1,10 @@
 <style>
     .Subscribe {
-        /* @if($news_email_setting->image_link)
+        @if($news_email_setting->image_link)
             background-image: url({{ $news_email_setting->image_link }});
         @else */
-            background-image: url(../img/foot1.png);
-        /* @endif */
+            background-image: url(/website/img/foot1.png);
+        /* @endif
     }
 </style>
 

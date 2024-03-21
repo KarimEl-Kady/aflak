@@ -64,12 +64,12 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.subtitle_' . $localeCode) }}
+                                        {{ __('messages.subtitle' ) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="subtitle-{{ $localeCode }}"
-                                            value={{ $news_email_setting->translate($localeCode)->subtitle }}>
+                                            value="{{ $news_email_setting->translate($localeCode)->subtitle ?? '' }}">
                                     </div>
 
                                 </div>

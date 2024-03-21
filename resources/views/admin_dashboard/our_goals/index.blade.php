@@ -81,7 +81,7 @@
                     <div class="row feature-container">
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>{{ __('messages.feature_' . $localeCode) }}
+                                <label>{{ __('messages.feature' ) }}
                                     <span class="text-danger"> ({{ $localeCode }})</span>
                                 </label>
                                 <input type="text" class="form-control"

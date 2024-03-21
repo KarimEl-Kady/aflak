@@ -43,7 +43,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.title_' . $localeCode) }}
+                                        {{ __('messages.title') }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
@@ -64,12 +64,12 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.subtitle_' . $localeCode) }}
+                                        {{ __('messages.subtitle' ) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="subtitle-{{ $localeCode }}"
-                                            value={{ $home_slider->translate($localeCode)->subtitle }}>
+                                            value="{{ $home_slider->translate($localeCode)->subtitle }}">
                                     </div>
 
                                 </div>
@@ -90,7 +90,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $home_slider->translate($localeCode)->text }}>
+                                            value="{{ $home_slider->translate($localeCode)->text }}">
                                     </div>
 
                                 </div>

@@ -28,7 +28,7 @@
 
                     </span>
 
-                    <h3 class="card-label"> {{ __('messages.add admin') }}</h3>
+                    <h3 class="card-label"> {{ __('messages.add_slider_image') }}</h3>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                         </div>
 
                     </div>
-                   
+
                     <button type="submit" class="btn btn-shadow btn-primary font-weight-bold mt-5">
                         {{ __('messages.save') }}
                         <span class="svg-icon svg-icon m-0 svg-icon-md">
