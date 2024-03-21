@@ -144,7 +144,7 @@
 
                                 </div>
                                 <div class="img">
-                                    <img src="{{ $our_goal->image_link }}" alt="" />
+                                    <img src="{{ $our_goal->image_link ?? '/website/img/qw4.png' }}" alt="" />
                                 </div>
 
                             </div>
@@ -173,7 +173,7 @@
                                     @endif
                                 </div>
                                 <div class="img">
-                                    <img src="img/qw2.png" alt="" />
+                                    <img src="{{$story_image->image_link ?? '/website/img/qw2.png'}}" alt="" />
                                 </div>
                             </div>
                         </div>
