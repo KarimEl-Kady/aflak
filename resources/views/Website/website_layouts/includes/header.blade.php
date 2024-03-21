@@ -49,10 +49,13 @@
             <div class="phones">
               <a >
                 <p>
-                    {{ $setting->translate(LaravelLocalization::getCurrentLocale())->address ?? '' }}<i
-                    class="fa-solid fa-location-dot"
-                  ></i></p
-              ></a>
+                    @if($setting !== null && $setting->address !== null)
+                        {{ $setting->translate(LaravelLocalization::getCurrentLocale())->address }}
+                    @endif
+                    <i class="fa-solid fa-location-dot"></i>
+                </p>
+
+              </a>
               <a >
                 <p>
 {{$setting->email ?? ''}}                  <i class="fa-regular fa-envelope"></i></p

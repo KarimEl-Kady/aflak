@@ -39,7 +39,7 @@ class AboutUsController extends Controller
             $about_us->update($data);
 
             if($request->images && count($request->images) > 0){
-                $about_us->images()->delete();
+                // $about_us->images()->delete();
                 foreach($request->images as $key => $image){
                     $image_data["image"] = upload_image($image, "why_us");
                     $image_data["about_us_id"] = $about_us->id;

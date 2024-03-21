@@ -335,7 +335,7 @@ return [
 
 
     //Offers messages start
-    'offer' => 'عرض',
+    'offer' => 'نقدم',
     'offers' => 'العروض',
     'edit offer' => 'تعديل العروض',
     'add offer' => 'اضافه العروض',
@@ -844,4 +844,29 @@ return [
     'most_important'    => 'الأكثر أهمية',
     'blog'              => 'المدونة',
 
+    'our_services'      => 'خدماتنا',
+'about_company'     => 'عن الشركة',
+'other_pages'       => 'صفحات أخرى',
+'communication_links'   => 'روابط الاتصال',
+'what_we'           => 'ماذا نحن',
+'offer'             => 'نقدم',
+'for you '          => 'بالنسبة لك ',
+'advantages'        => 'مزايا',
+'for_you'           => 'بالنسبة لك',
+'our_advantages'    => 'مزايانا',
+'how'               => 'كيف',
+'how_its_work'      => 'كيف تعمل',
+'how_to_send_your'  => 'كيفية إرسال حزمتك',
+'package'           => 'حزمة',
+'your_name'         => 'اسمك',
+'freight_type'      => 'نوع الشحنة',
+'load'              => 'حمولة',
+'select'            => 'اختر',
+
+'about_logistics' => 'حول الخدمات اللوجستية',
+'our_story' => 'قصتنا',
+'our_goal' => 'هدفنا',
+
+'related_posts' => 'مقالات ذات صلة',
+'time' => 'وقت',
 ];

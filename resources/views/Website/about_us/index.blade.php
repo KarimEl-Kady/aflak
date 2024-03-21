@@ -108,7 +108,7 @@ overflow: auto;
                     aria-controls="nav-home"
                     aria-selected="true"
                   >
-                    our goals
+                    {{__('messages.our_goal') }}
                   </button>
                   <button
                     class="nav-link"
@@ -120,7 +120,7 @@ overflow: auto;
                     aria-controls="nav-profile"
                     aria-selected="false"
                   >
-                    our story
+                    {{ __('messages.our_story') }}
                   </button>
                 </div>
               </nav>
@@ -136,41 +136,28 @@ overflow: auto;
                   <div class="contant">
                     <div class="text">
                       <p>
-                        Our company was founded with a mission to simplify the
-                        logistics process for our customers, and we achieve this
-                        through our commitment to delivering exceptional service
-                        and innovative solutions that meet the unique needs of
-                        each client.Our team of experienced logistics
-                        professionals work closely with our clients to understand
-                        their needs, develop customized logistics solutions, and
-                        provide ongoing support throughout the entire
-                        transportation process.
-                      </p>
+                        {{ $our_goal->translate(LaravelLocalization::getCurrentLocale())->text ?? '' }}
+                    </p>
+                    @if($our_goal_features)
+                    @foreach ($our_goal_features as $index => $feature)
                       <div class="check">
                         <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
+                          <img src="/website/img/qw3.png" alt="" />
+                          <p>{{ $feature->title }}</p>
                         </div>
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
+
                       </div>
-                      <div class="check">
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
-                      </div>
+
+                      @endforeach
+                      @endif
+
                     </div>
                     <div class="img">
-                      <img src="img/qw4.png" alt="" />
+                      <img src="{{ $our_goal->image_link }}" alt="" />
                     </div>
+
                   </div>
+
                 </div>
                 <div
                   class="tab-pane fade"
@@ -181,36 +168,21 @@ overflow: auto;
                   <div class="contant">
                     <div class="text">
                       <p>
-                        Our company was founded with a mission to simplify the
-                        logistics process for our customers, and we achieve this
-                        through our commitment to delivering exceptional service
-                        and innovative solutions that meet the unique needs of
-                        each client.Our team of experienced logistics
-                        professionals work closely with our clients to understand
-                        their needs, develop customized logistics solutions, and
-                        provide ongoing support throughout the entire
-                        transportation process.
-                      </p>
-                      <div class="check">
+                    {{ $our_story->translate(LaravelLocalization::getCurrentLocale())->text ?? '' }}</p>
+                        @if($our_story_features)
+                        @foreach ($our_story_features as $index => $feature)
+
+                    <div class="check">
                         <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
+                          <img src="/website/img/qw3.png" alt="" />
+                          <p>{{ $feature->title }}</p>
                         </div>
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
+
                       </div>
-                      <div class="check">
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
-                        <div class="gols">
-                          <img src="img/qw3.png" alt="" />
-                          <p>Transportation assistance</p>
-                        </div>
-                      </div>
+                      @endforeach
+
+
+                      @endif
                     </div>
                     <div class="img">
                       <img src="img/qw2.png" alt="" />
@@ -243,9 +215,9 @@ overflow: auto;
             <div class="container">
                 <div class="head">
                     <div class="title">
-                        <h1>Advantages</h1>
-                        <p>Our Advantages</p>
-                        <h5>what we <span>offer</span> for you ?</h5>
+                        <h1>{{ __('messages.advantages') }}</h1>
+                        <p>{{ __('messages.our_advantages') }}</p>
+                        <h5>{{ __('messages.what_we') }} <span>{{__('messages.offer')}}</span> {{ __('messages.for_you') }} ?</h5>
                     </div>
                     <div class="cards">
                         <div class="row">

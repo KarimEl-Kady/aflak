@@ -61,9 +61,9 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
+
                                             value="{{ $about_us->translate($localeCode)->title }}">
                                     </div>
-
                                 </div>
                             </div>
                         @endforeach
@@ -84,9 +84,9 @@
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
                                             value="{{ $about_us->translate($localeCode)->text }}">
                                     </div>
+                                </div>
 
                                 </div>
-                            </div>
                         @endforeach
 
 
@@ -120,14 +120,14 @@
                                     <input type="file" name="images[]" multiple onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="uploadFile" />
                                 </span>
                             </div>
-                            <div id="preview" class="mt-4">
+                            {{-- <div id="preview" class="mt-4">
                                 @if ($about_images)
                                 @foreach ($about_images as $image)
                                 <div class="row">
                                     <div class="col-8 mx-auto">
                                         <div class="preview-image">
                                             <img src="{{ $image->image_link }}" alt="Preview Image" style="max-width: 100%; height: auto;">
-                                            {{-- <a href="{{ route('about_us.destroy_image', $image->id) }}" class="btn btn-danger delete-image">Delete</a> --}}
+                                            {{-- <a href="{{ route('about_us.destroy_image', $image->id) }}" class="btn btn-danger delete-image">Delete</a>
                                             <form method="post" action="{{ route('about_us.destroy_image', $image->id) }}">
                                                 @csrf
                                                 @method('DELETE')
@@ -143,7 +143,7 @@
                                 <span class="invalid-feedback">
                                     {{ $message }}
                                 </span>
-                            @enderror
+                            @enderror --}}
                         </div>
                     </div>
 
@@ -177,7 +177,30 @@
                     </button>
                 </form>
                 <div>
-
+                    <div id="preview" class="mt-4">
+                        @if ($about_images)
+                        @foreach ($about_images as $image)
+                        <div class="row">
+                            <div class="col-8 mx-auto">
+                                <div class="preview-image">
+                                    <img src="{{ $image->image_link }}" alt="Preview Image" style="max-width: 100%; height: auto;">
+                                    {{-- <a href="{{ route('about_us.destroy_image', $image->id) }}" class="btn btn-danger delete-image">Delete</a> --}}
+                                    <form method="post" action="{{ route('about_us.destroy_image', $image->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete-image">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                        @endif
+                    </div>
+                    @error('images')
+                        <span class="invalid-feedback">
+                            {{ $message }}
+                        </span>
+                    @enderror
                     <a href="{{route('about_us_features.index')}} " class="btn btn-shadow btn-primary font-weight-bold mt-5"><span>{{ __('messages.add_about_us_features') }}</span> </a>
                 </div>
             </div>

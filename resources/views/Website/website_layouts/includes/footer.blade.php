@@ -1,10 +1,10 @@
 <style>
     .Subscribe {
-        @if($news_email_setting->image_link)
+        /* @if($news_email_setting->image_link)
             background-image: url({{ $news_email_setting->image_link }});
-        @else
+        @else */
             background-image: url(../img/foot1.png);
-        @endif
+        /* @endif */
     }
 </style>
 
@@ -82,7 +82,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-12">
           <div class="About-company">
-            <p>About company</p>
+            <p>{{ __('messages.about_company') }}</p>
             <ul>
               <a href="/"><li> {{ __('messages.home') }}</li></a>
               <a href="about_us"><li>{{ __('messages.about_us') }}</li></a>
@@ -93,7 +93,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-12">
           <div class="About-company">
-            <h4>other pages</h4>
+            <h4>{{ __('messages.other_pages') }}</h4>
             <ul>
               <a href={{route('privacies')}}><li>{{__('messages.privacy_policy')}}</li></a>
               <a href="#"><li>{{__('messages.terms_and_conditions')}}</li></a>
@@ -104,7 +104,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-12">
           <div class="Communication-links">
-            <p>Communication links</p>
+            <p>{{ __('messages.communication_links') }}</p>
             <div class="links">
               <div class="icon">
                 <img src="img/Icon4.svg" alt="" />

@@ -42,9 +42,9 @@
         <div class="container">
             <div class="head">
                 <div class="title">
-                    <h1>Advantages</h1>
-                    <p>Our Advantages</p>
-                    <h5>what we <span>offer</span> for you ?</h5>
+                    <h1>{{ __('messages.advantages') }}</h1>
+                    <p>{{ __('messages.our_advantages') }}</p>
+                    <h5>{{ __('messages.what_we') }} <span>{{__('messages.offer')}}</span> {{ __('messages.for_you') }} ?</h5>
                 </div>
                 <div class="cards">
                     <div class="row">
@@ -72,8 +72,8 @@
                     <div class="col-lg-7 col-md-12 col-12">
                         <div class="About-Us-Experiences">
                             <div class="title">
-                                <h1>About Us</h1>
-                                <p>about company</p>
+                                <h1>{{ __('messages.about_us') }}</h1>
+                                <p>{{ __('messages.about_company') }}</p>
                                 <h4><span>25+</span> {{ $aboutus->title ?? '' }}</h4>
                                 <h6>
                                     {{ $aboutus->text ?? '' }}
@@ -123,11 +123,11 @@
     <div class="Services" data-aos="fade-down" data-aos-duration="2500">
         <div class="container">
             <div class="title">
-                <h1>Services</h1>
-                <p>Our Services</p>
+                <h1>{{ __('messages.services') }}</h1>
+                <p>{{ __('messages.our_services') }}</p>
                 <h5>
-                    Learn About <span>Our</span> Most Important
-                    <span>Services</span>
+                    {{ __('messages.learn_about') }} <span>{{ __('messages.our') }}</span> {{ __('messages.most_important') }}
+                    <span>{{ __('messages.services') }}</span>
                 </h5>
             </div>
             <div class="card-Services">
@@ -171,9 +171,9 @@
           data-aos-duration="2000"
         >
           <div class="title">
-            <h1>How</h1>
-            <p>How It’s Work</p>
-            <h5>How to send your <span>package</span> ?</h5>
+            <h1>{{ __('messages.how') }}</h1>
+            <p>{{ __('messages.how_its_work') }}</p>
+            <h5>{{ __('messages.how_to_send_your') }} <span>{{ __('messages.package') }}</span> ?</h5>
           </div>
           <div class="items-package">
             @if ($steps)
@@ -455,6 +455,7 @@
                             <p>{{ $last_blog ? $last_blog->created_at->format('d F Y') : __('messages.no_blogs_found') }}</p>
                             <h6>{{ $last_blog ? $last_blog->text : '' }}</h6>
                             @if ($last_blog)
+                            <p>{{ $last_blog->description ?? '' }}</p>
                             <a href="{{ route('blog.show', $last_blog->id) }}">
                                 <h5>{{ __('Read More') }} <i class="fa-solid fa-arrow-right"></i></h5>
                             </a>
@@ -472,7 +473,7 @@
                             </div>
                             <h4>{{ $blog->title ?? '' }}</h4>
                             <p>{{ $blog->created_at->format('d F Y') ?? '' }}</p>
-                            <h6>{{ $blog->description ?? '' }}</h6>
+                            {{-- <h6>{{ $blog->description ?? '' }}</h6> --}}
                             <a href="{{ route('blog.show', $blog->id) }}">
                                 <h5>{{ __('Read More') }} <i class="fa-solid fa-arrow-right"></i></h5>
                             </a>
