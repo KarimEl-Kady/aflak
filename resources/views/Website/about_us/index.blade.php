@@ -20,6 +20,9 @@
         margin-bottom: 1rem;
         align-items: center;
     }
+    .home .advantges-home {
+        margin-top: unset !important;
+    }
 </style>
 
 @section('content')
