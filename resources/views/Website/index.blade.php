@@ -477,7 +477,7 @@
                         <div class="Updates-news">
                             <div class="img">
                                 <a href="{{ route('blog.show', $blog->id) }}">
-                                    <img src="{{ $blog->image_link }}" alt="" style="width: 636px; height: 303px; border-radius: 10px;"/>
+                                    <img src="{{ $blog->image_link }}" alt="" style="width: 630px; height: 222px; border-radius: 10px;"/>
                                 </a>
                             </div>
                             <h4>{{ $blog->title ?? '' }}</h4>
