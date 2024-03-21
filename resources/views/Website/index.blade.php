@@ -146,7 +146,7 @@
 
                             <h4>{{ $service->title ?? '' }}</h4>
                             <p>
-                                {{$service->text ?? ''}}
+                                {{ substr($service->text , 0, 30)?? '' }}
                             </p>
                             <a href="services">
                                 <button type="button" class="btn btn-light">
