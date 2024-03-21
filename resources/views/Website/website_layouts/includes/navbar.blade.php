@@ -1,5 +1,16 @@
-<section class="nav-bar">
-    <nav class="navbar navbar-expand-lg sticky-top">
+
+<style>
+    .nav-bar {
+        position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+    
+</style>
+
+<section
+class="nav-bar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
           <button
             class="navbar-toggler"
