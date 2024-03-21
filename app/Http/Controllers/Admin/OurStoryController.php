@@ -53,15 +53,20 @@ class OurStoryController extends Controller
         if ($request->features && count($request->features) > 0) {
             foreach ($request->features as $featureLocale => $featureData) {
                 foreach ($featureData as $localeCode => $feature) {
-                    $feature_data[$localeCode] = [
-                        'title' => $feature,
-                    ];
+                    if (!empty($feature)) { // Check if feature is not empty
+                        $feature_data[$localeCode] = [
+                            'title' => $feature,
+                        ];
+                    }
                 }
-                $feature_data['our_story_id'] = $our_story->id;
-
-                OurStoryFeature::create($feature_data);
+                // Check if there's any feature data to be saved
+                if (!empty($feature_data)) {
+                    $feature_data['our_story_id'] = $our_story->id;
+                    OurStoryFeature::create($feature_data);
+                }
             }
         }
+
 
         $our_story->update($data);
 

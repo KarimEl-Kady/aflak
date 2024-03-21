@@ -1,11 +1,25 @@
-@extends('Website.website_layouts.index')
+@extends('Website.website_layouts.index') .Related-posts
 
 <style>
-.card-plog {
-min-width: 280;
-overflow: auto;
-}
 
+div#card-mou {
+    height: 251px;
+    width: 100%;
+    overflow: hidden;
+}
+.our-blog-page .Related-posts .section .img img {
+    width: 118px !important;
+    height: 84px !important;
+    border-radius: 10px;
+}
+.one-tag {
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 0.5rem !important;
+}
+.one-tag h4 {
+    font-size: 0.9rem;
+}
 </style>
 
 @section('content')
@@ -38,7 +52,7 @@ overflow: auto;
                 @foreach ($posts as $post )
 
                 <div class="section">
-                    <div class="img"><img src="{{ $post->image_link }}" alt="" width="107px" height="76px" style="border-radius: 10px;"/></div>
+                    <div class="img"><img src="{{ $post->image_link }}" alt="" /></div>
                   <div class="contant">
                     <h6>
                       {{$post->title}}
@@ -54,7 +68,9 @@ overflow: auto;
                 <div class="head">
                     @foreach ($hashtags as $hashtag )
 
-                    <div class="one-tag">{{ $hashtag->title }}</div>
+                    <div class="one-tag">
+                        <h4>{{ $hashtag->title }}</h4>
+                    </div>
 
                     @endforeach
                 </div>
@@ -69,7 +85,7 @@ overflow: auto;
                             <div class="col-lg-6 col-md-6 col-6" >
 
 
-                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000" style="min-height: 358px">
+                                <div class="card-plog" id="card-mou" data-aos="zoom-in-up" data-aos-duration="1000">
                                     <a href="{{ route('blog.show', $blog->id) }}">
                                         <div class="img">
                                             <img src="{{ $blog->image_link ?? ''}}" alt="" style="border-radius: 10px;"/>
