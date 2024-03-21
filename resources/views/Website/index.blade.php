@@ -19,10 +19,13 @@
     margin-top: 48px !important;
 }
 .items-package {
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(/website/img/line.png)
+    background-image: url(/website/img/line.png);
+    background-position: center center;
+    background-size: cover;
 }
 .item-one {
     text-align: center;
@@ -30,7 +33,9 @@
 .icon img {
     border: 3px solid black;
     border-radius: 100%;
+    background-color: #56a0dd;
 }
+
 
 </style>
 
