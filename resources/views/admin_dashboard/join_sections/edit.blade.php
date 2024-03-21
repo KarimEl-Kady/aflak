@@ -49,7 +49,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $join_section->translate($localeCode)->title }}>
+                                            value="{{ $join_section->translate($localeCode)->title }}">
                                     </div>
 
                                 </div>
@@ -70,7 +70,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $join_section->translate($localeCode)->text }}>
+                                            value="{{ $join_section->translate($localeCode)->text }}">
                                     </div>
 
                                 </div>

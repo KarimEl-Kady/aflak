@@ -360,6 +360,39 @@
                     </li>
 
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <a href="{{route('our_goals.index')}}" class="menu-link menu-toggle">
+                            <span class="svg-icon menu-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span class="menu-text">{{ __('messages.our_goal') }}</span>
+                            {{-- <i class="menu-arrow"></i> --}}
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <a href="{{route('common_questions.index')}}" class="menu-link menu-toggle">
+                            <span class="svg-icon menu-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span class="menu-text">{{ __('messages.common_questions') }}</span>
+                            {{-- <i class="menu-arrow"></i> --}}
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <a href="{{route('privacies.index')}}" class="menu-link menu-toggle">
+                            <span class="svg-icon menu-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span class="menu-text">{{ __('messages.privacies') }}</span>
+                            {{-- <i class="menu-arrow"></i> --}}
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                         <a href="{{route('settings.index')}}" class="menu-link menu-toggle">
                             <span class="svg-icon menu-icon">
                                 <i class="fas fa-user-lock"></i>

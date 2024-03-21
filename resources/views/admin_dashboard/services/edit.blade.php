@@ -70,7 +70,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="text-{{ $localeCode }}"
-                                            value={{ $service->translate($localeCode)->text }}>
+                                            value="{{ $service->translate($localeCode)->text }}">
                                     </div>
 
                                 </div>

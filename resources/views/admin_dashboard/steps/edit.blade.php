@@ -49,7 +49,7 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="title-{{ $localeCode }}"
-                                            value={{ $step->translate($localeCode)->title }}>
+                                            value="{{ $step->translate($localeCode)->title }}">
                                     </div>
 
                                 </div>

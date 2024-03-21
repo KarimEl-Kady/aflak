@@ -755,9 +755,19 @@ return [
 'second_text'       => 'Second Text',
 'add_request_section'    => 'Add Request Section',
 'logisitic_setcions'     => 'Logisitic Setcions',
-
-
-
+'about_us_features'      => 'About Us Features',
+'add_about_us_features'  => 'Add About Us Features',
+'edit_about_us_feature'  => 'Edit About Us Feature',
+'request_sections'       => 'Request Sections',
+'request_section_settings'  => 'Request Section Settings',
+'edit_request_section'   => 'Edit Request Section',
+'add_request_section_setting'   => 'Add Request Section Setting',
+'add_request_section_settings'  => 'Add Request Section Settings',
+'edit_request_section_setting'      => 'Edit Request Section Setting',
+'our_goal'          => 'Our Goal',
+'add_our_goal'      => 'Add Our Goal',
+'add_pivacies'      => 'Add Pivacies',
+'add_common_questions'  => 'Add Common Question',
 
 
 ];
