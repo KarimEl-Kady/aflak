@@ -9,6 +9,12 @@
 
      @endif
 }
+.home .advantges-home {
+    margin-top: unset !important;
+}
+.home .mySwiper1 img {
+    height: unset !important;
+}
 
 </style>
 
@@ -238,19 +244,19 @@
 
 
         <!-- swiper3 logo -->
-        <div class="swiper mySwiper3"  style="height: 145px;">
-          <div class="swiper-wrapper">
-            @foreach ($clients as $client)
-
-            <div class="swiper-slide">
-                <img src="{{ $client->image_link }}" alt="" />
-            </div>
-            @endforeach
-
-          </div>
-        </div>
         <!-- swiper3 logo -->
+    </div>
+    <div class="swiper mySwiper3"  style="height: 145px;">
+      <div class="swiper-wrapper">
+        @foreach ($clients as $client)
+
+        <div class="swiper-slide">
+            <img src="{{ $client->image_link }}" alt="" />
+        </div>
+        @endforeach
+
       </div>
+    </div>
       <!-- how-it-work -->
 
       <!-- contact us -->
@@ -468,7 +474,7 @@
                         <div class="Updates-news">
                             <div class="img">
                                 <a href="{{ route('blog.show', $blog->id) }}">
-                                    <img src="{{ $blog->image_link }}" alt="" style="width: 632px; height: 222px; border-radius: 10px;"/>
+                                    <img src="{{ $blog->image_link }}" alt="" style="width: 636px; height: 303px; border-radius: 10px;"/>
                                 </a>
                             </div>
                             <h4>{{ $blog->title ?? '' }}</h4>
