@@ -723,5 +723,41 @@ return [
 'privacy_policy'         => 'Privacy Policy',
 'terms_and_conditions'    => 'Terms And Conditions',
 
+'add_home_slider'    => 'Add Home Slider',
+'home_slider_images'    => 'Home Slider Images',
+'home_slider_image'    => 'Home Slider Image',
+'subtitle'           => 'Subtitle',
+'add_slider_image'   => 'Add Slider Image',
+'home_slider'        => 'Home Slider',
+'edit_hashtags'      => 'Edit Hashtags',
+'add_advantage'      => 'Add Advantage',
+'edit_advantage'     => 'Edit Advantage',
+'icon'               => 'Icon',
+'add_service'        => 'Add Service',
+'edit_service'       => 'Edit Service',
+'clients'            => 'Clients',
+'add_client'        => 'Add Client',
+'edit_client'       => 'Edit Client',
+'email_news'        => 'Email News',
+'news_email_settings'   => 'News Email Settings',
+'email_news'        => 'Email News',
+'add_news_email_setting'    => 'Add News Email Setting',
+'our_stories'        => 'Our Stories',
+'add_our_story'     => 'Add Our Story',
+'edit_our_story'    => 'Edit Our Story',
+'label_title'       => 'Label Title',
+'label_text'        => 'Label Text',
+'feature'           => 'Feature',
+'add_feature'       => 'Add Feature',
+'edit_feature'      => 'Edit Feature',
+'add_logisitic_setcion'  => 'Add Logisitic Setcion',
+'first_text'        => 'First Text',
+'second_text'       => 'Second Text',
+'add_request_section'    => 'Add Request Section',
+'logisitic_setcions'     => 'Logisitic Setcions',
+
+
+
+
 
 ];

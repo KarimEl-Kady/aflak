@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="image">{{ __('messages.preview_image') }}</label>
+                            <label for="image">{{ __('messages.image') }}</label>
                             <input type="file" class="form-control" name="image" id="image" accept="image/*">
                         </div>
                         <div id="imagePreview" class="preview"></div>
@@ -58,7 +58,7 @@
 
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="icon">{{ __('messages.preview_icon') }}</label>
+                            <label for="icon">{{ __('messages.icon') }}</label>
                             <input type="file" class="form-control" name="icon" id="icon" accept="image/*">
                         </div>
                         <div id="iconPreview" class="preview"></div>

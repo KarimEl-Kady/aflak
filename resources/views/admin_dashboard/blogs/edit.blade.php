@@ -18,7 +18,7 @@
                         </span>
                     </span>
 
-                    <h3 class="card-label">{{ __('messages.edit_home_slider_images') }}</h3>
+                    <h3 class="card-label">{{ __('messages.edit_blog') }}</h3>
                 </div>
             </div>
 

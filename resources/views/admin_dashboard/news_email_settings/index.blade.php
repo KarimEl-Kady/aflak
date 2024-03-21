@@ -64,7 +64,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.subtitle_' . $localeCode) }}
+                                        {{ __('messages.subtitle' ) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">

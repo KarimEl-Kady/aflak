@@ -65,7 +65,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.label_title_' . $localeCode) }}
+                                        {{ __('messages.label_title' ) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
@@ -81,7 +81,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
-                                        {{ __('messages.label_text_' . $localeCode) }}
+                                        {{ __('messages.label_text' ) }}
                                         <span class="text-danger"> ( {{ $localeCode }} )</span>
                                     </label>
                                     <div class="text-input">
@@ -131,7 +131,7 @@
                     <div class="row feature-container">
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>{{ __('messages.feature_' . $localeCode) }}
+                                <label>{{ __('messages.feature' ) }}
                                     <span class="text-danger"> ({{ $localeCode }})</span>
                                 </label>
                                 <input type="text" class="form-control"
