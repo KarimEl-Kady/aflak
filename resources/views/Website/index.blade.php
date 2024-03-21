@@ -30,11 +30,11 @@
 .item-one {
     text-align: center;
 }
-.icon img {
+/* .icon img {
     border: 3px solid black;
     border-radius: 100%;
     background-color: #56a0dd;
-}
+} */
 
 
 </style>
