@@ -24,6 +24,7 @@ class AboutUsController extends Controller
         $our_story = OurStory::first();
         $our_story_features = OurStoryFeature::get();
         $our_story_images = OurStoryImage::get();
+        $story_image = OurStoryImage::first();
         $our_goal = OurGoal::first();
         $our_goal_features = OurGoalFeature::take(4)->get();
         $logistic_sectoion = LogisiticSection::first();
@@ -36,6 +37,7 @@ class AboutUsController extends Controller
             'clients',
             'our_goal',
             'our_goal_features',
+            'story_image',
         ));
     }
 }
