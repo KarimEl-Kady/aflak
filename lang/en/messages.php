@@ -720,7 +720,8 @@ return [
 'our_goal'          => 'Our Goal',
 'related_posts'     => 'Related Posts',
 'time'              => 'Time',
-
+'privacy_policy'         => 'Privacy Policy',
+'terms_and_conditions'    => 'Terms And Conditions',
 
 
 ];

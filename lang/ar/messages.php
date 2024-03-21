@@ -869,4 +869,6 @@ return [
 
 'related_posts' => 'مقالات ذات صلة',
 'time' => 'وقت',
+'terms_and_conditions'  => 'شروط الاستخدام',
+'privacy_policy'        => 'سياسة الخصوصية',
 ];
