@@ -53,11 +53,12 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="contant-on-swiper">
-            <h3>{{ "$home_slider->title" ?? '' }}</h3>
-            <h6>{{ "$home_slider->subtitle" ?? '' }}</h6>
+            <h3>{{ $home_slider->title ?? '' }}</h3>
+            <h6>{{ $home_slider->subtitle ?? '' }}</h6>
             <p>
-                {{ "$home_slider->text" ?? '' }}
+               {{ $home_slider->text ?? '' }}
             </p>
+
             <a href="contact_us">
                 <button type="button" class="btn btn-light">Contact Us</button></a>
         </div>
