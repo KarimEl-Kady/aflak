@@ -9,6 +9,6 @@ class HomeSliderTranslation extends Model
 {
     use HasFactory;
     protected $table = 'home_slider_translations';
-    protected $fillable =  ['title' , 'text'];
+    protected $fillable =  ['title' , 'subtitle' , 'text'];
 
 }
