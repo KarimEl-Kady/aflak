@@ -1,7 +1,9 @@
 @extends('Website.website_layouts.index')
 
 <style>
-
+.Related-posts {
+    margin-top: 25px;
+}
 </style>
 
 @section('content')
@@ -14,7 +16,107 @@
         </div>
     </div>
     <div class="img">
-        <img src="img/Map.png" alt="" />
+        <div class="map">
+            {{-- <img src="https://estc.com.sa/web/image/6292/branches-map.jpg" alt="" /> --}}
+            <input type="hidden" class="form-control" value="{{ old('lat') }}" id="Lat" name="lat" />
+            <input type="hidden" class="form-control" value="{{ old('lon') }}" id="Lng" name="lon" />
+
+            <div class="row">
+                <div class="col-12">
+
+                </div>
+                <div id="map" style="height: 400px; width: 100%;"></div>
+                <!-- Ensure the map container has a defined size -->
+            </div>
+        </div>
+
+
+          <!-- connect -->
+
+          <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSkVZximb5DWCAPqk44ri8JfK_B7pySgk&callback=initMap&libraries=places">
+          </script>
+
+          <script>
+            var lat1 = 25.381427;
+            var lon1 = 49.582997;
+
+            function initMap() {
+              var myLatlng = new google.maps.LatLng(lat1, lon1);
+              var mapOptions = {
+                center: myLatlng,
+                zoom: 14
+              };
+              var input = document.getElementById('searchTextField');
+              var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+              var geocoder = new google.maps.Geocoder;
+              var infowindow = new google.maps.InfoWindow;
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'I move with you man :)'
+              });
+
+              var autocomplete = new google.maps.places.Autocomplete((input), {
+                types: ['geocode']
+              });
+              google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+                var place = autocomplete.getPlace();
+
+                console.log(place);
+
+
+
+                map.panTo(place.geometry.location)
+                var Lat = place.geometry.location.lat();
+                var Lng = place.geometry.location.lat();
+                $('#Lat').val(Lat);
+                $('#Lng').val(Lng);
+                $('.address').val(place.formatted_address)
+              });
+
+              google.maps.event.addListener(map, 'click', function(e) {
+                //marker.setPosition(e.latLng);
+                console.log(e.latLng);
+                map.panTo(e.latLng)
+                var Lat = e.latLng.lat();
+                var Lng = e.latLng.lng();
+                $('#Lat').val(Lat);
+                $('#Lng').val(Lng);
+                //map.setCenter(e.latLng);
+              });
+
+              google.maps.event.addListener(map, 'center_changed', function() {
+                var center = map.getCenter();
+                marker.setPosition(center);
+                window.setTimeout(function() {
+                  geocodeLatLng(geocoder, map, infowindow, marker);
+                }, 2000);
+              });
+            }
+
+            function geocodeLatLng(geocoder, map, infowindow, marker) {
+              geocoder.geocode({
+                'location': marker.position
+              }, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+
+                  if (results[1]) {
+                    //map.setZoom(11);
+                    infowindow.setContent(results[1].formatted_address);
+                    infowindow.open(map, marker);
+                  } else {
+                    console.warn('GeoCoder: No results found');
+                  }
+                } else {
+                  console.warn('Geocoder failed due to: ' + status);
+                }
+              });
+            }
+
+            google.maps.event.addDomListener(window, 'load', initMap);
+          </script>
     </div>
     <div class="container">
         <div class="CONTACt">
