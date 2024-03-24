@@ -60,7 +60,6 @@
 
                     <div class="row">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <!-- For loop this div -->
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <label>
@@ -69,16 +68,14 @@
                                     </label>
                                     <div class="text-input">
                                         <input type="text" class="form-control" name="subtitle-{{ $localeCode }}"
-                                            value="{{ $home_slider->translate($localeCode)->subtitle }}">
+                                               value="{{ $home_slider->translate($localeCode)->subtitle }}">
                                     </div>
-
                                 </div>
                             </div>
                         @endforeach
-
-
                     </div>
 
+                    
                     <div class="row">
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <!-- For loop this div -->
