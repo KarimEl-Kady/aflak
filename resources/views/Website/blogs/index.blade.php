@@ -1,4 +1,4 @@
-@extends('Website.website_layouts.index') .Related-posts
+@extends('Website.website_layouts.index') 
 
 <style>
 
