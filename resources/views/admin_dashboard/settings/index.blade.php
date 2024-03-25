@@ -121,7 +121,7 @@
                                     <div class="form-group">
                                         <label>{{ __('messages.footer_text') }} <span class="text-danger"> ( {{ $localeCode }} )</span></label>
                                         <div class="text-input">
-                                            <textarea id="footer_text" class="form-control" rows="3" name="footer_text-{{ $localeCode }}">{{ $setting->translate($localeCode)->address ?? '' }}</textarea>
+                                            <textarea id="footer_text" class="form-control" rows="3" name="footer_text-{{ $localeCode }}">{{ $setting->translate($localeCode)->footer_text ?? '' }}</textarea>
                                         </div>
                                     </div>
                                 </div>
