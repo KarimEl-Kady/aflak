@@ -769,5 +769,7 @@ return [
 'add_pivacies'      => 'Add Pivacies',
 'add_common_questions'  => 'Add Common Question',
 'footer_text'       => 'Footer Text',
-
+'add_service_feature'    => 'Add Service Feature',
+'service_features'       => 'Service Features',
+'edit_service_feature'   => 'Edit Service Feature',
 ];

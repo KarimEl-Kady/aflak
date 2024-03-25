@@ -917,4 +917,6 @@ return [
 'add_pivacies' => 'إضافة الخصوصية',
 'add_common_questions' => 'إضافة الأسئلة الشائعة',
 'footer_text'   => 'نص الجزء السفلى',
+'service_features'   => 'ميزات الخدمة',
+'add_service_feature'   => 'إضافة ميزة الخدمة',
 ];
