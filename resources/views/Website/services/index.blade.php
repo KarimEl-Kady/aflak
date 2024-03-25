@@ -13,6 +13,9 @@
         transform : rotate(0deg);
         @endif
     }
+    .pagge-serves .Important-Services .items-Services {
+        gap: 20px;
+    }
 </style>
 
 @section('content')
