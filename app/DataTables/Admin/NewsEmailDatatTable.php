@@ -64,7 +64,7 @@ class NewsEmailDatatTable extends DataTable
         return [
             ['data' => 'id', 'title' => __('messages.id')  ,'orderable'=>false,'searchable'=>false],
             ['data' => 'email', 'title' => __("messages.email")],
-            ['data' => 'action', 'title' => __("messages.actions"), 'orderable' => false, 'searchable' => false],
+            // ['data' => 'action', 'title' => __("messages.actions"), 'orderable' => false, 'searchable' => false],
         ];
     }
 

@@ -4,10 +4,10 @@
 			<!--begin::Container-->
 			<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
 				<!--begin::Copyright-->
-				<div class="text-dark order-2 order-md-1">
+				{{-- <div class="text-dark order-2 order-md-1">
 					<span class="text-muted font-weight-bold mr-2">2021©</span>
 					<a href="#" target="_blank" class="text-dark-75 text-hover-primary">Crazyidea</a>
-				</div>
+				</div> --}}
 				<!--end::Copyright-->
 				<!--begin::Nav-->
 				<div class="nav nav-dark">
@@ -19,7 +19,7 @@
 		<!--end::Footer-->
 	</div>
 	<!--end::Wrapper-->
-	
+
 </div>
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
@@ -33,7 +33,7 @@
 	<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-	
+
 	{{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
 
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
