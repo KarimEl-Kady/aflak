@@ -1,4 +1,4 @@
-@extends('Website.website_layouts.index') 
+@extends('Website.website_layouts.index')
 
 <style>
 
@@ -20,6 +20,14 @@ div#card-mou {
 .one-tag h4 {
     font-size: 0.9rem;
 }
+.our-blog-page .card-plog .img img {
+    width: 100%;
+    height: 150px
+}
+.our-blog-page .card-plog h4{
+    font-size: 1rem !important;
+}
+
 </style>
 
 @section('content')
