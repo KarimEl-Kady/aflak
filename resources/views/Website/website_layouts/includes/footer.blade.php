@@ -1,16 +1,33 @@
+@php
+    $locale = LaravelLocalization::getCurrentLocale();
+@endphp
+
 <style>
     .Subscribe {
-        @if($news_email_setting->image_link)
-            background-image: url({{ $news_email_setting->image_link }});
-        @else */
-            background-image: url(/website/img/foot1.png);
-        /* @endif
+    background-image: url(/website/img/footerimg.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-dir {
+    width: 100%;
+}
+
+.telgram {
+        @if ($locale == 'ar')
+            left: 20px;
+        @else
+            right: 20px;
+        @endif
     }
 </style>
 
 <!-- subscibe -->
      <div class="container">
         <div class="Subscribe" data-aos="flip-right" data-aos-duration="1500">
+
+           <div class="all-dir">
             <p>{{ $news_email_setting->title ?? __('messages.get_the_latest_news_andevents') }}</p>
             <h4>{{ $news_email_setting->subtitle ?? __('messages.see_the_latest_offers') }}</h4>
             <form action="{{ route('send_email') }}" method="POST">
@@ -28,7 +45,7 @@
                     />
                     <div class="email"><img src="{{ asset('img/sms.svg') }}" alt="" /></div>
 
-                    <div class="telgram">
+                    <div class="telgram" >
                         <button type="submit" class="btn btn-primary">
                             <img src="/website/img/tel.png" alt="" />
                         </button>
@@ -38,6 +55,8 @@
         </form>
 
         </div>
+        <img src="{{ asset('/website/img/footerphoto.png') }}" alt="">
+           </div>
       </div>
       <!-- subscibe -->
 
