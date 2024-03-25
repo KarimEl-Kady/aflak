@@ -114,6 +114,19 @@
                                 </div>
                             @endforeach
                         </div>
+
+                        <div class="row">
+                            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>{{ __('messages.footer_text') }} <span class="text-danger"> ( {{ $localeCode }} )</span></label>
+                                        <div class="text-input">
+                                            <textarea id="footer_text" class="form-control" rows="3" name="footer_text-{{ $localeCode }}">{{ $setting->translate($localeCode)->address ?? '' }}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
 
 

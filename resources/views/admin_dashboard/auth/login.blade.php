@@ -112,10 +112,9 @@
 									<div class="item text-center col-sm-12 mt-3">
 										<a href="https://crazyideaco.com" class="href_crazy">
 											<h6>Made with <img class="my-heart" src="{{asset('red.svg')}}" alt="icon heart"> by
-												Crazy
-												Idea</h6>
+												X-Coders </h6>
 										</a>
-										<span>Think Out Of The Box</span>
+										<span>Code With Expert</span>
 									</div>
 								</div>
 								<!--end::Action-->
@@ -141,7 +140,7 @@
 				</div>
 				<!--end::Image-->
 				<div class="text-center">
-					<p class="my-3 h5">جميع الحقوق محفوظه @ <span class="alina"> AZCOURSES </span> 2021</p>
+					{{-- <p class="my-3 h5">جميع الحقوق محفوظه @ <span class="alina"> AZCOURSES </span> 2021</p> --}}
 				</div>
 				<!--<div class="content-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url({{asset('assets/media/svg/illustrations/truck4.png);')}}"></div>-->
 				<!--end::Image-->

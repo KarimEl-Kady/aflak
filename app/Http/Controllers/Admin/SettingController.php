@@ -25,8 +25,11 @@ class SettingController extends Controller
     {
         $setting = Setting::firstOrCreate();
         foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-            $data[$localeCode] = ['address' => $request['address-' . $localeCode]
-          ];
+            $data[$localeCode] = [
+                'address' => $request['address-' . $localeCode ],
+                'footer_text' => $request['footer_text-' . $localeCode ],
+            ];
+
         }
 
         $data['phone']=$request->phone;
@@ -36,6 +39,7 @@ class SettingController extends Controller
         $data['linkedin']=$request->linkedin;
         $data['instagram']=$request->instagram;
         $data['youtube']=$request->youtube;
+
         // $data['lat']=$request->lat;
         // $data['lon']=$request->lon;
 
