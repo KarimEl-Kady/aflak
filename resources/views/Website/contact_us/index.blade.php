@@ -1,8 +1,15 @@
 @extends('Website.website_layouts.index')
 
 <style>
-.Related-posts {
-    margin-top: 25px;
+
+.CONTACt {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 11;
+}
+.right-form{
+    margin-top: 7rem !important;
+
 }
 </style>
 
@@ -16,7 +23,9 @@
         </div>
     </div>
     <div class="img">
-        <div class="map">
+        <div class="container-fluid"  >
+
+          <div class="map">
             {{-- <img src="https://estc.com.sa/web/image/6292/branches-map.jpg" alt="" /> --}}
             <input type="hidden" class="form-control" value="{{ old('lat') }}" id="Lat" name="lat" />
             <input type="hidden" class="form-control" value="{{ old('lon') }}" id="Lng" name="lon" />
@@ -28,6 +37,8 @@
                 <div id="map" style="height: 400px; width: 100%;"></div>
                 <!-- Ensure the map container has a defined size -->
             </div>
+        </div>
+
         </div>
 
 
@@ -181,7 +192,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
-                    <form>
+                    <form class="right-form">
                         <h4>{{ __('messages.contact_us') }}</h4>
                         <div class="form-group">
                             <label for="formGroupExampleInput">{{ __('messages.name') }}</label>

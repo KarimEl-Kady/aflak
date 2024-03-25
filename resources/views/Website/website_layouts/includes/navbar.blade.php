@@ -5,7 +5,10 @@
     top: 0;
     z-index: 1020;
 }
-    
+.navbar .chose-languge .dropdown {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
 </style>
 
 <section

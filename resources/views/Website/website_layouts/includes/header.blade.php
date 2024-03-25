@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="{{LaravelLocalization::getCurrentLocale()}}">
+
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,4 +72,13 @@
             </div>
           </div>
         </div>
+        <script>
+            var currentLocale = "{{ LaravelLocalization::getCurrentLocale() }}";
+
+            if (currentLocale == 'ar') {
+                document.body.style.direction = 'rtl';
+            } else {
+                document.body.style.direction = 'ltr';
+            }
+        </script>
       </header>
