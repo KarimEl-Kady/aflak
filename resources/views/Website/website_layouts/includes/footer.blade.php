@@ -21,6 +21,12 @@
             right: 20px;
         @endif
     }
+    footer .About-company ul li {
+    color: #d9d9d9;
+    font-size: 16px;
+    font-family: "Bold";
+    padding-top: 1.5rem;
+}
 </style>
 
 <!-- subscibe -->
