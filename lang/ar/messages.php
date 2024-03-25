@@ -916,4 +916,5 @@ return [
 'add_our_goal' => 'إضافة هدفنا',
 'add_pivacies' => 'إضافة الخصوصية',
 'add_common_questions' => 'إضافة الأسئلة الشائعة',
+'footer_text'   => 'نص الجزء السفلى',
 ];

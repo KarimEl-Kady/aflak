@@ -12,7 +12,7 @@ class Setting extends Model
     protected $table = 'settings';
     protected $guarded = [];
 
-    public $translatedAttributes = ['address'];
+    public $translatedAttributes = ['address' ,'footer_text'];
     protected $translationForeignKey = 'setting_id';
 
     protected $appends  = ["logo_link"];

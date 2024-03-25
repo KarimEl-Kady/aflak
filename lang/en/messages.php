@@ -768,6 +768,6 @@ return [
 'add_our_goal'      => 'Add Our Goal',
 'add_pivacies'      => 'Add Pivacies',
 'add_common_questions'  => 'Add Common Question',
-
+'footer_text'       => 'Footer Text',
 
 ];

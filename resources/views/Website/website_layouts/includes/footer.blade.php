@@ -51,10 +51,7 @@
           <div class="logo-footer">
             <img src="/website/img/title.png" alt="" />
             <p>
-              Vestibulum id ligula porta felis euismod sem per. Aenean eu
-              leo quam. Pellen tesque orn are sem lacinia quam venenatis.
-              Fusce dap ibus, tellus ac cursus commodo ut fermentu massa.
-              mentum sit amet risus.
+              {{$setting->footer_text ?? ''}}
             </p>
             <div class="icon">
               <a href="#">
