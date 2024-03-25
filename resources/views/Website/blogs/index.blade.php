@@ -3,7 +3,7 @@
 <style>
 
 div#card-mou {
-    height: 251px;
+    height: auto;
     width: 100%;
     overflow: hidden;
 }

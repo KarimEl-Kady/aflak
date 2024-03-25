@@ -77,6 +77,7 @@
 
             if (currentLocale == 'ar') {
                 document.body.style.direction = 'rtl';
+                
             } else {
                 document.body.style.direction = 'ltr';
             }

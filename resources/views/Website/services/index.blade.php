@@ -1,7 +1,18 @@
+@php
+    $locale = LaravelLocalization::getCurrentLocale();
+@endphp
+
+
 @extends('Website.website_layouts.index')
 
 <style>
-
+.icon img {
+        @if ($locale == 'ar')
+        transform : rotate(180deg);
+        @else
+        transform : rotate(0deg);
+        @endif
+    }
 </style>
 
 @section('content')
