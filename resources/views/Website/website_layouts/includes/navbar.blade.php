@@ -66,7 +66,7 @@ class="nav-bar">
                         <li>
                           <a rel="alternate" class="dropdown-item" hreflang="{{ $localeCode }}"
                             href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }} <img {{ $localeCode == 'en' ? 'src="/website/img/en.png"' : 'src="img/download.jfif"' }} alt="" />
+                            {{ $properties['native'] }} <img {{ $localeCode == 'en' ? 'src=/website/img/en.png' : 'src=/website/img/download.jfif' }} alt="" />
 
                           </a>
                         </li>
