@@ -28,7 +28,7 @@ class="nav-bar">
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="img">
-              <img src="/website/img/title.png" alt="" />
+              <img src="{{ $setting->logo_link ? $setting->logo_link : asset('website/img/title.png') }}" style="width: 75px; height: 75px;" alt="" />
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
