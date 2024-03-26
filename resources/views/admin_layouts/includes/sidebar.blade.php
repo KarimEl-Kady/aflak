@@ -348,16 +348,7 @@
 
                     </li>
 
-                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                        <a href="{{route('requests.index')}}" class="menu-link menu-toggle">
-                            <span class="svg-icon menu-icon">
-                                <i class="fas fa-user-lock"></i>
-                            </span>
-                            <span class="menu-text">{{ __('messages.requests') }}</span>
-                            {{-- <i class="menu-arrow"></i> --}}
-                        </a>
 
-                    </li>
 
                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                         <a href="{{route('our_goals.index')}}" class="menu-link menu-toggle">
@@ -387,6 +378,28 @@
                                 <i class="fas fa-user-lock"></i>
                             </span>
                             <span class="menu-text">{{ __('messages.privacies') }}</span>
+                            {{-- <i class="menu-arrow"></i> --}}
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <a href="{{route('requests.index')}}" class="menu-link menu-toggle">
+                            <span class="svg-icon menu-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span class="menu-text">{{ __('messages.requests') }}</span>
+                            {{-- <i class="menu-arrow"></i> --}}
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <a href="{{route('messages.index')}}" class="menu-link menu-toggle">
+                            <span class="svg-icon menu-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </span>
+                            <span class="menu-text">{{ __('messages.messages') }}</span>
                             {{-- <i class="menu-arrow"></i> --}}
                         </a>
 
