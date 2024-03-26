@@ -772,4 +772,5 @@ return [
 'add_service_feature'    => 'Add Service Feature',
 'service_features'       => 'Service Features',
 'edit_service_feature'   => 'Edit Service Feature',
+'email_subject'     => 'Email Subject',
 ];
