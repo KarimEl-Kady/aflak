@@ -6,6 +6,7 @@ use App\Http\Controllers\Website\CommonQuestionController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\EmailNewsController;
 use App\Http\Controllers\Website\IndexController;
+use App\Http\Controllers\Website\MessageController;
 use App\Http\Controllers\Website\PrivacyController;
 use App\Http\Controllers\Website\RequestController;
 use App\Http\Controllers\Website\ServiceController;
@@ -46,6 +47,8 @@ Route::group(
 
 
         Route::post('send_request', [RequestController::class, 'send_request'])->name('send_request');
+
+        Route::post('send_message', [MessageController::class, 'send_message'])->name('send_message');
 
         Route::get('privacies', [PrivacyController::class, 'index'])->name('privacies'); // Privacy Page Route
 

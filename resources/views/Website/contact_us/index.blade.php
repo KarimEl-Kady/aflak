@@ -192,26 +192,27 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
-                    <form class="right-form">
+                      <form class="right-form" method="POST" action="{{ route('send_message') }}">
+                        @csrf
                         <h4>{{ __('messages.contact_us') }}</h4>
                         <div class="form-group">
                             <label for="formGroupExampleInput">{{ __('messages.name') }}</label>
-                            <input type="text" class="form-control" placeholder="{{ __('messages.enter_name') }}" />
+                            <input type="text" name="name" class="form-control" placeholder="{{ __('messages.enter_name') }}" />
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">{{ __('messages.email') }}</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ __('messages.enter_email') }}" />
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ __('messages.enter_email') }}" />
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">{{ __('messages.subject') }}</label>
-                            <input type="text" class="form-control" placeholder="{{ __('messages.enter_subject') }}" />
+                            <input type="text" name="subject" class="form-control" placeholder="{{ __('messages.enter_subject') }}" />
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">{{ __('messages.message') }}</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="{{ __('messages.enter_message') }}" rows="3"></textarea>
+                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="{{ __('messages.enter_message') }}" rows="3"></textarea>
                         </div>
                         <div class="Submit">
-                            <button type="button" class="btn btn-primary">{{ __('messages.send') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ __('messages.send') }}</button>
                         </div>
                     </form>
                 </div>

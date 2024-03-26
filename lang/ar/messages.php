@@ -919,4 +919,5 @@ return [
 'footer_text'   => 'نص الجزء السفلى',
 'service_features'   => 'ميزات الخدمة',
 'add_service_feature'   => 'إضافة ميزة الخدمة',
+'email_subject'   => 'موضوع البريد الإلكتروني',
 ];

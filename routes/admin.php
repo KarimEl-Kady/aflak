@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\HomeSliderController;
 use App\Http\Controllers\Admin\HomeSliderImageController;
 use App\Http\Controllers\Admin\JoinSectionController;
 use App\Http\Controllers\Admin\LogisiticSectionController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NewsEmailSettingController;
 use App\Http\Controllers\Admin\OurGoalController;
 use App\Http\Controllers\Admin\OurStoryController;
@@ -96,6 +97,9 @@ Route::group(
                 //email_news_seeting
                 Route::resource('news_email_settings', NewsEmailSettingController::class);
                 Route::post('news_email_settings/update', [NewsEmailSettingController::class, 'update'])->name('news_email_settings.update');
+
+                //messages
+                Route::resource('messages', MessageController::class);
 
 
                 //join_sections
