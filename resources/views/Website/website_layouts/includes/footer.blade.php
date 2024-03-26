@@ -74,7 +74,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 col-12">
           <div class="logo-footer">
-            <img src="/website/img/title.png" alt="" />
+            <img src="{{ $setting->logo_link ? $setting->logo_link : asset('website/img/title.png') }}" style="width: 72px; height: 72px;" alt="" />
             <p>
               {{$setting->footer_text ?? ''}}
             </p>
