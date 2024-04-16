@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/website/css/fontawesome.min.css" />
     <!-- ? Custom CSS -->
     <link rel="stylesheet" href="/website/css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="/website/sass/style.min.css" />
+    <link rel="stylesheet" href="/website/sass/style.css" />
     <!-- ? Custom CSS -->
     <!-- ? Main JavaScript -->
     <script src="/website/js/jquery-3.5.1.min.js"></script>
@@ -77,7 +77,7 @@
 
             if (currentLocale == 'ar') {
                 document.body.style.direction = 'rtl';
-                
+
             } else {
                 document.body.style.direction = 'ltr';
             }

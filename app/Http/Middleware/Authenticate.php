@@ -16,8 +16,8 @@ class Authenticate extends Middleware
             return route('token_invalid');
         }
         if (
-            $request->is("ciadmin/*") || $request->is("*/ciadmin/*") || $request->is('/ciadmin')
-            || $request->is('*/ciadmin') || $request->is('ciadmin/*')
+            $request->is("admin/*") || $request->is("*/admin/*") || $request->is('/admin')
+            || $request->is('*/admin') || $request->is('admin/*')
         ) {
             return route('admin_loginpage');
         }
