@@ -140,9 +140,9 @@
                 <div class="Communication-links">
                     <p>{{ __('messages.communication_links') }}</p>
                     <div class="links">
-                        <div class="icon">
+                        {{-- <div class="icon">
                             <img src="{{ asset('/website/img/Icon4.svg') }}" alt="">
-                        </div>
+                        </div> --}}
                         <div class="contant">
                             <a href="#">
                                 <p>{{ __('messages.phone') }}</p>
