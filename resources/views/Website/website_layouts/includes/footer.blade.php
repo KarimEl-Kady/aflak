@@ -49,7 +49,7 @@
                         placeholder="{{ __('messages.enter_your_email_address') }}"
                         required
                     />
-                    <div class="email"><img src="{{ asset('img/sms.svg') }}" alt="" /></div>
+                    <div class="email"><img src="{{ asset('/website/img/sms.svg') }}" alt="" /></div>
 
                     <div class="telgram" >
                         <button type="submit" class="btn btn-primary">
@@ -129,7 +129,7 @@
             <p>{{ __('messages.communication_links') }}</p>
             <div class="links">
               <div class="icon">
-                <img src="img/Icon4.svg" alt="" />
+                <img src="{{asset(/website/img/Icon4.svg)}}" alt="" />
               </div>
               <div class="contant">
                 <a href="#"> <p>{{__('messages.phone')}}</p></a>
@@ -138,7 +138,7 @@
             </div>
             <div class="links">
               <div class="icon">
-                <img src="img/Icon5.svg" alt="" />
+                <img src="{{asset(/website/img/Icon5.svg)}}" alt="" />
               </div>
               <div class="contant">
                 <a href="#"> <p>{{__('messages.email')}}</p></a>
@@ -147,7 +147,7 @@
             </div>
             <div class="links">
               <div class="icon">
-                <img src="img/Icon66.svg" alt="" />
+                <img src="{{asset(/website/img/Icon66.svg)}}" alt="" />
               </div>
               <div class="contant">
                 <a href="#"> <p>{{__('messages.address')}}</p></a>

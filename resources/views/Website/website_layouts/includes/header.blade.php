@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{LaravelLocalization::getCurrentLocale()}}">
+<html lang="{{ LaravelLocalization::getCurrentLocale() }}">
 
 
 
@@ -8,16 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--  -->
-    <link rel="icon" href="img/title.png" type="image" />
-    <!-- animation -->
+    <link rel="icon" href="{{ asset('/website/img/title.png') }}" type="image/png" /> <!-- animation -->
     {{-- <link rel="stylesheet" href="/website/css/aos-anmite.css" /> --}}
     <!-- animation -->
     <link rel="stylesheet" href="/website/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/website/sass/_navbar.scss" />
+    {{-- <link rel="stylesheet" href="/website/sass/_navbar.scss" /> --}}
     <!--  -->
     <!-- ? Main CSS -->
     <link rel="stylesheet" href="" />
-    <link rel="stylesheet" href="/website/main-scss/main.min.css" />
+    {{-- <link rel="stylesheet" href="/website/main-scss/main.min.css" /> --}}
     <link rel="stylesheet" href="/website/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/website/css/fontawesome.min.css" />
     <!-- ? Custom CSS -->
@@ -38,48 +37,49 @@
     <!-- ? Custom JavaScript -->
 
     <title>Aflak Home</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="home">
-      <!-- header -->
-      <header>
-        <div class="container">
-          <div class="socia-media">
-            <div class="logo">
-              <a href="{{ $setting->facebook ?? '' }}"> <i class="fa-brands fa-facebook-f"></i></a>
-              <a href="{{ $setting->twitter ?? '' }}"> <i class="fa-brands fa-twitter"></i></a>
-              <a href="{{ $setting->linkedin ?? '' }}"> <i class="fa-brands fa-linkedin"></i></a>
-              <a href="{{ $setting->youtube ?? '' }}"> <i class="fa-brands fa-youtube"></i></a>
+        <!-- header -->
+        <header>
+            <div class="container">
+                <div class="socia-media">
+                    <div class="logo">
+                        <a href="{{ $setting->facebook ?? '' }}"> <i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="{{ $setting->twitter ?? '' }}"> <i class="fa-brands fa-twitter"></i></a>
+                        <a href="{{ $setting->linkedin ?? '' }}"> <i class="fa-brands fa-linkedin"></i></a>
+                        <a href="{{ $setting->youtube ?? '' }}"> <i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="phones">
+                        <a>
+                            <p>
+                                @if ($setting !== null && $setting->address !== null)
+                                    {{ $setting->translate(LaravelLocalization::getCurrentLocale())->address }}
+                                @endif
+                                <i class="fa-solid fa-location-dot"></i>
+                            </p>
+
+                        </a>
+                        <a>
+                            <p>
+                                {{ $setting->email ?? '' }} <i class="fa-regular fa-envelope"></i></p>
+                        </a>
+
+                        <a href="#">
+                            <p>{{ $setting->phone ?? '' }} <i class="fa-solid fa-phone-flip"></i></p>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="phones">
-              <a >
-                <p>
-                    @if($setting !== null && $setting->address !== null)
-                        {{ $setting->translate(LaravelLocalization::getCurrentLocale())->address }}
-                    @endif
-                    <i class="fa-solid fa-location-dot"></i>
-                </p>
+            <script>
+                var currentLocale = "{{ LaravelLocalization::getCurrentLocale() }}";
 
-              </a>
-              <a >
-                <p>
-{{$setting->email ?? ''}}                  <i class="fa-regular fa-envelope"></i></p
-              ></a>
+                if (currentLocale == 'ar') {
+                    document.body.style.direction = 'rtl';
 
-              <a href="#">
-                <p>{{ $setting->phone ?? '' }} <i class="fa-solid fa-phone-flip"></i></p
-              ></a>
-            </div>
-          </div>
-        </div>
-        <script>
-            var currentLocale = "{{ LaravelLocalization::getCurrentLocale() }}";
-
-            if (currentLocale == 'ar') {
-                document.body.style.direction = 'rtl';
-
-            } else {
-                document.body.style.direction = 'ltr';
-            }
-        </script>
-      </header>
+                } else {
+                    document.body.style.direction = 'ltr';
+                }
+            </script>
+        </header>
